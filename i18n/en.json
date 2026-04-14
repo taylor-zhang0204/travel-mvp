@@ -1,0 +1,29 @@
+{
+  "common": {
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "confirm": "Confirm"
+  },
+  "index": {
+    "tabsTitle": "Tabs",
+    "openComponents": "Open components",
+    "openComponentsAlt": "Open components alt"
+  },
+  "component": {
+    "title": "Component",
+    "activeButton": "Active",
+    "enterDetails": "Enter your details...",
+    "placeholder": "Enter your details...",
+    "testText": "Sample text"
+  },
+  "settings": {
+    "language": "Language",
+    "selectLanguage": "Select Language"
+  }
+}

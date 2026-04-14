@@ -1,0 +1,29 @@
+{
+  "common": {
+    "submit": "提交",
+    "cancel": "取消",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "confirm": "确认"
+  },
+  "index": {
+    "tabsTitle": "标签页",
+    "openComponents": "打开组件",
+    "openComponentsAlt": "打开组件（另一个）"
+  },
+  "component": {
+    "title": "组件",
+    "activeButton": "激活",
+    "enterDetails": "输入详情...",
+    "placeholder": "输入详情...",
+    "testText": "测试文字"
+  },
+  "settings": {
+    "language": "语言",
+    "selectLanguage": "选择语言"
+  }
+}

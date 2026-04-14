@@ -2,7 +2,11 @@ import { Stack } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Button, Input, Text, TextArea, Theme, XStack, YStack, ZStack } from 'tamagui';
 
+import { useI18n } from '@/i18n';
+
 export default function Component() {
+  const { t } = useI18n();
+
   return (
     <SafeAreaView>
       <Stack.Screen
@@ -21,7 +25,7 @@ export default function Component() {
           alignItems: 'center',
         }}
       >
-        <Text>Component</Text>
+        <Text>{t('component.title')}</Text>
       </XStack>
       <YStack>
         <XStack maxW={350} p="$2" self="center" gap="$2">
@@ -77,17 +81,17 @@ export default function Component() {
         </XStack>
         <Theme name="dark">
           <Button size="$3" variant="outlined" height={60} width={100}>
-            Active
+            {t('component.activeButton')}
           </Button>
-          <TextArea height={100} placeholder="Enter your details..." />
+          <TextArea height={100} placeholder={t('component.enterDetails')} />
           <XStack>
             <Input
               className=""
               borderWidth={2}
               borderColor="$color"
-              placeholder="Enter your details..."
+              placeholder={t('component.placeholder')}
             />
-            <Text color="$color">测试文字</Text>
+            <Text color="$color">{t('component.testText')}</Text>
           </XStack>
         </Theme>
       </YStack>
