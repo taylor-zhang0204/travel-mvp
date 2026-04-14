@@ -1,10 +1,6 @@
 import axios from 'axios';
-import {
-  onRequest,
-  onRequestError,
-  onResponse,
-  onResponseError,
-} from './interceptors';
+
+import { onRequest, onRequestError, onResponse, onResponseError } from './interceptors';
 import type { ApiResponse } from './types';
 
 export type { ApiError, ApiResponse } from './types';

@@ -1,6 +1,8 @@
-import { AxiosError, InternalAxiosRequestConfig, AxiosResponse } from 'axios';
+import { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
+
+import { API_ERROR_CODE, API_ERROR_MESSAGE } from '@/constants';
+
 import { ApiError } from './types';
-import { API_ERROR_CODE, API_ERROR_MESSAGE } from '../../constants';
 
 // 字段转换：snake_case -> camelCase
 export function transformKeysToCamel<T>(obj: unknown): T {
@@ -23,14 +25,17 @@ export function transformKeysToCamel<T>(obj: unknown): T {
 }
 
 // 检查网络状态
-async function checkNetworkStatus(): Promise<{ isConnected: boolean; message: string }> {
+async function checkNetworkStatus(): Promise<{
+  isConnected: boolean;
+  message: string;
+}> {
   try {
     const Network = await import('expo-network');
     const state = await Network.getNetworkStateAsync();
     if (!state.isConnected) {
       return {
         isConnected: false,
-        message: API_ERROR_MESSAGE[API_ERROR_CODE.NO_NETWORK]
+        message: API_ERROR_MESSAGE[API_ERROR_CODE.NO_NETWORK],
       };
     }
     return { isConnected: true, message: '' };
@@ -41,9 +46,7 @@ async function checkNetworkStatus(): Promise<{ isConnected: boolean; message: st
 }
 
 // 请求拦截器 - 请求发送前执行
-export function onRequest(
-  config: InternalAxiosRequestConfig
-): InternalAxiosRequestConfig {
+export function onRequest(config: InternalAxiosRequestConfig): InternalAxiosRequestConfig {
   // 可在此添加 token 等
   // const token = await getToken();
   // config.headers.Authorization = `Bearer ${token}`;
@@ -58,7 +61,7 @@ export async function onRequestError(error: AxiosError): Promise<never> {
     console.error('[API] No Network:', message);
     return Promise.reject({
       code: API_ERROR_CODE.NO_NETWORK,
-      message
+      message,
     });
   }
 
@@ -67,7 +70,7 @@ export async function onRequestError(error: AxiosError): Promise<never> {
     console.error('[API] Timeout:', timeoutMsg);
     return Promise.reject({
       code: API_ERROR_CODE.REQUEST_TIMEOUT,
-      message: timeoutMsg
+      message: timeoutMsg,
     });
   }
 
@@ -75,7 +78,7 @@ export async function onRequestError(error: AxiosError): Promise<never> {
   console.error('[Request Error]', error.message);
   return Promise.reject({
     code: API_ERROR_CODE.REQUEST_ERROR,
-    message: error.message || errorMsg
+    message: error.message || errorMsg,
   });
 }
 
@@ -92,7 +95,8 @@ export async function onResponseError(error: AxiosError<ApiError>): Promise<neve
 
   if (response) {
     const { status, data } = response;
-    const message = data?.message || API_ERROR_MESSAGE[status as keyof typeof API_ERROR_MESSAGE] || '未知错误';
+    const message =
+      data?.message || API_ERROR_MESSAGE[status as keyof typeof API_ERROR_MESSAGE] || '未知错误';
 
     switch (status) {
       case 400:
@@ -147,13 +151,13 @@ export async function onResponseError(error: AxiosError<ApiError>): Promise<neve
     console.error('[API] Network Error:', message);
     return Promise.reject({
       code: isConnected ? 503 : API_ERROR_CODE.NO_NETWORK,
-      message
+      message,
     });
   } else {
     console.error('[API] Request Error:', error.message);
     return Promise.reject({
       code: API_ERROR_CODE.REQUEST_ERROR,
-      message: error.message || API_ERROR_MESSAGE[API_ERROR_CODE.REQUEST_ERROR]
+      message: error.message || API_ERROR_MESSAGE[API_ERROR_CODE.REQUEST_ERROR],
     });
   }
 }

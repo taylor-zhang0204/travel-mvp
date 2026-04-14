@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+.tamagui/
+android/
+ios/
+
+# Expo
+.expo/
+
+# Generated files
+*.d.ts
+expo-env.d.ts
+
+# Logs
+*.log
+
+# Coverage
+coverage/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Binary files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.pdf
+*.woff
+*.woff2
+*.ttf
+*.eot
+
+# Data files
+*.json
+!package.json
+!tsconfig.json
+!.prettierrc

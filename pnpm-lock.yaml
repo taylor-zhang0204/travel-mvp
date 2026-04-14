@@ -23,6 +23,9 @@ importers:
       '@tamagui/config':
         specifier: 2.0.0-rc.40
         version: 2.0.0-rc.40(581c26631e27f76c8baeef61d06fab75)
+      '@tamagui/core':
+        specifier: 2.0.0-rc.40
+        version: 2.0.0-rc.40(react-dom@19.2.0(react@19.2.0))(react-native-gesture-handler@2.30.1(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0))(react-native-safe-area-context@5.6.2(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0))(react-native@0.83.4(@babel/core@7.29.0)(@types/react@19.2.14)(react@19.2.0))(react@19.2.0)(sf-symbols-typescript@2.2.0)
       axios:
         specifier: ^1.15.0
         version: 1.15.0
