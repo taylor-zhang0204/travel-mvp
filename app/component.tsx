@@ -3,6 +3,8 @@ import { useTranslation } from 'react-i18next';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Button, Input, Text, TextArea, Theme, XStack, YStack, ZStack } from 'tamagui';
 
+import { Chart } from '@/components/icons/src/public/common';
+
 export default function Component() {
   const { t } = useTranslation();
 
@@ -91,6 +93,7 @@ export default function Component() {
               placeholder={t('component.placeholder')}
             />
             <Text color="$color">{t('component.testText')}</Text>
+            <Chart color="red" size={40} onPress={() => console.log('Chart pressed')} />
           </XStack>
         </Theme>
       </YStack>
