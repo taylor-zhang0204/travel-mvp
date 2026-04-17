@@ -19,10 +19,9 @@ type SearchParams = {
 
 type Props = {
   onSearch?: (params: SearchParams) => void;
-  onDateRangePress?: () => void;
 };
 
-export default function SearchForm({ onSearch, onDateRangePress }: Props) {
+export default function SearchForm({ onSearch }: Props) {
   const [params, setParams] = useState<SearchParams>({
     destination: '',
     checkIn: dayjs().format('YYYY-MM-DD'),
@@ -46,18 +45,12 @@ export default function SearchForm({ onSearch, onDateRangePress }: Props) {
 
   return (
     <YStack
-      style={{
-        width: SCREEN_WIDTH - 50,
-        paddingHorizontal: 14,
-        paddingVertical: 20,
-        backgroundColor: '#fff',
-        borderRadius: 13,
-        gap: 16,
-        shadowColor: 'rgba(16,49,96,0.1)',
-        shadowOffset: { width: 0, height: 0 },
-        shadowOpacity: 1,
-        shadowRadius: 10,
-      }}
+      width={SCREEN_WIDTH - 50}
+      px={14}
+      py={20}
+      bg="#fff"
+      gap={16}
+      style={{ borderRadius: 12 }}
     >
       <DestinationInput
         value={params.destination}

@@ -22,16 +22,13 @@ export default function DestinationInput({
         Destination
       </Text>
       <XStack
-        style={{
-          height: 45,
-          backgroundColor: '#F5F7FA',
-          borderRadius: 12,
-          paddingHorizontal: 16,
-          gap: 8,
-          alignItems: 'center',
-          borderWidth: 1,
-          borderColor: focused ? '#1566D1' : 'rgba(255,255,255,0.1)',
-        }}
+        height={45}
+        bg="#F5F7FA"
+        px={16}
+        gap={8}
+        borderWidth={1}
+        borderColor={focused ? '#1566D1' : 'rgba(255,255,255,0.1)'}
+        style={{ borderRadius: 12, alignItems: 'center' }}
       >
         <Location size={18} />
         <Input

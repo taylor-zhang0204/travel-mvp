@@ -20,7 +20,12 @@ const Header = ({ showBack = true, title, right }: HeaderProps) => {
     <XStack
       height={60}
       paddingInline={8}
-      style={{ alignItems: 'center', backgroundColor: '#FFFFFF' }}
+      style={{
+        alignItems: 'center',
+        backgroundColor: '#FFFFFF',
+        borderBottomWidth: 1,
+        borderBottomColor: '#E5E7EB',
+      }}
     >
       <YStack position="absolute" style={{ left: 8 }}>
         {router.canGoBack() && showBack && <ChevronLeft onPress={() => router.back()} />}

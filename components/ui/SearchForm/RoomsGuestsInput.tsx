@@ -19,14 +19,11 @@ export default function RoomsGuestsInput({ rooms, guests, onRoomsChange, onGuest
         Rooms and guests
       </Text>
       <XStack
-        style={{
-          height: 45,
-          backgroundColor: '#F5F7FA',
-          borderRadius: 12,
-          paddingHorizontal: 16,
-          gap: 12,
-          alignItems: 'center',
-        }}
+        height={45}
+        bg="#F5F7FA"
+        px={16}
+        gap={12}
+        style={{ borderRadius: 12, alignItems: 'center' }}
         onPress={() => setOpen(true)}
       >
         <People size={18} />
