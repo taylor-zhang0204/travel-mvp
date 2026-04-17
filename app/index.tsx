@@ -2,10 +2,10 @@ import { Stack } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { ScrollView, Text, YStack } from 'tamagui';
 
-import ExclusiveDeals from '@/components/ui/ExclusiveDeals';
-import Footer from '@/components/ui/Footer';
-import Header from '@/components/ui/Header';
-import SearchForm from '@/components/ui/SearchForm';
+import ExclusiveDeals from '@/components/features/ExclusiveDeals';
+import Footer from '@/components/features/Layout/Footer';
+import Header from '@/components/features/Layout/Header';
+import SearchForm from '@/components/features/SearchForm';
 
 const Index = () => {
   const { t } = useTranslation();

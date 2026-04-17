@@ -1,4 +1,5 @@
 import { Check } from '@tamagui/lucide-icons-2';
+import { router } from 'expo-router';
 import { ImageBackground, StyleSheet } from 'react-native';
 import { Button, Text, View, XStack, YStack } from 'tamagui';
 
@@ -24,6 +25,10 @@ const ExclusiveOffer = ({
   cashback = '5%',
   hotelName = 'Langham, Hong Kong',
 }: Props) => {
+  const gotoClaim = () => {
+    router.push('/claim');
+  };
+
   return (
     <YStack>
       <ImageBackground
@@ -97,6 +102,7 @@ const ExclusiveOffer = ({
             justifyContent: 'center',
             backgroundColor: '#1566D1',
           }}
+          onPress={gotoClaim}
         >
           <Text fontSize={13} fontWeight="500" color="#fff">
             Claim Kody Offer

@@ -2,9 +2,9 @@ import { useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { ScrollView, YStack } from 'tamagui';
 
-import ExclusiveOffer from '@/components/ui/ExclusiveOffer';
-import Footer from '@/components/ui/Footer';
-import SearchHeader from '@/components/ui/SearchHeader';
+import ExclusiveOffer from '@/components/features/ExclusiveOffer';
+import Footer from '@/components/features/Layout/Footer';
+import SearchHeader from '@/components/features/SearchHeader';
 import type { SearchParams } from '@/types/page';
 
 const Search = () => {
