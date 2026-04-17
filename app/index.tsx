@@ -7,7 +7,7 @@ import Footer from '@/components/ui/Footer';
 import Header from '@/components/ui/Header';
 import SearchForm from '@/components/ui/SearchForm';
 
-export default function Index() {
+const Index = () => {
   const { t } = useTranslation();
 
   return (
@@ -34,4 +34,6 @@ export default function Index() {
       </ScrollView>
     </>
   );
-}
+};
+
+export default Index;

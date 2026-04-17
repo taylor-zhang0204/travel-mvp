@@ -1,7 +1,9 @@
 import dayjs from 'dayjs';
+import { router } from 'expo-router';
 import { useState } from 'react';
 import { YStack } from 'tamagui';
 
+import { SearchParams } from '@/types/page';
 import { SCREEN_WIDTH } from '@/utils/screen';
 
 import DateRangeSection from './DateRangeSection';
@@ -9,23 +11,15 @@ import DestinationInput from './DestinationInput';
 import RoomsGuestsInput from './RoomsGuestsInput';
 import SearchButton from './SearchButton';
 
-type SearchParams = {
-  destination: string;
-  checkIn: string;
-  checkOut: string;
-  rooms: number;
-  guests: number;
-};
-
 type Props = {
   onSearch?: (params: SearchParams) => void;
 };
 
-export default function SearchForm({ onSearch }: Props) {
+const SearchForm = ({ onSearch }: Props) => {
   const [params, setParams] = useState<SearchParams>({
-    destination: '',
+    destination: 'Langham, Hong Kong',
     checkIn: dayjs().format('YYYY-MM-DD'),
-    checkOut: dayjs().add(7, 'day').format('YYYY-MM-DD'),
+    checkOut: dayjs().add(1, 'day').format('YYYY-MM-DD'),
     rooms: 1,
     guests: 1,
   });
@@ -33,7 +27,8 @@ export default function SearchForm({ onSearch }: Props) {
   const onRoomsChange = (rooms: number) =>
     setParams((p) => ({ ...p, guests: Math.max(p.guests, rooms), rooms }));
 
-  const onGuestsChange = (guests: number) => setParams((p) => ({ ...p, guests }));
+  const onGuestsChange = (guests: number) =>
+    setParams((p) => ({ ...p, guests, rooms: guests < p.rooms ? guests : p.rooms }));
 
   const onDateRangeChange = (range: { startDate: string; endDate: string }) => {
     setParams((p) => ({ ...p, checkIn: range.startDate, checkOut: range.endDate }));
@@ -41,7 +36,13 @@ export default function SearchForm({ onSearch }: Props) {
 
   const handleSearch = () => {
     onSearch?.(params);
+    router.push({
+      pathname: '/search',
+      params,
+    });
   };
+
+  const isSearchDisabled = !params.destination;
 
   return (
     <YStack
@@ -70,9 +71,9 @@ export default function SearchForm({ onSearch }: Props) {
         onGuestsChange={(guests) => onGuestsChange(guests)}
       />
 
-      <SearchButton onPress={handleSearch} />
+      <SearchButton onPress={handleSearch} disabled={isSearchDisabled} />
     </YStack>
   );
-}
+};
 
-export type { SearchParams };
+export default SearchForm;

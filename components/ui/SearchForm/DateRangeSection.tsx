@@ -11,7 +11,7 @@ type Props = {
   onDateRangeChange: (range: { startDate: string; endDate: string }) => void;
 };
 
-export default function DateRangeSection({ checkIn, checkOut, onDateRangeChange }: Props) {
+const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
   const [dialogOpen, setDialogOpen] = useState(false);
   const [range, setRange] = useState<{ startDate: string; endDate: string }>({
     startDate: checkIn,
@@ -37,6 +37,8 @@ export default function DateRangeSection({ checkIn, checkOut, onDateRangeChange 
     setDialogOpen(false);
     onDateRangeChange(range);
   };
+
+  const isDisabled = !range.startDate || !range.endDate;
 
   return (
     <>
@@ -169,11 +171,12 @@ export default function DateRangeSection({ checkIn, checkOut, onDateRangeChange 
             >
               <Button
                 style={{
-                  backgroundColor: '#1566D1',
+                  backgroundColor: isDisabled ? '#CBD5E1' : '#1566D1',
                   borderRadius: 10,
                   height: 45,
                 }}
                 flex={1}
+                disabled={isDisabled}
                 onPress={handleConfirm}
               >
                 <Text style={{ color: '#FFFFFF', fontSize: 15, fontWeight: '500' }}>Apply</Text>
@@ -184,4 +187,6 @@ export default function DateRangeSection({ checkIn, checkOut, onDateRangeChange 
       </Sheet>
     </>
   );
-}
+};
+
+export default DateRangeSection;

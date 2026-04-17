@@ -5,14 +5,14 @@ type Props = {
   disabled?: boolean;
 };
 
-export default function SearchButton({ onPress, disabled }: Props) {
+const SearchButton = ({ onPress, disabled }: Props) => {
   return (
     <Button
       onPress={onPress}
       disabled={disabled}
       style={{
         height: 44,
-        backgroundColor: '#1566D1',
+        backgroundColor: disabled ? '#CBD5E1' : '#1566D1',
         borderRadius: 9,
         width: '100%',
       }}
@@ -29,4 +29,6 @@ export default function SearchButton({ onPress, disabled }: Props) {
       </Button.Text>
     </Button>
   );
-}
+};
+
+export default SearchButton;

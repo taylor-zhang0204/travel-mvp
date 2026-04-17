@@ -54,3 +54,18 @@ If TypeScript errors appear for these props, restart Metro bundler: `npx expo st
 ## Package Manager
 
 Uses **pnpm** (not npm or yarn). All commands should use `pnpm`.
+
+## Icon Library
+
+Uses **`@tamagui/lucide-icons-2`** for icons. Import from:
+```typescript
+import { ChevronLeft, Search, Calendar, Location, ... } from '@tamagui/lucide-icons-2';
+```
+
+Available icons: ChevronLeft, Search, Calendar, Location, Plus, Minus, People, etc.
+
+## UI Components
+
+**优先使用 Tamagui 组件**（如 XStack, YStack, Button, Text, Sheet 等）。
+
+组件文档参考：`.claude/memory/tamagui-docs.md`

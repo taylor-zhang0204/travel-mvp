@@ -7,7 +7,7 @@ import '@/i18n';
 
 import { tamaguiConfig } from '../tamagui.config';
 
-export default function RootLayout() {
+const RootLayout = () => {
   const colorScheme = useColorScheme();
 
   return (
@@ -22,4 +22,6 @@ export default function RootLayout() {
       </SafeAreaView>
     </TamaguiProvider>
   );
-}
+};
+
+export default RootLayout;

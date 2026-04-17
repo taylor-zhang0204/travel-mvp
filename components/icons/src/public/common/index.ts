@@ -1,3 +1,4 @@
+export { default as ArrowUpRightFromSquare } from './ArrowUpRightFromSquare';
 export { default as Calendar } from './Calendar';
 export { default as Chart } from './Chart';
 export { default as Globe } from './Globe';

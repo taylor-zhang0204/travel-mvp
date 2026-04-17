@@ -20,11 +20,7 @@ const PrimaryColor = '#1566D1';
 const SecondaryColor = '#EBF4FF';
 const CellSize = 50;
 
-export default function DateRangePicker({
-  initialRange,
-  onRangeChange,
-  color = PrimaryColor,
-}: Props) {
+const DateRangePicker = ({ initialRange, onRangeChange, color = PrimaryColor }: Props) => {
   const [range, setRange] = useState<DateRange>(initialRange ?? { startDate: '', endDate: '' });
 
   const getMarkedDates = useCallback(() => {
@@ -168,4 +164,6 @@ export default function DateRangePicker({
       onDayPress={handleDayPress}
     />
   );
-}
+};
+
+export default DateRangePicker;

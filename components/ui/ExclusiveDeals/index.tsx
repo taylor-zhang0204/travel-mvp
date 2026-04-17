@@ -18,28 +18,31 @@ type Props = {
   deals?: Deal[];
 };
 
-export default function ExclusiveDeals({ deals = [] }: Props) {
+const ExclusiveDeals = ({ deals = [] }: Props) => {
   const defaultDeals: Deal[] =
     deals.length > 0
       ? deals
       : [
           {
             id: '1',
-            name: 'Cordis Hotel',
+            name: 'Langham',
             deal: '10% cashback deal',
-            imageUrl: 'https://picsum.photos/400/100',
+            imageUrl:
+              'https://pix10.agoda.net/hotelImages/551/551856/551856_16111110450048635209.jpg',
           },
           {
             id: '2',
-            name: 'Royal Garden',
+            name: 'Langham',
             deal: '15% cashback deal',
-            imageUrl: 'https://picsum.photos/400/101',
+            imageUrl:
+              'https://img1.baidu.com/it/u=3415293545,3582943321&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500',
           },
           {
             id: '3',
-            name: 'Harbor View',
+            name: 'Langham',
             deal: '20% cashback deal',
-            imageUrl: 'https://picsum.photos/400/102',
+            imageUrl:
+              'https://img2.baidu.com/it/u=536344076,370510174&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=648',
           },
         ];
 
@@ -59,6 +62,7 @@ export default function ExclusiveDeals({ deals = [] }: Props) {
             <ImageBackground
               source={{ uri: item.imageUrl }}
               style={styles.cardBackground}
+              resizeMode="cover"
               imageStyle={{ borderRadius: CARD_BORDER_RADIUS }}
             >
               {/* Semi-transparent Overlay */}
@@ -80,7 +84,7 @@ export default function ExclusiveDeals({ deals = [] }: Props) {
       </YStack>
     </YStack>
   );
-}
+};
 
 const styles = StyleSheet.create({
   titleContainer: {
@@ -119,3 +123,5 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 });
+
+export default ExclusiveDeals;

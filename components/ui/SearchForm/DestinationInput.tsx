@@ -9,11 +9,7 @@ type Props = {
   placeholder?: string;
 };
 
-export default function DestinationInput({
-  value,
-  onChangeText,
-  placeholder = 'Cordis, Hong Kong',
-}: Props) {
+const DestinationInput = ({ value, onChangeText, placeholder = 'Langham, Hong Kong' }: Props) => {
   const [focused, setFocused] = useState(false);
 
   return (
@@ -25,7 +21,6 @@ export default function DestinationInput({
         height={45}
         bg="#F5F7FA"
         px={16}
-        gap={8}
         borderWidth={1}
         borderColor={focused ? '#1566D1' : 'rgba(255,255,255,0.1)'}
         style={{ borderRadius: 12, alignItems: 'center' }}
@@ -42,10 +37,11 @@ export default function DestinationInput({
             backgroundColor: 'transparent',
           }}
           borderWidth={0}
-          // padding={0}
           fontSize={15}
         />
       </XStack>
     </YStack>
   );
-}
+};
+
+export default DestinationInput;

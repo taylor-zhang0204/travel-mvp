@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Pressable } from 'react-native';
-import Svg, { G, Path, Defs, ClipPath } from 'react-native-svg';
+import Svg, { ClipPath, Defs, G, Path } from 'react-native-svg';
 
 import type { BaseProps } from '@/components/icons/types';
 
@@ -9,7 +9,7 @@ const Location = ({ color, size = 40, onPress }: BaseProps) => {
     <Pressable onPress={onPress}>
       <Svg fill="none" viewBox="0 0 18 18" width={size} height={size}>
         <G
-          stroke="#9CA3AF"
+          stroke={color}
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={1.5}

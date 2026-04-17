@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Sheet, Text, XStack, YStack } from 'tamagui';
 
-import { Minus, People, Plus } from '@/components/icons/src/public/common';
+import { Minus, MinusDisabled, People, Plus } from '@/components/icons/src/public/common';
 
 type Props = {
   rooms: number;
@@ -10,7 +10,7 @@ type Props = {
   onGuestsChange: (guests: number) => void;
 };
 
-export default function RoomsGuestsInput({ rooms, guests, onRoomsChange, onGuestsChange }: Props) {
+const RoomsGuestsInput = ({ rooms, guests, onRoomsChange, onGuestsChange }: Props) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -52,7 +52,11 @@ export default function RoomsGuestsInput({ rooms, guests, onRoomsChange, onGuest
               Rooms
             </Text>
             <XStack style={{ alignItems: 'center', gap: 16 }}>
-              <Minus size={30} onPress={() => onRoomsChange(Math.max(1, rooms - 1))} />
+              {rooms <= 1 ? (
+                <MinusDisabled size={30} />
+              ) : (
+                <Minus size={30} onPress={() => onRoomsChange(Math.max(1, rooms - 1))} />
+              )}
               <Text
                 fontSize={17}
                 fontWeight="500"
@@ -70,7 +74,11 @@ export default function RoomsGuestsInput({ rooms, guests, onRoomsChange, onGuest
               Guests
             </Text>
             <XStack style={{ alignItems: 'center', gap: 16 }}>
-              <Minus size={30} onPress={() => onGuestsChange(Math.max(1, guests - 1))} />
+              {guests <= 1 ? (
+                <MinusDisabled size={30} />
+              ) : (
+                <Minus size={30} onPress={() => onGuestsChange(Math.max(1, guests - 1))} />
+              )}
               <Text
                 fontSize={17}
                 fontWeight="500"
@@ -86,4 +94,6 @@ export default function RoomsGuestsInput({ rooms, guests, onRoomsChange, onGuest
       </Sheet>
     </YStack>
   );
-}
+};
+
+export default RoomsGuestsInput;

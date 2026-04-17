@@ -22,7 +22,7 @@ const defaultSections = [
   { title: 'Partners', value: 'partners' },
 ];
 
-export default function Footer(_props: FooterProps) {
+const Footer = (_props: FooterProps) => {
   const [openItems, setOpenItems] = useState<string[]>([]);
 
   return (
@@ -62,4 +62,6 @@ export default function Footer(_props: FooterProps) {
       </XStack>
     </YStack>
   );
-}
+};
+
+export default Footer;

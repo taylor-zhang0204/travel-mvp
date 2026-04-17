@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { Button, Text, XStack } from 'tamagui';
 
-export default function LanguageSwitcher() {
+const LanguageSwitcher = () => {
   const { i18n } = useTranslation();
 
   return (
@@ -24,4 +24,6 @@ export default function LanguageSwitcher() {
       </Button>
     </XStack>
   );
-}
+};
+
+export default LanguageSwitcher;
