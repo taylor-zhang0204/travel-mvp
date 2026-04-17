@@ -21,7 +21,8 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.kody.travel"
     },
     "web": {
       "output": "static",
@@ -52,7 +53,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "b815b583-7bf7-4b45-a5c1-cf8f9a19f265"
+        "projectId": "ec1b1c30-d92c-4823-b158-45b0fcb7e29f"
       }
     }
   }
