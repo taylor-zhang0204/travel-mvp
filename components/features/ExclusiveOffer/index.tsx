@@ -5,6 +5,7 @@ import { Button, Text, View, XStack, YStack } from 'tamagui';
 
 import { ArrowUpRightFromSquare, Location } from '@/components/icons/src/public/common';
 import Rate from '@/components/ui/Rate';
+import { openExternalLink } from '@/utils';
 
 type Props = {
   title?: string;
@@ -13,11 +14,11 @@ type Props = {
 };
 
 const PROVIDERS = [
-  { name: 'Booking.com', price: 'HK$5,812' },
-  { name: 'Trip.com', price: 'HK$5,876' },
-  { name: 'Agoda', price: 'HK$5,834' },
-  { name: 'Expedia', price: 'HK$5,865' },
-  { name: 'Hotels', price: 'HK$5,845' },
+  { name: 'Booking.com', price: 'HK$5,812', link: 'https://www.booking.com/' },
+  { name: 'Trip.com', price: 'HK$5,876', link: 'https://www.trip.com/' },
+  { name: 'Agoda', price: 'HK$5,834', link: 'https://www.agoda.com/' },
+  { name: 'Expedia', price: 'HK$5,865', link: 'https://www.expedia.com/' },
+  { name: 'Hotels', price: 'HK$5,845', link: 'https://www.hotels.com/' },
 ];
 
 const ExclusiveOffer = ({
@@ -131,7 +132,11 @@ const ExclusiveOffer = ({
                 <Text fontSize={15} fontWeight="600" color="#101828">
                   {provider.price}
                 </Text>
-                <ArrowUpRightFromSquare size={14} color="#CDD7E4" />
+                <ArrowUpRightFromSquare
+                  size={14}
+                  color="#CDD7E4"
+                  onPress={() => openExternalLink(provider.link)}
+                />
               </XStack>
             </XStack>
           </YStack>

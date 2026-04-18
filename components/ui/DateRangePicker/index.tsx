@@ -76,6 +76,9 @@ const DateRangePicker = ({ initialRange, onRangeChange, color = PrimaryColor }: 
       setRange(newRange);
       onRangeChange?.(newRange);
     } else {
+      if (day.dateString === startDate) {
+        return;
+      }
       if (day.dateString < startDate) {
         const newRange = { startDate: day.dateString, endDate: '' };
         setRange(newRange);

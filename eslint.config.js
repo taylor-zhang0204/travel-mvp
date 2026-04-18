@@ -1,35 +1,47 @@
 // https://docs.expo.dev/guides/using-eslint/
-const { defineConfig } = require("eslint/config");
-const expoConfig = require("eslint-config-expo/flat");
+const { defineConfig } = require('eslint/config');
+const expoConfig = require('eslint-config-expo/flat');
 
 module.exports = defineConfig([
   expoConfig,
   {
-    ignores: ["dist/*"],
+    ignores: [
+      'dist/*',
+      'node_modules/*',
+      '.tamagui/*',
+      'android/*',
+      'ios/*',
+      '.expo/*',
+      '*.config.js',
+      '*.config.ts',
+      '!eslint.config.js',
+      '*.d.ts',
+      'expo-env.d.ts',
+      '*.log',
+      'npm-debug.log*',
+      'pnpm-debug.log*',
+      'coverage/*',
+      '*.tmp',
+      '*.temp',
+      '.cache/*',
+    ],
   },
   {
     rules: {
-      "import/order": [
-        "error",
+      'import/order': [
+        'error',
         {
-          groups: [
-            "builtin",
-            "external",
-            "internal",
-            "parent",
-            "sibling",
-            "index",
-          ],
+          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
           pathGroups: [
             {
-              pattern: "@/**",
-              group: "internal",
-              position: "before",
+              pattern: '@/**',
+              group: 'internal',
+              position: 'before',
             },
           ],
-          "newlines-between": "always",
+          'newlines-between': 'always',
           alphabetize: {
-            order: "asc",
+            order: 'asc',
             caseInsensitive: true,
           },
         },

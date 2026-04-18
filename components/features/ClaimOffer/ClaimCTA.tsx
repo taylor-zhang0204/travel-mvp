@@ -1,9 +1,16 @@
 import { Button, Text } from 'tamagui';
 
-const ClaimCTA = () => {
+type Props = {
+  disabled?: boolean;
+  onPress?: () => void;
+};
+
+const ClaimCTA = ({ disabled = false, onPress }: Props) => {
   return (
     <Button
-      bg="#1566d1"
+      disabled={disabled}
+      onPress={onPress}
+      bg={disabled ? '#9ca3af' : '#1566d1'}
       px={124}
       py={11}
       style={{ borderRadius: 9, justifyContent: 'center', alignItems: 'center' }}

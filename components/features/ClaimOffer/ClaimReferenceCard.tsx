@@ -1,6 +1,8 @@
-import { Copy, Download } from '@tamagui/lucide-icons-2';
 import QRCode from 'react-native-qrcode-svg';
 import { Text, XStack, YStack } from 'tamagui';
+
+import CopyButton from '@/components/ui/CopyButton';
+import DownloadButton from '@/components/ui/DownloadButton';
 
 const ClaimReferenceCard = () => {
   return (
@@ -20,21 +22,12 @@ const ClaimReferenceCard = () => {
         <Text fontSize={18} fontWeight="700" color="#101828">
           KODY1234
         </Text>
-        <XStack gap={7} style={{ alignItems: 'center' }}>
-          <Text fontSize={13} fontWeight="500" color="#1566d1">
-            Copy
-          </Text>
-          <Copy size={15} color="#1566d1" />
-        </XStack>
+        <CopyButton value="KODY1234" />
       </XStack>
       <XStack gap={7} style={{ alignItems: 'flex-end' }}>
-        <QRCode value="KODY1234" size={80} />
-        <XStack gap={7} style={{ alignItems: 'center' }}>
-          <Text fontSize={13} fontWeight="500" color="#1566d1">
-            Download
-          </Text>
-          <Download size={15} color="#1566d1" />
-        </XStack>
+        <DownloadButton>
+          <QRCode value="KODY1234" size={80} />
+        </DownloadButton>
       </XStack>
       <Text fontSize={10} color="#747d8b">
         *This is only applicable to the standard rate.

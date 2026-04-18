@@ -1,6 +1,8 @@
+import { ErrorToast, SuccessToast } from '@/components/ui/Toast';
 import { Stack } from 'expo-router';
 import { useColorScheme } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import Toast from 'react-native-toast-message';
 import { TamaguiProvider } from 'tamagui';
 
 import '@/i18n';
@@ -20,6 +22,14 @@ const RootLayout = () => {
           }}
         />
       </SafeAreaView>
+      <Toast
+        config={{
+          success: ({ text1 }) => <SuccessToast text1={text1 || ''} />,
+          error: ({ text1 }) => <ErrorToast text1={text1 || ''} />,
+        }}
+        visibilityTime={1000}
+        position="bottom"
+      />
     </TamaguiProvider>
   );
 };
