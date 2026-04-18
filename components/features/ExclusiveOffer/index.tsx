@@ -1,17 +1,17 @@
 import { Check } from '@tamagui/lucide-icons-2';
+import dayjs from 'dayjs';
 import { router } from 'expo-router';
 import { ImageBackground, StyleSheet } from 'react-native';
 import { Button, Text, View, XStack, YStack } from 'tamagui';
 
 import { ArrowUpRightFromSquare, Location } from '@/components/icons/src/public/common';
 import Rate from '@/components/ui/Rate';
+import type { SearchParams } from '@/types/page';
 import { openExternalLink } from '@/utils';
 
 type Props = {
-  title?: string;
   cashback?: string;
-  hotelName?: string;
-};
+} & Partial<SearchParams>;
 
 const PROVIDERS = [
   { name: 'Booking.com', price: 'HK$5,812', link: 'https://www.booking.com/' },
@@ -22,10 +22,12 @@ const PROVIDERS = [
 ];
 
 const ExclusiveOffer = ({
-  title = 'Exclusive Partner Offer',
   cashback = '5%',
-  hotelName = 'Langham, Hong Kong',
+  destination = '',
+  checkIn = '',
+  checkOut = '',
 }: Props) => {
+  const nights = dayjs(checkOut).diff(dayjs(checkIn), 'day');
   const gotoClaim = () => {
     router.push('/claim');
   };
@@ -45,7 +47,7 @@ const ExclusiveOffer = ({
         {/* Badge */}
         <XStack style={styles.badge} mt={15} ml={15} px={15} height={19}>
           <Text fontSize={11} fontWeight="500" color="#1566d1">
-            {title}{' '}
+            Exclusive Partner Offer
             <Text fontSize={11} fontWeight="700" color="#1566d1">
               - {cashback} Cashback
             </Text>
@@ -54,7 +56,7 @@ const ExclusiveOffer = ({
 
         <YStack gap={6} mt={44} pl={14} ml={15}>
           <Text fontSize={19} fontWeight="600" style={{ color: '#FFF' }} letterSpacing={-0.2}>
-            {hotelName}
+            {destination || 'Langham, Hong Kong'}
           </Text>
           <XStack gap={4} style={{ alignItems: 'center' }}>
             <Rate count={5} />
@@ -81,7 +83,7 @@ const ExclusiveOffer = ({
         }}
       >
         <Text fontSize={11} color="#505050">
-          Direct Booking (4 nights, Standard Room, 2 Double Beds)
+          Direct Booking ({nights} nights, Standard Room, 2 Double Beds)
         </Text>
         <XStack gap={4} mt={8}>
           <Text fontSize={20} fontWeight="700" color="#1566d1">

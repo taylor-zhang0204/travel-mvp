@@ -1,4 +1,5 @@
 import { AxiosError, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
+import * as Network from 'expo-network';
 
 import { API_ERROR_CODE, API_ERROR_MESSAGE } from '@/constants';
 
@@ -30,7 +31,6 @@ async function checkNetworkStatus(): Promise<{
   message: string;
 }> {
   try {
-    const Network = await import('expo-network');
     const state = await Network.getNetworkStateAsync();
     if (!state.isConnected) {
       return {
@@ -85,7 +85,9 @@ export async function onRequestError(error: AxiosError): Promise<never> {
 // 响应成功拦截器 - 数据转换
 export function onResponse(response: AxiosResponse): AxiosResponse {
   // 转换字段为驼峰
+  console.log('response.data', response.data);
   response.data = transformKeysToCamel(response.data);
+  console.log('transformKeysToCamel', response.data);
   return response;
 }
 
