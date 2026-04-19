@@ -35,9 +35,15 @@ const DestinationInput = ({ value, onChangeText, placeholder = 'Langham, Hong Ko
           onBlur={() => setFocused(false)}
           style={{
             backgroundColor: 'transparent',
+            outlineWidth: 0,
+            outlineColor: 'transparent',
+          }}
+          focusStyle={{
+            outlineWidth: 0,
+            outlineColor: 'transparent',
           }}
           borderWidth={0}
-          fontSize={15}
+          fontSize={16}
         />
       </XStack>
     </YStack>

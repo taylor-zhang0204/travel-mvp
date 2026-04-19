@@ -1,6 +1,4 @@
-import { Stack } from 'expo-router';
-import { useTranslation } from 'react-i18next';
-import { ScrollView, Text, YStack, useThemeName } from 'tamagui';
+import { ScrollView, Text, YStack } from 'tamagui';
 
 import ExclusiveDeals from '@/components/features/ExclusiveDeals';
 import Footer from '@/components/features/Layout/Footer';
@@ -8,22 +6,11 @@ import Header from '@/components/features/Layout/Header';
 import SearchForm from '@/components/features/SearchForm';
 
 const Index = () => {
-  const { t } = useTranslation();
-
-  const name = useThemeName();
-  console.log('theme: ', name);
-
   return (
-    <>
-      <Stack.Screen
-        options={{
-          headerTransparent: true,
-          headerShown: false,
-        }}
-      />
+    <YStack flex={1} bg="#F7F9FD">
       <Header />
       <ScrollView flex={1}>
-        <YStack flex={1} pt={30} style={{ justifyContent: 'center', alignItems: 'center' }}>
+        <YStack pt={30} style={{ alignItems: 'center' }}>
           <Text color="#101828" fontSize={28} fontWeight="700" marginBlockEnd={12}>
             Find Best Hotel Deals
           </Text>
@@ -35,7 +22,7 @@ const Index = () => {
           <Footer />
         </YStack>
       </ScrollView>
-    </>
+    </YStack>
   );
 };
 

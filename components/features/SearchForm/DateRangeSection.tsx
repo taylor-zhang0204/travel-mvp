@@ -49,15 +49,11 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
             Check-in
           </Text>
           <XStack
-            style={{
-              height: 45,
-              backgroundColor: '#F5F7FA',
-              borderRadius: 12,
-              paddingHorizontal: 14,
-              gap: 8,
-              alignItems: 'center',
-            }}
+            height={45}
+            px={14}
+            gap={8}
             onPress={handleOpenDialog}
+            style={{ backgroundColor: '#F5F7FA', borderRadius: 12, alignItems: 'center' }}
           >
             <Calendar size={16} />
             <Text fontSize={14} style={{ color: '#56708B' }}>
@@ -72,15 +68,11 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
             Check-out
           </Text>
           <XStack
-            style={{
-              height: 45,
-              backgroundColor: '#F5F7FA',
-              borderRadius: 12,
-              paddingHorizontal: 14,
-              gap: 8,
-              alignItems: 'center',
-            }}
+            height={45}
+            px={14}
+            gap={8}
             onPress={handleOpenDialog}
+            style={{ backgroundColor: '#F5F7FA', borderRadius: 12, alignItems: 'center' }}
           >
             <Calendar size={16} />
             <Text fontSize={14} style={{ color: '#56708B' }}>
@@ -96,7 +88,7 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
         open={dialogOpen}
         onOpenChange={setDialogOpen}
         snapPointsMode="constant"
-        snapPoints={[580]}
+        snapPoints={[590]}
       >
         <Sheet.Overlay style={{ backgroundColor: 'rgba(0,0,0,0.5)' }} />
         <Sheet.Frame
@@ -106,20 +98,12 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
         >
           <YStack>
             {/* Title */}
-            <YStack
-              gap={12}
-              style={{
-                paddingTop: 24,
-                paddingBottom: 12,
-                paddingHorizontal: 22,
-                backgroundColor: '#F5F7FA',
-              }}
-            >
+            <YStack gap={12} pt={24} pb={12} px={22} style={{ backgroundColor: '#F5F7FA' }}>
               <Text fontSize={20} fontWeight="500" style={{ color: '#003064' }}>
                 Select dates
               </Text>
               {/* Date Info Row */}
-              <XStack gap={30} style={{ paddingHorizontal: 8 }}>
+              <XStack gap={30} px={8}>
                 {/* Check-in */}
                 <YStack gap={1}>
                   <Text fontSize={13} fontWeight="500" style={{ color: '#56708B' }}>
@@ -153,7 +137,7 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
             </YStack>
 
             {/* Date Picker */}
-            <XStack style={{ height: 400, paddingHorizontal: 22, paddingVertical: 16 }}>
+            <XStack height={400} px={22} py={16}>
               <DateRangePicker
                 initialRange={{ startDate: range.startDate, endDate: range.endDate }}
                 onRangeChange={setRange}
@@ -162,12 +146,9 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
 
             <XStack
               gap={12}
-              style={{
-                justifyContent: 'flex-end',
-                paddingHorizontal: 30,
-                paddingVertical: 16,
-                backgroundColor: '#F5F7FA',
-              }}
+              px={30}
+              py={16}
+              style={{ justifyContent: 'flex-end', backgroundColor: '#F5F7FA' }}
             >
               <Button
                 style={{

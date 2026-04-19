@@ -25,29 +25,33 @@ const Footer = (_props: FooterProps) => {
 
   return (
     <YStack width="100%" bg="$white" px={16} pb="$6">
-      <Accordion type="multiple" value={openItems} onValueChange={setOpenItems} defaultValue={[]}>
+      <Accordion
+        type="multiple"
+        value={openItems}
+        onValueChange={setOpenItems}
+        style={{ border: 0 }}
+      >
         {defaultSections.map((section) => (
-          <Accordion.Item key={section.value} value={section.value}>
+          <Accordion.Item key={section.value} value={section.value} style={{ border: 0 }}>
             <Accordion.Trigger
               flexDirection="row"
               justify="space-between"
               bg="$white"
               pressStyle={{ background: '#FFFFFF' }}
-              borderBottomWidth={1}
-              borderColor="$borderColor"
+              style={{ border: 0, borderBottomWidth: 1, borderColor: '#CDD7E4' }}
             >
               {({ open }: { open: boolean }) => (
                 <>
-                  <Paragraph>{section.title}</Paragraph>
+                  <Paragraph color="#101828">{section.title}</Paragraph>
                   <Square transparent transition="quick" rotate={open ? '180deg' : '0deg'}>
                     <ChevronDown size="$1" color="$color" />
                   </Square>
                 </>
               )}
             </Accordion.Trigger>
-            <Accordion.Content bg="$white" borderBottomWidth={1} borderColor="$borderColor">
-              <YStack py="$4" height={80}>
-                <Text>{section.title}</Text>
+            <Accordion.Content bg="$white" borderBottomWidth={1} borderColor="#CDD7E4">
+              <YStack py="$1" height={80}>
+                <Text color="#4A5565">{section.title}</Text>
               </YStack>
             </Accordion.Content>
           </Accordion.Item>

@@ -16,6 +16,14 @@ const Header = ({ showBack = true, title, right }: HeaderProps) => {
   const router = useRouter();
   const { i18n } = useTranslation();
 
+  const goBack = () => {
+    try {
+      router.back();
+    } catch (error) {
+      router.replace('/');
+    }
+  };
+
   return (
     <XStack
       height={60}
@@ -28,7 +36,7 @@ const Header = ({ showBack = true, title, right }: HeaderProps) => {
       }}
     >
       <YStack position="absolute" style={{ left: 8 }}>
-        {router.canGoBack() && showBack && <ChevronLeft onPress={() => router.back()} />}
+        {router.canGoBack() && showBack && <ChevronLeft onPress={goBack} />}
       </YStack>
       <YStack flex={1} style={{ alignItems: 'center' }}>
         {title || <Logo size={60} />}

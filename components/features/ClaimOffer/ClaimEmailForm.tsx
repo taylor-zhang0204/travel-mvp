@@ -28,8 +28,8 @@ const ClaimEmailForm = ({ name, email, onNameChange, onEmailChange, showEmailErr
           placeholderTextColor="$color7"
           px={11}
           py={7}
-          style={{ borderRadius: 9, height: 35 }}
-          fontSize={13}
+          style={{ borderRadius: 9, height: 35, outline: 'none' }}
+          fontSize={16}
         />
         <Text fontSize={13} fontWeight="500" color="#364153">
           Email*
@@ -44,8 +44,8 @@ const ClaimEmailForm = ({ name, email, onNameChange, onEmailChange, showEmailErr
           placeholderTextColor="$color7"
           px={11}
           py={7}
-          style={{ borderRadius: 9, height: 35 }}
-          fontSize={13}
+          style={{ borderRadius: 9, height: 35, outline: 'none' }}
+          fontSize={16}
           keyboardType="email-address"
           autoCapitalize="none"
         />
