@@ -24,7 +24,7 @@ const Claim = () => {
     <YStack flex={1} bg="#F7F9FD">
       <Header
         title={
-          <Text fontSize={20} fontWeight="500">
+          <Text fontSize={20} fontWeight="500" color="#101828">
             Claim Kody Offer
           </Text>
         }

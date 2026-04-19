@@ -5,11 +5,11 @@ import { openExternalLink } from '@/utils';
 
 const ExternalLink = ({ url }: { url: string }) => {
   return (
-    <XStack style={{ alignItems: 'center' }} gap={7}>
+    <XStack style={{ alignItems: 'center' }} gap={7} onPress={() => openExternalLink(url)}>
       <Text fontSize={15} fontWeight="500" color="#1566d1">
         Go to hotel booking site
       </Text>
-      <ArrowUpRightFromSquare size={15} color="#1566d1" onPress={() => openExternalLink(url)} />
+      <ArrowUpRightFromSquare size={15} color="#1566d1" />
     </XStack>
   );
 };

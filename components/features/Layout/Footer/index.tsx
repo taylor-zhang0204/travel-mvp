@@ -11,8 +11,6 @@ interface FooterProps {
 }
 
 // Figma design colors
-const SECTION_TITLE_COLOR = '#101828';
-const DIVIDER_COLOR = '#CDD7E4';
 const FOOTER_TEXT_COLOR = '#56708B';
 
 const defaultSections = [
@@ -28,7 +26,7 @@ const Footer = (_props: FooterProps) => {
   return (
     <YStack width="100%" bg="$white" px={16} pb="$6">
       <Accordion type="multiple" value={openItems} onValueChange={setOpenItems} defaultValue={[]}>
-        {defaultSections.map((section, index) => (
+        {defaultSections.map((section) => (
           <Accordion.Item key={section.value} value={section.value}>
             <Accordion.Trigger
               flexDirection="row"

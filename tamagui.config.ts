@@ -12,6 +12,8 @@ export const tamaguiConfig = createTamagui({
     // 参考 tamagui-config.json中的light dark配置
     // },
   },
+  // 禁用系统主题跟随，强制使用 defaultTheme
+  useSystemColorScheme: false,
 });
 
 export default tamaguiConfig;

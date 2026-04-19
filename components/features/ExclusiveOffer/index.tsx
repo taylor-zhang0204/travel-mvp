@@ -29,7 +29,9 @@ const ExclusiveOffer = ({
 }: Props) => {
   const nights = dayjs(checkOut).diff(dayjs(checkIn), 'day');
   const gotoClaim = () => {
-    router.push('/claim');
+    router.push({
+      pathname: '/claim',
+    });
   };
 
   return (
@@ -130,15 +132,15 @@ const ExclusiveOffer = ({
               <Text fontSize={13} fontWeight="500" color="#101828">
                 {provider.name}
               </Text>
-              <XStack gap={8} style={{ alignItems: 'center' }}>
+              <XStack
+                gap={8}
+                style={{ alignItems: 'center' }}
+                onPress={() => openExternalLink(provider.link)}
+              >
                 <Text fontSize={15} fontWeight="600" color="#101828">
                   {provider.price}
                 </Text>
-                <ArrowUpRightFromSquare
-                  size={14}
-                  color="#CDD7E4"
-                  onPress={() => openExternalLink(provider.link)}
-                />
+                <ArrowUpRightFromSquare size={14} color="#CDD7E4" />
               </XStack>
             </XStack>
           </YStack>
@@ -153,7 +155,7 @@ const styles = StyleSheet.create({
     width: '100%',
     height: 152,
     overflow: 'hidden',
-    backgroundColor: 'red',
+    backgroundColor: 'grey',
   },
   gradientOverlay: {
     ...StyleSheet.absoluteFillObject,

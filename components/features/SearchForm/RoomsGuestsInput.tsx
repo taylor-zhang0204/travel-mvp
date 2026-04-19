@@ -34,7 +34,6 @@ const RoomsGuestsInput = ({ rooms, guests, onRoomsChange, onGuestsChange }: Prop
 
       <Sheet modal open={open} onOpenChange={setOpen} snapPoints={[25]} dismissOnSnapToBottom>
         <Sheet.Overlay style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }} />
-        <Sheet.Handle />
         <Sheet.Frame
           style={{
             backgroundColor: '#fff',
