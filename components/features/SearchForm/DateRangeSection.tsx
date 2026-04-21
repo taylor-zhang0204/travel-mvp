@@ -4,6 +4,7 @@ import { Button, Sheet, Text, XStack, YStack } from 'tamagui';
 
 import { Calendar } from '@/components/icons/src/public/common';
 import DateRangePicker from '@/components/ui/DateRangePicker';
+import { palette } from '@/styles/palette';
 
 type Props = {
   checkIn: string;
@@ -45,7 +46,7 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
       <XStack gap={8}>
         {/* Check-in */}
         <YStack flex={1} gap={6}>
-          <Text fontSize={13} fontWeight="500" color="#003064" letterSpacing={-0.2}>
+          <Text fontSize={13} fontWeight="500" color="$color11" letterSpacing={-0.2}>
             Check-in
           </Text>
           <XStack
@@ -53,12 +54,12 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
             px={14}
             gap={8}
             onPress={handleOpenDialog}
-            bg="#F5F7FA"
+            bg="$backgroundPress"
             rounded={12}
             items="center"
           >
-            <Calendar size={16} />
-            <Text fontSize={14} color="#56708B">
+            <Calendar size={16} color="$color8" />
+            <Text fontSize={14} color="$color10">
               {checkIn}
             </Text>
           </XStack>
@@ -66,7 +67,7 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
 
         {/* Check-out */}
         <YStack flex={1} gap={6}>
-          <Text fontSize={13} fontWeight="500" color="#003064" letterSpacing={-0.2}>
+          <Text fontSize={13} fontWeight="500" color="$color11" letterSpacing={-0.2}>
             Check-out
           </Text>
           <XStack
@@ -74,12 +75,12 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
             px={14}
             gap={8}
             onPress={handleOpenDialog}
-            bg="#F5F7FA"
+            bg="$backgroundPress"
             rounded={12}
             items="center"
           >
-            <Calendar size={16} />
-            <Text fontSize={14} color="#56708B">
+            <Calendar size={16} color="$color8" />
+            <Text fontSize={14} color="$color10">
               {checkOut}
             </Text>
           </XStack>
@@ -95,41 +96,41 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
         snapPoints={[590]}
       >
         <Sheet.Overlay bg="rgba(0,0,0,0.5)" />
-        <Sheet.Frame bg="$white">
+        <Sheet.Frame bg="$color1">
           <YStack>
             {/* Title */}
-            <YStack gap={12} pt={24} pb={12} px={22} bg="#F5F7FA">
-              <Text fontSize={20} fontWeight="500" color="#003064">
+            <YStack gap={12} pt={24} pb={12} px={22} bg="$backgroundPress">
+              <Text fontSize={20} fontWeight="500" color="$color11">
                 Select dates
               </Text>
               {/* Date Info Row */}
               <XStack gap={30} px={8}>
                 {/* Check-in */}
                 <YStack gap={1}>
-                  <Text fontSize={13} fontWeight="500" color="#56708B">
+                  <Text fontSize={13} fontWeight="500" color="$color10">
                     Check-in
                   </Text>
-                  <Text fontSize={14} fontWeight="600" color="#003064">
+                  <Text fontSize={14} fontWeight="600" color="$color11">
                     {range.startDate}
                   </Text>
                 </YStack>
 
                 {/* Check-out */}
                 <YStack gap={1}>
-                  <Text fontSize={13} fontWeight="500" color="#56708B">
+                  <Text fontSize={13} fontWeight="500" color="$color10">
                     Check-out
                   </Text>
-                  <Text fontSize={14} fontWeight="600" color="#003064">
+                  <Text fontSize={14} fontWeight="600" color="$color11">
                     {range.endDate}
                   </Text>
                 </YStack>
 
                 {/* Total stay */}
                 <YStack gap={1}>
-                  <Text fontSize={13} fontWeight="500" color="#56708B">
+                  <Text fontSize={13} fontWeight="500" color="$color10">
                     Total stay
                   </Text>
-                  <Text fontSize={14} fontWeight="600" color="#003064">
+                  <Text fontSize={14} fontWeight="600" color="$color11">
                     {night ? `${night} Nights` : ''}
                   </Text>
                 </YStack>
@@ -141,20 +142,28 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
               <DateRangePicker
                 initialRange={{ startDate: range.startDate, endDate: range.endDate }}
                 onRangeChange={setRange}
+                color={palette.brand}
+                rangeColor={palette.brandSoft}
               />
             </XStack>
 
-            <XStack gap={12} px={30} py={16} justify="flex-end" bg="#F5F7FA">
+            <XStack gap={12} px={30} py={16} justify="flex-end" bg="$backgroundPress">
               <Button
-                bg={isDisabled ? '#CBD5E1' : '#1566D1'}
+                bg={isDisabled ? '$color5' : '$blue9'}
                 rounded={10}
                 height={45}
                 flex={1}
                 disabled={isDisabled}
                 onPress={handleConfirm}
-                pressStyle={{ borderWidth: 0 }}
+                hoverStyle={{
+                  bg: isDisabled ? '$color5' : '$blue10',
+                }}
+                pressStyle={{
+                  borderWidth: 0,
+                  bg: isDisabled ? '$color5' : '$blue11',
+                }}
               >
-                <Text color="#fff" fontSize={15} fontWeight="500">
+                <Text color="$color1" fontSize={15} fontWeight="500">
                   Apply
                 </Text>
               </Button>

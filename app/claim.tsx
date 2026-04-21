@@ -21,10 +21,10 @@ const Claim = () => {
   const isDisabled = !name.trim() || !isValidEmail(email);
 
   return (
-    <YStack flex={1} bg="#F7F9FD">
+    <YStack flex={1} bg="$background">
       <Header
         title={
-          <Text fontSize={20} fontWeight="500" color="#101828">
+          <Text fontSize={20} fontWeight="500" color="$color12">
             Claim Kody Offer
           </Text>
         }
@@ -33,7 +33,7 @@ const Claim = () => {
       <ScrollView flex={1} px={22} py={22}>
         <YStack gap={22} pb={22}>
           {/* Subtitle */}
-          <Text fontSize={15} color="#4a5565">
+          <Text fontSize={15} color="$color10">
             Follow these simple steps to book your hotel with exclusive cashback benefits
           </Text>
 

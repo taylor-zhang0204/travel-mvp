@@ -5,6 +5,8 @@ import { CalendarList, DateData } from 'react-native-calendars';
 import { MarkedDates } from 'react-native-calendars/src/types';
 import { Text, XStack } from 'tamagui';
 
+import { palette } from '@/styles/palette';
+
 type DateRange = {
   startDate: string;
   endDate: string;
@@ -14,13 +16,17 @@ type Props = {
   initialRange?: DateRange;
   onRangeChange?: (range: DateRange) => void;
   color?: string;
+  rangeColor?: string;
 };
 
-const PrimaryColor = '#1566D1';
-const SecondaryColor = '#EBF4FF';
 const CellSize = 50;
 
-const DateRangePicker = ({ initialRange, onRangeChange, color = PrimaryColor }: Props) => {
+const DateRangePicker = ({
+  initialRange,
+  onRangeChange,
+  color = palette.brand,
+  rangeColor = palette.brandSoft,
+}: Props) => {
   const [range, setRange] = useState<DateRange>(initialRange ?? { startDate: '', endDate: '' });
 
   const getMarkedDates = useCallback(() => {
@@ -46,7 +52,7 @@ const DateRangePicker = ({ initialRange, onRangeChange, color = PrimaryColor }: 
       while (current < end) {
         const dateString = dayjs(current).format('YYYY-MM-DD');
         marked[dateString] = {
-          color: SecondaryColor,
+          color: rangeColor,
         };
         current.setDate(current.getDate() + 1);
       }
@@ -59,7 +65,7 @@ const DateRangePicker = ({ initialRange, onRangeChange, color = PrimaryColor }: 
     }
 
     return marked;
-  }, [range, color]);
+  }, [range, color, rangeColor]);
 
   useEffect(() => {
     const { startDate, endDate } = range;

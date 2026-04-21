@@ -15,12 +15,12 @@ const RoomsGuestsInput = ({ rooms, guests, onRoomsChange, onGuestsChange }: Prop
 
   return (
     <YStack gap={6}>
-      <Text fontSize={13} fontWeight="500" color="#003064">
+      <Text fontSize={13} fontWeight="500" color="$color11">
         Rooms and guests
       </Text>
       <XStack
         height={45}
-        bg="#F5F7FA"
+        bg="$backgroundPress"
         px={16}
         gap={12}
         rounded={12}
@@ -28,21 +28,21 @@ const RoomsGuestsInput = ({ rooms, guests, onRoomsChange, onGuestsChange }: Prop
         onPress={() => setOpen(true)}
       >
         <People size={18} />
-        <Text fontSize={15} color="#56708B">
+        <Text fontSize={15} color="$color10">
           {rooms} Room, {guests} Guests
         </Text>
       </XStack>
 
       <Sheet modal open={open} onOpenChange={setOpen} snapPoints={[25]} dismissOnSnapToBottom>
         <Sheet.Overlay bg="rgba(0, 0, 0, 0.5)" />
-        <Sheet.Frame bg="#fff" p={20} gap={20}>
-          <Text fontSize={18} fontWeight="600" color="#003064">
+        <Sheet.Frame bg="$color1" p={20} gap={20}>
+          <Text fontSize={18} fontWeight="600" color="$color11">
             Rooms and guests
           </Text>
 
           {/* Rooms */}
           <XStack justify="space-between" items="center">
-            <Text fontSize={15} color="#003064">
+            <Text fontSize={15} color="$color11">
               Rooms
             </Text>
             <XStack items="center" gap={16}>
@@ -51,7 +51,7 @@ const RoomsGuestsInput = ({ rooms, guests, onRoomsChange, onGuestsChange }: Prop
               ) : (
                 <Minus size={30} onPress={() => onRoomsChange(Math.max(1, rooms - 1))} />
               )}
-              <Text fontSize={17} fontWeight="500" color="#003064" minW={20} text="center">
+              <Text fontSize={17} fontWeight="500" color="$color11" minW={20} text="center">
                 {rooms}
               </Text>
               <Plus size={30} onPress={() => onRoomsChange(rooms + 1)} />
@@ -60,7 +60,7 @@ const RoomsGuestsInput = ({ rooms, guests, onRoomsChange, onGuestsChange }: Prop
 
           {/* Guests */}
           <XStack justify="space-between" items="center">
-            <Text fontSize={15} color="#003064">
+            <Text fontSize={15} color="$color11">
               Guests
             </Text>
             <XStack items="center" gap={16}>
@@ -69,7 +69,7 @@ const RoomsGuestsInput = ({ rooms, guests, onRoomsChange, onGuestsChange }: Prop
               ) : (
                 <Minus size={30} onPress={() => onGuestsChange(Math.max(1, guests - 1))} />
               )}
-              <Text fontSize={17} fontWeight="500" color="#003064" minW={20} text="center">
+              <Text fontSize={17} fontWeight="500" color="$color11" minW={20} text="center">
                 {guests}
               </Text>
 

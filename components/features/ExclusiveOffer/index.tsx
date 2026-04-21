@@ -111,10 +111,14 @@ const ExclusiveOffer = ({
           rounded={9}
           justify="center"
           items="center"
-          bg="#1566D1"
+          bg="$blue9"
           onPress={gotoClaim}
+          hoverStyle={{
+            bg: '$blue10',
+          }}
           pressStyle={{
             borderWidth: 0,
+            bg: '$blue11',
           }}
         >
           <Text fontSize={13} fontWeight="500" color="#fff">

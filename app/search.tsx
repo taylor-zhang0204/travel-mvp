@@ -31,7 +31,7 @@ const Search = () => {
   // }, [params?.checkIn]);
 
   return (
-    <YStack flex={1} bg="#F7F9FD">
+    <YStack flex={1} bg="$background">
       <SearchHeader
         destination={params?.destination}
         dateRange={`${params?.checkIn} - ${params?.checkOut}`}

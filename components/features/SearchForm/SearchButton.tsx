@@ -1,4 +1,4 @@
-import { Button } from 'tamagui';
+import { Button, Text } from 'tamagui';
 
 type Props = {
   onPress: () => void;
@@ -11,16 +11,20 @@ const SearchButton = ({ onPress, disabled }: Props) => {
       onPress={onPress}
       disabled={disabled}
       height={44}
-      bg={disabled ? '#CBD5E1' : '#1566D1'}
+      bg={disabled ? '$color5' : '$blue9'}
       rounded={9}
       width="100%"
+      hoverStyle={{
+        bg: disabled ? '$color5' : '$blue10',
+      }}
       pressStyle={{
         borderWidth: 0,
+        bg: disabled ? '$color5' : '$blue11',
       }}
     >
-      <Button.Text color="$white" fontSize={15} fontWeight="500">
+      <Text color="$color1" fontSize={15} fontWeight="500">
         Search Hotels
-      </Button.Text>
+      </Text>
     </Button>
   );
 };

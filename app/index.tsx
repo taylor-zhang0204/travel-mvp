@@ -7,14 +7,14 @@ import SearchForm from '@/components/features/SearchForm';
 
 const Index = () => {
   return (
-    <YStack flex={1} bg="#F7F9FD">
+    <YStack flex={1} bg="$background">
       <Header />
       <ScrollView flex={1}>
         <YStack pt={30} items="center">
-          <Text color="#101828" fontSize={28} fontWeight="700" marginBlockEnd={12}>
+          <Text color="$color12" fontSize={28} fontWeight="700" marginBlockEnd={12}>
             Find Best Hotel Deals
           </Text>
-          <Text color="#4A5565" fontSize={15} marginBlockEnd={20}>
+          <Text color="$color10" fontSize={15} marginBlockEnd={20}>
             Compare hotel prices and save up to 30%
           </Text>
           <SearchForm />

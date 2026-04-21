@@ -6,6 +6,7 @@ import Toast from 'react-native-toast-message';
 import { TamaguiProvider } from 'tamagui';
 
 import { ErrorToast, SuccessToast } from '@/components/ui/Toast';
+import { palette } from '@/styles/palette';
 
 import '@/i18n';
 
@@ -67,8 +68,8 @@ const RootLayout = () => {
   useWebKeyboardFix();
 
   return (
-    <TamaguiProvider config={tamaguiConfig} defaultTheme="light">
-      <SafeAreaView style={{ flex: 1, backgroundColor: '#F7F9FD' }} edges={['top']}>
+    <TamaguiProvider config={tamaguiConfig} defaultTheme="kody">
+      <SafeAreaView style={{ flex: 1, backgroundColor: palette.pageBackground }} edges={['top']}>
         <KeyboardAvoidingView
           style={{ flex: 1 }}
           behavior={Platform.OS === 'ios' ? 'padding' : 'height'}

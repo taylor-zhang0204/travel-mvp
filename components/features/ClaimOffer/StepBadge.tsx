@@ -10,12 +10,12 @@ const StepBadge = ({ number, active = false }: Props) => {
     <XStack
       width={37}
       height={37}
-      bg={active ? '#d1dff0' : '#e5e7eb'}
+      bg={active ? '$accentBackground' : '$color4'}
       rounded={999}
       justify="center"
       items="center"
     >
-      <Text fontSize={15} fontWeight="600" color="#4a4f55">
+      <Text fontSize={15} fontWeight="600" color="$color10">
         {number}
       </Text>
     </XStack>

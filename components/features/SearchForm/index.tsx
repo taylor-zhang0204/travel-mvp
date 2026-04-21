@@ -45,7 +45,7 @@ const SearchForm = ({ onSearch }: Props) => {
   const isSearchDisabled = !params.destination;
 
   return (
-    <YStack width={SCREEN_WIDTH - 50} px={14} py={20} bg="#fff" gap={16} rounded={12}>
+    <YStack width={SCREEN_WIDTH - 50} px={14} py={20} bg="$color1" gap={16} rounded={12}>
       <DestinationInput
         value={params.destination}
         onChangeText={(destination) => setParams((p) => ({ ...p, destination }))}
