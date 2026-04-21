@@ -6,25 +6,17 @@ import DownloadButton from '@/components/ui/DownloadButton';
 
 const ClaimReferenceCard = () => {
   return (
-    <YStack
-      bg="#f5f7fa"
-      borderWidth={1.8}
-      borderColor="#1566d1"
-      px={17}
-      py={9}
-      gap={7}
-      style={{ borderRadius: 9 }}
-    >
+    <YStack bg="#f5f7fa" borderWidth={1.8} borderColor="#1566d1" px={17} py={9} gap={7} rounded={9}>
       <Text fontSize={13} fontWeight="500" color="#364153">
         Reference code*
       </Text>
-      <XStack gap={7.4} style={{ alignItems: 'center' }}>
+      <XStack gap={7.4} items="center">
         <Text fontSize={18} fontWeight="700" color="#101828">
           KODY1234
         </Text>
         <CopyButton value="KODY1234" />
       </XStack>
-      <XStack gap={7} style={{ alignItems: 'flex-end' }}>
+      <XStack gap={7} items="flex-end">
         <DownloadButton>
           <QRCode value="KODY1234" size={80} />
         </DownloadButton>

@@ -23,7 +23,8 @@ const DestinationInput = ({ value, onChangeText, placeholder = 'Langham, Hong Ko
         px={16}
         borderWidth={1}
         borderColor={focused ? '#1566D1' : 'rgba(255,255,255,0.1)'}
-        style={{ borderRadius: 12, alignItems: 'center' }}
+        rounded={12}
+        items="center"
       >
         <Location size={18} color="#9CA3AF" />
         <Input
@@ -33,15 +34,11 @@ const DestinationInput = ({ value, onChangeText, placeholder = 'Langham, Hong Ko
           placeholder={placeholder}
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
-          style={{
-            backgroundColor: 'transparent',
-            outlineWidth: 0,
-            outlineColor: 'transparent',
-          }}
           focusStyle={{
             outlineWidth: 0,
             outlineColor: 'transparent',
           }}
+          bg="transparent"
           borderWidth={0}
           fontSize={16}
         />

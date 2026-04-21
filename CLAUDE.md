@@ -58,6 +58,7 @@ Uses **pnpm** (not npm or yarn). All commands should use `pnpm`.
 ## Icon Library
 
 Uses **`@tamagui/lucide-icons-2`** for icons. Import from:
+
 ```typescript
 import { ChevronLeft, Search, Calendar, Location, ... } from '@tamagui/lucide-icons-2';
 ```
@@ -69,3 +70,43 @@ Available icons: ChevronLeft, Search, Calendar, Location, Plus, Minus, People, e
 **优先使用 Tamagui 组件**（如 XStack, YStack, Button, Text, Sheet 等）。
 
 组件文档参考：`.claude/memory/tamagui-docs.md`
+
+## Tamagui Component Style Shorthand
+
+```json
+{
+  "b": "bottom",
+  "bg": "backgroundColor",
+  "content": "alignContent",
+  "grow": "flexGrow",
+  "items": "alignItems",
+  "justify": "justifyContent",
+  "l": "left",
+  "m": "margin",
+  "maxH": "maxHeight",
+  "maxW": "maxWidth",
+  "mb": "marginBottom",
+  "minH": "minHeight",
+  "minW": "minWidth",
+  "ml": "marginLeft",
+  "mr": "marginRight",
+  "mt": "marginTop",
+  "mx": "marginHorizontal",
+  "my": "marginVertical",
+  "p": "padding",
+  "pb": "paddingBottom",
+  "pl": "paddingLeft",
+  "pr": "paddingRight",
+  "pt": "paddingTop",
+  "px": "paddingHorizontal",
+  "py": "paddingVertical",
+  "r": "right",
+  "rounded": "borderRadius",
+  "select": "userSelect",
+  "self": "alignSelf",
+  "shrink": "flexShrink",
+  "t": "top",
+  "text": "textAlign",
+  "z": "zIndex"
+}
+```

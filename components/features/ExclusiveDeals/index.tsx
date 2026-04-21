@@ -1,4 +1,4 @@
-import { ImageBackground, StyleSheet, View } from 'react-native';
+import { ImageBackground } from 'react-native';
 import { Text, XStack, YStack } from 'tamagui';
 
 import { SCREEN_WIDTH } from '@/utils/screen';
@@ -49,8 +49,8 @@ const ExclusiveDeals = ({ deals = [] }: Props) => {
   return (
     <YStack gap={22} pt={22} px={14} pb={36}>
       {/* Title */}
-      <XStack style={styles.titleContainer}>
-        <Text fontSize={22} fontWeight="700" color="#101828" style={styles.title}>
+      <XStack width="100%" justify="center" items="center">
+        <Text fontSize={22} fontWeight="700" color="#101828" text="center">
           Exclusive Deals
         </Text>
       </XStack>
@@ -58,70 +58,48 @@ const ExclusiveDeals = ({ deals = [] }: Props) => {
       {/* Deals Container */}
       <YStack gap={15} width={CARD_WIDTH} height={CARD_HEIGHT * 3 + 15 * 2}>
         {defaultDeals.map((item) => (
-          <View key={item.id} style={styles.cardWrapper}>
+          <YStack
+            key={item.id}
+            width={CARD_WIDTH}
+            height={CARD_HEIGHT}
+            rounded={CARD_BORDER_RADIUS}
+            overflow="hidden"
+            shadowColor="#000"
+            shadowOffset={{ width: 0, height: 0.9 }}
+            shadowOpacity={1}
+            shadowRadius={2.8}
+            elevation={2}
+          >
             <ImageBackground
               source={{ uri: item.imageUrl }}
-              style={styles.cardBackground}
+              style={{ flex: 1, justifyContent: 'flex-end' }}
               resizeMode="cover"
               imageStyle={{ borderRadius: CARD_BORDER_RADIUS }}
             >
               {/* Semi-transparent Overlay */}
-              <View style={[styles.gradientOverlay, { borderRadius: CARD_BORDER_RADIUS }]}>
+              <YStack
+                flex={1}
+                justify="flex-end"
+                bg="rgba(0,0,0,0.35)"
+                rounded={CARD_BORDER_RADIUS}
+              >
                 <XStack pt={50} px={22} pb={22}>
                   <YStack flex={1}>
-                    <Text fontSize={18} fontWeight="600" color="$white" style={styles.hotelName}>
+                    <Text fontSize={18} fontWeight="600" color="$white" text="center" mb={7}>
                       {item.name}
                     </Text>
-                    <Text fontSize={15} fontWeight="400" color="$white" style={styles.dealText}>
+                    <Text fontSize={15} fontWeight="400" color="$white" text="center">
                       {item.deal}
                     </Text>
                   </YStack>
                 </XStack>
-              </View>
+              </YStack>
             </ImageBackground>
-          </View>
+          </YStack>
         ))}
       </YStack>
     </YStack>
   );
 };
-
-const styles = StyleSheet.create({
-  titleContainer: {
-    width: '100%',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    textAlign: 'center',
-  },
-  cardWrapper: {
-    width: CARD_WIDTH,
-    height: CARD_HEIGHT,
-    borderRadius: CARD_BORDER_RADIUS,
-    overflow: 'hidden',
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 0.9 },
-    shadowOpacity: 1,
-    shadowRadius: 2.8,
-    elevation: 2,
-  },
-  cardBackground: {
-    flex: 1,
-    justifyContent: 'flex-end',
-  },
-  gradientOverlay: {
-    flex: 1,
-    justifyContent: 'flex-end',
-    backgroundColor: 'rgba(0,0,0,0.35)',
-  },
-  hotelName: {
-    textAlign: 'center',
-    marginBottom: 7,
-  },
-  dealText: {
-    textAlign: 'center',
-  },
-});
 
 export default ExclusiveDeals;

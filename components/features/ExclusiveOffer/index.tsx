@@ -40,14 +40,23 @@ const ExclusiveOffer = ({
         source={{
           uri: 'https://pix10.agoda.net/hotelImages/551/551856/551856_16111110450048635209.jpg',
         }}
-        style={styles.container}
+        style={{ width: '100%', height: 152, overflow: 'hidden', backgroundColor: 'grey' }}
         resizeMode="cover"
       >
         {/* Gradient overlay */}
-        <View style={styles.gradientOverlay} />
+        <View style={StyleSheet.absoluteFillObject} />
 
         {/* Badge */}
-        <XStack style={styles.badge} mt={15} ml={15} px={15} height={19}>
+        <XStack
+          bg="rgba(255, 255, 255, 0.6)"
+          rounded={19}
+          items="center"
+          self="flex-start"
+          mt={15}
+          ml={15}
+          px={15}
+          height={19}
+        >
           <Text fontSize={11} fontWeight="500" color="#1566d1">
             Exclusive Partner Offer
             <Text fontSize={11} fontWeight="700" color="#1566d1">
@@ -57,10 +66,10 @@ const ExclusiveOffer = ({
         </XStack>
 
         <YStack gap={6} mt={44} pl={14} ml={15}>
-          <Text fontSize={19} fontWeight="600" style={{ color: '#FFF' }} letterSpacing={-0.2}>
+          <Text fontSize={19} fontWeight="600" color="#FFF" letterSpacing={-0.2}>
             {destination || 'Langham, Hong Kong'}
           </Text>
-          <XStack gap={4} style={{ alignItems: 'center' }}>
+          <XStack gap={4} items="center">
             <Rate count={5} />
             <Location size={15} color="#FFF" />
             <Text fontSize={12} color="#FFF">
@@ -74,15 +83,13 @@ const ExclusiveOffer = ({
         bg="$white"
         px={15}
         py={15}
-        style={{
-          position: 'relative',
-          top: -15,
-          borderRadius: 13,
-          shadowColor: 'rgba(16, 49, 96, 0.1)',
-          shadowOffset: { width: 0, height: 0 },
-          shadowOpacity: 0.6,
-          shadowRadius: 10,
-        }}
+        position="relative"
+        t={-15}
+        rounded={13}
+        shadowColor="rgba(16, 49, 96, 0.1)"
+        shadowOffset={{ width: 0, height: 0 }}
+        shadowOpacity={0.6}
+        shadowRadius={10}
       >
         <Text fontSize={11} color="#505050">
           Direct Booking ({nights} nights, Standard Room, 2 Double Beds)
@@ -91,7 +98,7 @@ const ExclusiveOffer = ({
           <Text fontSize={20} fontWeight="700" color="#1566d1">
             $5,506
           </Text>
-          <XStack gap={4} style={{ alignItems: 'center' }}>
+          <XStack gap={4} items="center">
             <Text fontSize={11} fontWeight="600" color="#1566d1">
               Cashback applied
             </Text>
@@ -101,13 +108,14 @@ const ExclusiveOffer = ({
         <Button
           mt={10}
           py={7}
-          style={{
-            borderRadius: 9,
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: '#1566D1',
-          }}
+          rounded={9}
+          justify="center"
+          items="center"
+          bg="#1566D1"
           onPress={gotoClaim}
+          pressStyle={{
+            borderWidth: 0,
+          }}
         >
           <Text fontSize={13} fontWeight="500" color="#fff">
             Claim Kody Offer
@@ -126,17 +134,13 @@ const ExclusiveOffer = ({
             borderBottomWidth={1}
             height={38}
             borderColor="#e1e7f3"
-            style={{ justifyContent: 'center' }}
+            justify="center"
           >
-            <XStack style={{ justifyContent: 'space-between', alignItems: 'center' }}>
+            <XStack justify="space-between" items="center">
               <Text fontSize={13} fontWeight="500" color="#101828">
                 {provider.name}
               </Text>
-              <XStack
-                gap={8}
-                style={{ alignItems: 'center' }}
-                onPress={() => openExternalLink(provider.link)}
-              >
+              <XStack gap={8} items="center" onPress={() => openExternalLink(provider.link)}>
                 <Text fontSize={15} fontWeight="600" color="#101828">
                   {provider.price}
                 </Text>
@@ -149,24 +153,5 @@ const ExclusiveOffer = ({
     </YStack>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    width: '100%',
-    height: 152,
-    overflow: 'hidden',
-    backgroundColor: 'grey',
-  },
-  gradientOverlay: {
-    ...StyleSheet.absoluteFillObject,
-    backgroundColor: 'rgba(0,0,0,0.4)',
-  },
-  badge: {
-    backgroundColor: 'rgba(255, 255, 255, 0.6)',
-    borderRadius: 19,
-    alignItems: 'center',
-    alignSelf: 'flex-start',
-  },
-});
 
 export default ExclusiveOffer;

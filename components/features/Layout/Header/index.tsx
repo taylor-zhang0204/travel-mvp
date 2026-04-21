@@ -28,20 +28,18 @@ const Header = ({ showBack = true, title, right }: HeaderProps) => {
     <XStack
       height={60}
       paddingInline={8}
-      style={{
-        alignItems: 'center',
-        backgroundColor: '#FFFFFF',
-        borderBottomWidth: 1,
-        borderBottomColor: '#E5E7EB',
-      }}
+      items="center"
+      bg="#FFFFFF"
+      borderBottomWidth={1}
+      borderBottomColor="#E5E7EB"
     >
-      <YStack position="absolute" style={{ left: 8 }}>
+      <YStack position="absolute" l={8}>
         {router.canGoBack() && showBack && <ChevronLeft onPress={goBack} />}
       </YStack>
-      <YStack flex={1} style={{ alignItems: 'center' }}>
+      <YStack flex={1} items="center">
         {title || <Logo size={60} />}
       </YStack>
-      <YStack position="absolute" style={{ right: 8 }}>
+      <YStack position="absolute" r={8}>
         {right || (
           <Globe
             size={40}

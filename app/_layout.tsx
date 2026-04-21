@@ -39,18 +39,24 @@ const useWebKeyboardFix = () => {
 
     document.addEventListener('focusin', (e) => {
       const tag = (e.target as HTMLElement).tagName;
-      if (tag === 'INPUT' || tag === 'TEXTAREA') lockScroll();
+      if (tag === 'INPUT' || tag === 'TEXTAREA') {
+        lockScroll();
+      }
     });
 
     document.addEventListener('focusout', (e) => {
       const tag = (e.target as HTMLElement).tagName;
-      if (tag === 'INPUT' || tag === 'TEXTAREA') setTimeout(unlockScroll, 300);
+      if (tag === 'INPUT' || tag === 'TEXTAREA') {
+        setTimeout(unlockScroll, 300);
+      }
     });
 
     document.addEventListener(
       'touchmove',
       (e) => {
-        if (scrollLocked) e.preventDefault();
+        if (scrollLocked) {
+          e.preventDefault();
+        }
       },
       { passive: false }
     );

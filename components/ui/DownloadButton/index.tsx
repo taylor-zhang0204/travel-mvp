@@ -59,7 +59,7 @@ const DownloadButton = ({ children }: Props) => {
   };
 
   return (
-    <XStack gap={7} style={{ alignItems: 'flex-end' }}>
+    <XStack gap={7} items="flex-end">
       {Platform.OS === 'web' ? (
         <div
           ref={containerRef}
@@ -81,7 +81,7 @@ const DownloadButton = ({ children }: Props) => {
           {children}
         </ViewShot>
       )}
-      <XStack gap={7} style={{ alignItems: 'center' }} onPress={handleDownload}>
+      <XStack gap={7} items="center" onPress={handleDownload}>
         <Text fontSize={13} fontWeight="500" color="#1566d1">
           Download
         </Text>

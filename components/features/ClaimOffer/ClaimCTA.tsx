@@ -13,7 +13,12 @@ const ClaimCTA = ({ disabled = false, onPress }: Props) => {
       bg={disabled ? '#9ca3af' : '#1566d1'}
       px={124}
       py={11}
-      style={{ borderRadius: 9, justifyContent: 'center', alignItems: 'center' }}
+      justify="center"
+      items="center"
+      rounded={9}
+      pressStyle={{
+        borderWidth: 0,
+      }}
     >
       <Text fontSize={15} fontWeight="500" color="#fff">
         Get codes

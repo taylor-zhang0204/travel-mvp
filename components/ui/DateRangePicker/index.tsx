@@ -1,9 +1,9 @@
 import { ChevronLeft, ChevronRight } from '@tamagui/lucide-icons-2';
 import dayjs from 'dayjs';
 import { useCallback, useEffect, useState } from 'react';
-import { Pressable, Text } from 'react-native';
 import { CalendarList, DateData } from 'react-native-calendars';
 import { MarkedDates } from 'react-native-calendars/src/types';
+import { Text, XStack } from 'tamagui';
 
 type DateRange = {
   startDate: string;
@@ -106,7 +106,7 @@ const DateRangePicker = ({ initialRange, onRangeChange, color = PrimaryColor }: 
       // 向后滚动的最大月数
       futureScrollRange={12}
       renderArrow={(direction) => (
-        <Text style={{ fontSize: 20, color: 'gray' }}>
+        <Text fontSize={20} color="gray">
           {direction === 'left' ? <ChevronLeft /> : <ChevronRight />}
         </Text>
       )}
@@ -120,17 +120,17 @@ const DateRangePicker = ({ initialRange, onRangeChange, color = PrimaryColor }: 
         if (!marking) {
           const textColor = state === 'disabled' ? '#d9e1e8' : '#2d4150';
           return (
-            <Pressable
-              style={{
-                width: CellSize,
-                height: CellSize,
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
+            <XStack
+              width={CellSize}
+              height={CellSize}
+              justify="center"
+              items="center"
               onPress={handlePress}
             >
-              <Text style={{ color: textColor, fontSize: 14 }}>{date.day}</Text>
-            </Pressable>
+              <Text color={textColor} fontSize={14}>
+                {date.day}
+              </Text>
+            </XStack>
           );
         }
 
@@ -144,22 +144,25 @@ const DateRangePicker = ({ initialRange, onRangeChange, color = PrimaryColor }: 
         const isRangeEnd = endingDay && !startingDay;
 
         return (
-          <Pressable
+          <XStack
+            width={CellSize}
+            height={CellSize}
+            justify="center"
+            items="center"
+            onPress={handlePress}
             style={{
-              width: CellSize,
-              height: CellSize,
-              justifyContent: 'center',
-              alignItems: 'center',
               backgroundColor: bgColor,
               borderTopLeftRadius: isSingle || isRangeStart ? 50 : 0,
               borderBottomLeftRadius: isSingle || isRangeStart ? 50 : 0,
               borderTopRightRadius: isSingle || isRangeEnd ? 50 : 0,
               borderBottomRightRadius: isSingle || isRangeEnd ? 50 : 0,
             }}
-            onPress={handlePress}
           >
-            <Text style={{ color: textColor, fontSize: 14 }}>{date.day}</Text>
-          </Pressable>
+            {/* @ts-ignore-next-line */}
+            <Text color={textColor} fontSize={14}>
+              {date.day}
+            </Text>
+          </XStack>
         );
       }}
       markingType="period"

@@ -9,18 +9,10 @@ type Props = {
 
 export default function SearchHeader({ destination = '', dateRange = '' }: Props) {
   return (
-    <YStack
-      bg="#fff"
-      style={{
-        borderBottomWidth: 1,
-        borderBottomColor: '#E5E7EB',
-      }}
-      px={14}
-      py={11}
-    >
-      <XStack bg="#fff" height={42} gap={11} style={{ borderRadius: 12 }}>
+    <YStack bg="#fff" borderBottomWidth={1} borderBottomColor="#E5E7EB" px={14} py={11}>
+      <XStack bg="#fff" height={42} gap={11} rounded={12}>
         {/* Back Button */}
-        <YStack style={{ justifyContent: 'center' }} onPress={() => router.back()}>
+        <YStack justify="center" onPress={() => router.back()}>
           <ChevronLeft size={22} color="#000" />
         </YStack>
 
@@ -32,7 +24,9 @@ export default function SearchHeader({ destination = '', dateRange = '' }: Props
           px={8}
           py={12}
           gap={11}
-          style={{ borderRadius: 10, alignItems: 'center', overflow: 'hidden' }}
+          rounded={10}
+          items="center"
+          overflow="hidden"
         >
           <Search size={12} color="#99a1af" />
           <Text flex={1} numberOfLines={1} fontSize={13} color="#0a0a0a">

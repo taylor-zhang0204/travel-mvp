@@ -18,7 +18,7 @@ const CopyButton = ({ value }: Props) => {
   };
 
   return (
-    <XStack gap={7} style={{ alignItems: 'center' }} onPress={handleCopy}>
+    <XStack gap={7} items="center" onPress={handleCopy}>
       <Text fontSize={13} fontWeight="500" color="#1566d1">
         Copy
       </Text>

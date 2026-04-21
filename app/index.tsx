@@ -10,7 +10,7 @@ const Index = () => {
     <YStack flex={1} bg="#F7F9FD">
       <Header />
       <ScrollView flex={1}>
-        <YStack pt={30} style={{ alignItems: 'center' }}>
+        <YStack pt={30} items="center">
           <Text color="#101828" fontSize={28} fontWeight="700" marginBlockEnd={12}>
             Find Best Hotel Deals
           </Text>

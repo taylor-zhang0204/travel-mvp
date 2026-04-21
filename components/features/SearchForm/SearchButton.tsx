@@ -10,21 +10,15 @@ const SearchButton = ({ onPress, disabled }: Props) => {
     <Button
       onPress={onPress}
       disabled={disabled}
-      style={{
-        height: 44,
-        backgroundColor: disabled ? '#CBD5E1' : '#1566D1',
-        borderRadius: 9,
-        width: '100%',
+      height={44}
+      bg={disabled ? '#CBD5E1' : '#1566D1'}
+      rounded={9}
+      width="100%"
+      pressStyle={{
+        borderWidth: 0,
       }}
     >
-      <Button.Text
-        style={{
-          color: '#fff',
-          fontSize: 15,
-          fontWeight: '500',
-          letterSpacing: -0.3,
-        }}
-      >
+      <Button.Text color="$white" fontSize={15} fontWeight="500">
         Search Hotels
       </Button.Text>
     </Button>

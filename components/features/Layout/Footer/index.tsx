@@ -25,19 +25,14 @@ const Footer = (_props: FooterProps) => {
 
   return (
     <YStack width="100%" bg="$white" px={16} pb="$6">
-      <Accordion
-        type="multiple"
-        value={openItems}
-        onValueChange={setOpenItems}
-        style={{ border: 0 }}
-      >
+      <Accordion type="multiple" value={openItems} onValueChange={setOpenItems} rounded={0}>
         {defaultSections.map((section) => (
-          <Accordion.Item key={section.value} value={section.value} style={{ border: 0 }}>
+          <Accordion.Item key={section.value} value={section.value} rounded={0}>
             <Accordion.Trigger
               flexDirection="row"
               justify="space-between"
               bg="$white"
-              pressStyle={{ background: '#FFFFFF' }}
+              pressStyle={{ bg: '$white' }}
               style={{ border: 0, borderBottomWidth: 1, borderColor: '#CDD7E4' }}
             >
               {({ open }: { open: boolean }) => (

@@ -1,16 +1,19 @@
-import { View } from 'react-native';
-import { Text } from 'tamagui';
+import { Text, YStack } from 'tamagui';
 
 const SuccessToast = ({ text1 }: { text1: string }) => (
-  <View style={{ backgroundColor: '#101828', borderRadius: 8, padding: 16, minHeight: 50 }}>
-    <Text style={[{ color: '#fff', fontSize: 14, fontWeight: '500' }]}>{text1}</Text>
-  </View>
+  <YStack bg="#101828" rounded={8} p={16} minH={50}>
+    <Text color="$white" fontSize={14} fontWeight="500">
+      {text1}
+    </Text>
+  </YStack>
 );
 
 const ErrorToast = ({ text1 }: { text1: string }) => (
-  <View style={{ backgroundColor: '#dc2626', borderRadius: 8, padding: 16, minHeight: 50 }}>
-    <Text style={[{ color: '#fff', fontSize: 14, fontWeight: '500' }]}>{text1}</Text>
-  </View>
+  <YStack bg="#dc2626" rounded={8} p={16} minH={50}>
+    <Text color="$white" fontSize={14} fontWeight="500">
+      {text1}
+    </Text>
+  </YStack>
 );
 
 export { ErrorToast, SuccessToast };
