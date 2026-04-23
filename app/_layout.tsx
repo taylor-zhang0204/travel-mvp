@@ -5,9 +5,9 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import Toast from 'react-native-toast-message';
 import { TamaguiProvider } from 'tamagui';
 
-import { ErrorToast, SuccessToast } from '@/components/ui/Toast';
+import { ErrorToast, SuccessToast } from '@/src/components/ui/Toast';
 
-import '@/i18n';
+import '@/src/i18n';
 
 import { tamaguiConfig } from '../tamagui.config';
 

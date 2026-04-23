@@ -2,14 +2,14 @@ import { useState } from 'react';
 import { ScrollView, Text, YStack } from 'tamagui';
 
 import {
-  ClaimCTA,
-  ClaimEmailForm,
-  ClaimReferenceCard,
-  ExternalLink,
-  StepItem,
-} from '@/components/features/ClaimOffer';
-import Header from '@/components/features/Layout/Header';
-import { isValidEmail } from '@/utils';
+    ClaimCTA,
+    ClaimEmailForm,
+    ClaimReferenceCard,
+    ExternalLink,
+    StepItem,
+} from '@/src/components/features/ClaimOffer';
+import Header from '@/src/components/features/Layout/Header';
+import { isValidEmail } from '@/src/utils';
 
 const BookingLink =
   'https://reservations.brilliantbylangham.com/en-US/booking/guest_details?adobe_mc=MCMID%3D64658287459836637982565876753401593918%7CMCORGID%3D085C2C1653DB0FFF0A490D4B%2540AdobeOrg%7CTS%3D1776498251&chain=10316&config=brilliant&hotel=27404&level=hotel&locale=en-US&theme=brilliant';

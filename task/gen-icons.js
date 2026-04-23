@@ -1,7 +1,7 @@
 /* eslint-disable */
 
 const { execSync } = require('node:child_process');
-const { readdirSync, mkdirSync, rmSync, readFileSync, writeFileSync } = require('node:fs');
+const { readdirSync, mkdirSync, readFileSync, writeFileSync, existsSync } = require('node:fs');
 const path = require('node:path');
 
 const iconsPath = path.resolve(__dirname, '../components/icons');
@@ -79,10 +79,8 @@ export default ${componentName};
  * Generate native SVG components using @svgr/cli
  */
 const generateComponents = async () => {
-  // Clean up old src directory
-  try {
-    rmSync(srcPath, { recursive: true, force: true });
-  } catch {}
+  // Incremental mode: do NOT remove existing src directory.
+  // Existing generated components will be preserved and skipped.
 
   // Find all SVG files and track their directories
   const svgFiles = [];
@@ -105,8 +103,28 @@ const generateComponents = async () => {
 
   findSvgs(assetsPath);
 
-  // Track index files to create
+  // Track index files to create. Pre-populate from existing index.ts so we
+  // preserve previously generated component exports.
   const indexFiles = new Map();
+  // Track which files were newly generated this run (for prettier).
+  const newlyGenerated = [];
+
+  const ensureIndexEntry = (dirKey, componentName) => {
+    if (!indexFiles.has(dirKey)) {
+      const indexPath = path.join(srcPath, dirKey === '.' ? '' : dirKey, 'index.ts');
+      const existing = new Set();
+      if (existsSync(indexPath)) {
+        const content = readFileSync(indexPath, 'utf8');
+        const re = /export\s*\{\s*default\s+as\s+(\w+)\s*\}/g;
+        let m;
+        while ((m = re.exec(content)) !== null) {
+          existing.add(m[1]);
+        }
+      }
+      indexFiles.set(dirKey, existing);
+    }
+    indexFiles.get(dirKey).add(componentName);
+  };
 
   for (const { fullPath, relativePath, fileName } of svgFiles) {
     // Create directory structure in src
@@ -120,6 +138,17 @@ const generateComponents = async () => {
       .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
       .join('');
 
+    const generatedFile = path.join(outputDir, `${componentName}.tsx`);
+    const dirKey = relativePath || '.';
+
+    // Incremental: skip if component already exists; just ensure it is
+    // referenced in the index file.
+    if (existsSync(generatedFile)) {
+      ensureIndexEntry(dirKey, componentName);
+      console.log(`Skipped (exists): ${generatedFile}`);
+      continue;
+    }
+
     // Generate native component using svgr
     try {
       execSync(`npx @svgr/cli --native --typescript --icon -d ${outputDir} ${fullPath}`, {
@@ -130,39 +159,36 @@ const generateComponents = async () => {
       continue;
     }
 
-    // Find and process the generated file
-    const generatedFile = path.join(outputDir, `${componentName}.tsx`);
-
-    if (require('fs').existsSync(generatedFile)) {
+    if (existsSync(generatedFile)) {
       const content = readFileSync(generatedFile, 'utf8');
       const processed = postProcessComponent(content, componentName);
       writeFileSync(generatedFile, processed);
-
-      // Track for index file
-      const dirKey = relativePath || '.';
-      if (!indexFiles.has(dirKey)) {
-        indexFiles.set(dirKey, []);
-      }
-      indexFiles.get(dirKey).push(componentName);
-
+      newlyGenerated.push(generatedFile);
+      ensureIndexEntry(dirKey, componentName);
       console.log(`Generated: ${generatedFile}`);
     }
   }
 
-  // Create index files
+  // Write/refresh index files (merged: existing entries + new ones)
   for (const [dir, components] of indexFiles) {
-    const indexPath = path.join(srcPath, dir, 'index.ts');
-    const exports = components
+    const indexPath = path.join(srcPath, dir === '.' ? '' : dir, 'index.ts');
+    const exports = [...components]
       .sort()
       .map((c) => `export { default as ${c} } from './${c}';`)
       .join('\n');
-    writeFileSync(indexPath, exports);
-    console.log(`Created index: ${indexPath}`);
+    writeFileSync(indexPath, exports + '\n');
+    console.log(`Updated index: ${indexPath}`);
   }
+
+  return newlyGenerated;
 };
 
-generateComponents().then(() => {
-  execSync('npx prettier --write "components/icons/src/**/*.tsx"');
-  console.log('\nIcon generation complete!');
+generateComponents().then((newlyGenerated = []) => {
+  if (newlyGenerated.length > 0) {
+    // Only format newly generated files to avoid touching existing ones.
+    const fileArgs = newlyGenerated.map((f) => `"${f}"`).join(' ');
+    execSync(`npx prettier --write ${fileArgs}`);
+  }
+  console.log(`\nIcon generation complete! (${newlyGenerated.length} new)`);
   console.log('Components location: components/icons/src/');
 });

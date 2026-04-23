@@ -1,0 +1,12 @@
+export { default as ArrowUpRightFromSquare } from './ArrowUpRightFromSquare';
+export { default as Calendar } from './Calendar';
+export { default as Chart } from './Chart';
+export { default as Clock } from './Clock';
+export { default as Globe } from './Globe';
+export { default as Location } from './Location';
+export { default as Logo } from './Logo';
+export { default as Minus } from './Minus';
+export { default as MinusDisabled } from './MinusDisabled';
+export { default as People } from './People';
+export { default as Plus } from './Plus';
+export { default as PlusDisabled } from './PlusDisabled';

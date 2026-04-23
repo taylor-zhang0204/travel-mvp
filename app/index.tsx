@@ -1,9 +1,9 @@
 import { ScrollView, Text, YStack } from 'tamagui';
 
-import ExclusiveDeals from '@/components/features/ExclusiveDeals';
-import Footer from '@/components/features/Layout/Footer';
-import Header from '@/components/features/Layout/Header';
-import SearchForm from '@/components/features/SearchForm';
+import ExclusiveDeals from '@/src/components/features/ExclusiveDeals';
+import Footer from '@/src/components/features/Layout/Footer';
+import Header from '@/src/components/features/Layout/Header';
+import SearchForm from '@/src/components/features/SearchForm';
 
 const Index = () => {
   return (

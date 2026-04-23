@@ -3,10 +3,10 @@ import { useEffect, useState } from 'react';
 import { ScrollView, YStack } from 'tamagui';
 
 // import { search } from '@/api/examples';
-import ExclusiveOffer from '@/components/features/ExclusiveOffer';
-import Footer from '@/components/features/Layout/Footer';
-import SearchHeader from '@/components/features/SearchHeader';
-import type { SearchParams } from '@/types/page';
+import ExclusiveOffer from '@/src/components/features/ExclusiveOffer';
+import Footer from '@/src/components/features/Layout/Footer';
+import SearchHeader from '@/src/components/features/SearchHeader';
+import type { SearchParams } from '@/src/types/page';
 
 const Search = () => {
   const searchParams = useLocalSearchParams();
