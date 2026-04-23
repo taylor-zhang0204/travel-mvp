@@ -2,6 +2,7 @@ import { Download } from '@tamagui/lucide-icons-2';
 import * as MediaLibrary from 'expo-media-library';
 import { toPng } from 'html-to-image';
 import { useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Platform } from 'react-native';
 import Toast from 'react-native-toast-message';
 import ViewShot, { captureRef } from 'react-native-view-shot';
@@ -12,6 +13,7 @@ type Props = {
 };
 
 const DownloadButton = ({ children }: Props) => {
+  const { t } = useTranslation();
   const viewShotRef = useRef<ViewShot>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -25,10 +27,10 @@ const DownloadButton = ({ children }: Props) => {
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      Toast.show({ type: 'success', text1: 'QR code downloaded!' });
+      Toast.show({ type: 'success', text1: t('common.qrDownloaded') });
     } catch (error) {
       console.log('Web download error:', error);
-      Toast.show({ type: 'error', text1: 'Failed to download QR code' });
+      Toast.show({ type: 'error', text1: t('common.qrDownloadFailed') });
     }
   };
 
@@ -46,15 +48,15 @@ const DownloadButton = ({ children }: Props) => {
       const { status } = await MediaLibrary.requestPermissionsAsync();
 
       if (status !== 'granted') {
-        Toast.show({ type: 'error', text1: 'Permission denied' });
+        Toast.show({ type: 'error', text1: t('common.permissionDenied') });
         return;
       }
 
       await MediaLibrary.saveToLibraryAsync(uri);
-      Toast.show({ type: 'success', text1: 'QR code saved!' });
+      Toast.show({ type: 'success', text1: t('common.qrSaved') });
     } catch (error) {
       console.log('Download error:', error);
-      Toast.show({ type: 'error', text1: 'Failed to save QR code' });
+      Toast.show({ type: 'error', text1: t('common.qrSaveFailed') });
     }
   };
 
@@ -83,7 +85,7 @@ const DownloadButton = ({ children }: Props) => {
       )}
       <XStack gap={7} items="center" onPress={handleDownload}>
         <Text fontSize={13} fontWeight="500" color="#1566d1">
-          Download
+          {t('common.download')}
         </Text>
         <Download size={15} color="#1566d1" />
       </XStack>

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import QRCode from 'react-native-qrcode-svg';
 import { Text, XStack, YStack } from 'tamagui';
 
@@ -5,10 +6,11 @@ import CopyButton from '@/src/components/ui/CopyButton';
 import DownloadButton from '@/src/components/ui/DownloadButton';
 
 const ClaimReferenceCard = () => {
+  const { t } = useTranslation();
   return (
     <YStack bg="#f5f7fa" borderWidth={1.8} borderColor="#1566d1" px={17} py={9} gap={7} rounded={9}>
       <Text fontSize={13} fontWeight="500" color="#364153">
-        Reference code*
+        {t('claim.referenceCode')}
       </Text>
       <XStack gap={7.4} items="center">
         <Text fontSize={18} fontWeight="700" color="#101828">
@@ -22,7 +24,7 @@ const ClaimReferenceCard = () => {
         </DownloadButton>
       </XStack>
       <Text fontSize={10} color="#747d8b">
-        *This is only applicable to the standard rate.
+        {t('claim.referenceNote')}
       </Text>
     </YStack>
   );

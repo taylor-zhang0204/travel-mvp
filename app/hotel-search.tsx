@@ -1,12 +1,13 @@
 import { Fragment, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ScrollView, Text, YStack, useDebounceValue } from 'tamagui';
 
 import {
-  HotelListItem,
-  POPULAR_HOTELS,
-  SearchInput,
-  SearchSection,
-  useHotelSearch,
+    HotelListItem,
+    POPULAR_HOTELS,
+    SearchInput,
+    SearchSection,
+    useHotelSearch,
 } from '@/src/components/features/HotelSearch';
 import Header from '@/src/components/features/Layout/Header';
 import { Clock, Location } from '@/src/components/icons/src/public/common';
@@ -14,6 +15,7 @@ import Divider from '@/src/components/ui/Divider';
 import { Empty } from '@/src/components/ui/Empty';
 
 export default function HotelSearch() {
+  const { t } = useTranslation();
   const { recentSearches, selectHotel } = useHotelSearch();
   const [searchHotel, setSearchHotel] = useState<string>('');
 
@@ -30,7 +32,7 @@ export default function HotelSearch() {
       <Header
         title={
           <Text fontSize={20} fontWeight="500" color="#101828">
-            Enter destination
+            {t('hotelSearch.title')}
           </Text>
         }
         right={<Text />}
@@ -43,8 +45,8 @@ export default function HotelSearch() {
             <>
               {filteredHotels.length === 0 ? (
                 <Empty
-                  title="No hotels found"
-                  description={`No results match "${debouncedSearchHotel}"`}
+                  title={t('hotelSearch.noHotelsFound')}
+                  description={t('hotelSearch.noResultsMatch', { query: debouncedSearchHotel })}
                 />
               ) : (
                 filteredHotels.map((hotel, index) => (
@@ -66,7 +68,7 @@ export default function HotelSearch() {
             <>
               {recentSearches.length > 0 ? (
                 <>
-                  <SearchSection title="Recent Searches">
+                  <SearchSection title={t('hotelSearch.recentSearches')}>
                     {recentSearches.map((hotel) => (
                       <HotelListItem
                         key={hotel.name}
@@ -80,7 +82,7 @@ export default function HotelSearch() {
                 </>
               ) : null}
 
-              <SearchSection title="Popular Hotels" gap={4} pt={4}>
+              <SearchSection title={t('hotelSearch.popularHotels')} gap={4} pt={4}>
                 {POPULAR_HOTELS.map((hotel) => (
                   <HotelListItem
                     key={hotel.name}

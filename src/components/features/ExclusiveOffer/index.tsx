@@ -1,6 +1,7 @@
 import { Check } from '@tamagui/lucide-icons-2';
 import dayjs from 'dayjs';
 import { router } from 'expo-router';
+import { useTranslation } from 'react-i18next';
 import { ImageBackground, StyleSheet } from 'react-native';
 import { Button, Text, View, XStack, YStack } from 'tamagui';
 
@@ -27,6 +28,7 @@ const ExclusiveOffer = ({
   checkIn = '',
   checkOut = '',
 }: Props) => {
+  const { t } = useTranslation();
   const nights = dayjs(checkOut).diff(dayjs(checkIn), 'day');
   const gotoClaim = () => {
     router.push({
@@ -58,22 +60,22 @@ const ExclusiveOffer = ({
           height={19}
         >
           <Text fontSize={11} fontWeight="500" color="#1566d1">
-            Exclusive Partner Offer
+            {t('offer.badge')}
             <Text fontSize={11} fontWeight="700" color="#1566d1">
-              - {cashback} Cashback
+              {t('offer.badgeCashback', { cashback })}
             </Text>
           </Text>
         </XStack>
 
         <YStack gap={6} mt={44} pl={14} ml={15}>
           <Text fontSize={19} fontWeight="600" color="#FFF" letterSpacing={-0.2}>
-            {destination || 'Langham, Hong Kong'}
+            {destination || t('searchForm.destinationPlaceholder')}
           </Text>
           <XStack gap={4} items="center">
             <Rate count={5} />
             <Location size={15} color="#FFF" />
             <Text fontSize={12} color="#FFF">
-              Mong Kok, Hong Kong
+              {t('offer.defaultLocation')}
             </Text>
           </XStack>
         </YStack>
@@ -92,7 +94,7 @@ const ExclusiveOffer = ({
         shadowRadius={10}
       >
         <Text fontSize={11} color="#505050">
-          Direct Booking ({nights} nights, Standard Room, 2 Double Beds)
+          {t('offer.directBooking', { nights })}
         </Text>
         <XStack gap={4} mt={8}>
           <Text fontSize={20} fontWeight="700" color="#1566d1">
@@ -100,7 +102,7 @@ const ExclusiveOffer = ({
           </Text>
           <XStack gap={4} items="center">
             <Text fontSize={11} fontWeight="600" color="#1566d1">
-              Cashback applied
+              {t('offer.cashbackApplied')}
             </Text>
             <Check size={14} color="#1566d1" />
           </XStack>
@@ -118,14 +120,14 @@ const ExclusiveOffer = ({
           }}
         >
           <Text fontSize={13} fontWeight="500" color="#fff">
-            Claim Kody Offer
+            {t('offer.claimKodyOffer')}
           </Text>
           <ArrowUpRightFromSquare size={15} color="#fff" />
         </Button>
       </YStack>
       <YStack gap={6} mt={10} px={29} pb={30}>
         <Text fontSize={13} fontWeight="600" color="#101828">
-          Other Providers:
+          {t('offer.otherProviders')}
         </Text>
         {/* Price comparison rows */}
         {PROVIDERS.map((provider) => (

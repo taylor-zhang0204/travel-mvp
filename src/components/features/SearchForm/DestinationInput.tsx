@@ -1,5 +1,6 @@
 import { router } from 'expo-router';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Input, Text, XStack, YStack } from 'tamagui';
 
 import { Location } from '@/src/components/icons/src/public/common';
@@ -10,7 +11,8 @@ type Props = {
   placeholder?: string;
 };
 
-const DestinationInput = ({ value, onChangeText, placeholder = 'Langham, Hong Kong' }: Props) => {
+const DestinationInput = ({ value, onChangeText, placeholder }: Props) => {
+  const { t } = useTranslation();
   const [focused, setFocused] = useState(false);
 
   useEffect(() => {
@@ -24,7 +26,7 @@ const DestinationInput = ({ value, onChangeText, placeholder = 'Langham, Hong Ko
   return (
     <YStack gap={6}>
       <Text fontSize={13} fontWeight="500" style={{ color: '#003064' }} letterSpacing={-0.2}>
-        Destination
+        {t('searchForm.destination')}
       </Text>
       <XStack
         height={45}

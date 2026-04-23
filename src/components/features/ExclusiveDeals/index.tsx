@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { ImageBackground } from 'react-native';
 import { Text, XStack, YStack } from 'tamagui';
 
@@ -19,6 +20,7 @@ type Props = {
 };
 
 const ExclusiveDeals = ({ deals = [] }: Props) => {
+  const { t } = useTranslation();
   const defaultDeals: Deal[] =
     deals.length > 0
       ? deals
@@ -26,21 +28,21 @@ const ExclusiveDeals = ({ deals = [] }: Props) => {
           {
             id: '1',
             name: 'Langham',
-            deal: '10% cashback deal',
+            deal: t('deals.cashbackDeal', { percent: 10 }),
             imageUrl:
               'https://pix10.agoda.net/hotelImages/551/551856/551856_16111110450048635209.jpg',
           },
           {
             id: '2',
             name: 'Langham',
-            deal: '15% cashback deal',
+            deal: t('deals.cashbackDeal', { percent: 15 }),
             imageUrl:
               'https://img1.baidu.com/it/u=3415293545,3582943321&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500',
           },
           {
             id: '3',
             name: 'Langham',
-            deal: '20% cashback deal',
+            deal: t('deals.cashbackDeal', { percent: 20 }),
             imageUrl:
               'https://img2.baidu.com/it/u=536344076,370510174&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=648',
           },
@@ -51,7 +53,7 @@ const ExclusiveDeals = ({ deals = [] }: Props) => {
       {/* Title */}
       <XStack width="100%" justify="center" items="center">
         <Text fontSize={22} fontWeight="700" color="#101828" text="center">
-          Exclusive Deals
+          {t('deals.exclusiveDeals')}
         </Text>
       </XStack>
 

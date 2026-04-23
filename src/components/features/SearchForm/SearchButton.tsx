@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Button } from 'tamagui';
 
 type Props = {
@@ -6,6 +7,7 @@ type Props = {
 };
 
 const SearchButton = ({ onPress, disabled }: Props) => {
+  const { t } = useTranslation();
   return (
     <Button
       onPress={onPress}
@@ -19,7 +21,7 @@ const SearchButton = ({ onPress, disabled }: Props) => {
       }}
     >
       <Button.Text color="$white" fontSize={15} fontWeight="500">
-        Search Hotels
+        {t('searchForm.searchHotels')}
       </Button.Text>
     </Button>
   );

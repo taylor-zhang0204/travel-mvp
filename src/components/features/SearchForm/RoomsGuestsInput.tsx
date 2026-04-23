@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Sheet, Text, XStack, YStack } from 'tamagui';
 
 import { Minus, MinusDisabled, People, Plus } from '@/src/components/icons/src/public/common';
@@ -11,12 +12,13 @@ type Props = {
 };
 
 const RoomsGuestsInput = ({ rooms, guests, onRoomsChange, onGuestsChange }: Props) => {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
 
   return (
     <YStack gap={6}>
       <Text fontSize={13} fontWeight="500" color="#003064">
-        Rooms and guests
+        {t('searchForm.roomsAndGuests')}
       </Text>
       <XStack
         height={45}
@@ -29,7 +31,7 @@ const RoomsGuestsInput = ({ rooms, guests, onRoomsChange, onGuestsChange }: Prop
       >
         <People size={18} />
         <Text fontSize={15} color="#56708B">
-          {rooms} Room, {guests} Guests
+          {t('searchForm.roomGuestSummary', { rooms, guests })}
         </Text>
       </XStack>
 
@@ -37,13 +39,13 @@ const RoomsGuestsInput = ({ rooms, guests, onRoomsChange, onGuestsChange }: Prop
         <Sheet.Overlay bg="rgba(0, 0, 0, 0.5)" />
         <Sheet.Frame bg="#fff" p={20} gap={20}>
           <Text fontSize={18} fontWeight="600" color="#003064">
-            Rooms and guests
+            {t('searchForm.roomsAndGuests')}
           </Text>
 
           {/* Rooms */}
           <XStack justify="space-between" items="center">
             <Text fontSize={15} color="#003064">
-              Rooms
+              {t('searchForm.rooms')}
             </Text>
             <XStack items="center" gap={16}>
               {rooms <= 1 ? (
@@ -61,7 +63,7 @@ const RoomsGuestsInput = ({ rooms, guests, onRoomsChange, onGuestsChange }: Prop
           {/* Guests */}
           <XStack justify="space-between" items="center">
             <Text fontSize={15} color="#003064">
-              Guests
+              {t('searchForm.guests')}
             </Text>
             <XStack items="center" gap={16}>
               {guests <= 1 ? (

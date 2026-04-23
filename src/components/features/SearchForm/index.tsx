@@ -21,7 +21,7 @@ const SearchForm = ({ onSearch }: Props) => {
   const destination = useAtomValue(selectedHotelAtom);
 
   const [params, setParams] = useState<SearchParams>({
-    destination: destination?.name || '',
+    destination: destination?.name || 'The Langham, Hong Kong',
     checkIn: dayjs().format('YYYY-MM-DD'),
     checkOut: dayjs().add(1, 'day').format('YYYY-MM-DD'),
     rooms: 1,

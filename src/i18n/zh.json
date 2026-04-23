@@ -1,29 +1,89 @@
 {
+  "lang": {
+    "en": "English",
+    "zh": "中文"
+  },
+  "home": {
+    "title": "发现最优酒店优惠",
+    "subtitle": "比价酒店价格，最高享 30% 优惠"
+  },
+  "searchForm": {
+    "destination": "目的地",
+    "checkIn": "入住",
+    "checkOut": "退房",
+    "selectDates": "选择日期",
+    "totalStay": "总计",
+    "nights": "{{count}} 晚",
+    "apply": "确定",
+    "roomsAndGuests": "房间与人数",
+    "roomGuestSummary": "{{rooms}} 间房，{{guests}} 位入住人",
+    "rooms": "房间数",
+    "guests": "人数",
+    "searchHotels": "搜索酒店"
+  },
+  "hotelSearch": {
+    "title": "输入目的地",
+    "placeholder": "搜索酒店、城市等",
+    "recentSearches": "最近搜索",
+    "popularHotels": "热门酒店",
+    "noHotelsFound": "未找到酒店",
+    "noResultsMatch": "没有与“{{query}}”匹配的结果"
+  },
+  "deals": {
+    "exclusiveDeals": "专享优惠",
+    "cashbackDeal": "{{percent}}% 返现优惠"
+  },
+  "offer": {
+    "badge": "专享合作优惠",
+    "badgeCashback": "- {{cashback}} 返现",
+    "defaultLocation": "香港旺角",
+    "directBooking": "直接预订（{{nights}} 晚，标准房，2 张双人床）",
+    "cashbackApplied": "返现已应用",
+    "claimKodyOffer": "领取 Kody 优惠",
+    "otherProviders": "其他渠道："
+  },
+  "claim": {
+    "title": "领取 Kody 优惠",
+    "subtitle": "按以下简单步骤预订酒店，享受专属返现权益",
+    "step1Title": "获取 Kody 优惠码（5% 返现）",
+    "step1Desc": "在此获取 Kody 优惠码，或填写信息通过邮件接收",
+    "step2Title": "预订时使用优惠码",
+    "step2Desc": "在预订房间时，在优惠码输入框中填写 Kody 优惠码。",
+    "step3Title": "入住时出示优惠码",
+    "step3Desc": "入住时出示您的二维码以获取返现奖励。",
+    "getCodes": "获取优惠码",
+    "goToBookingSite": "前往酒店预订页",
+    "emailFormHint": "填写信息通过邮件接收 Kody 优惠码",
+    "name": "姓名*",
+    "namePlaceholder": "张三",
+    "email": "邮箱*",
+    "emailPlaceholder": "user@email.com",
+    "emailInvalid": "请输入有效的邮箱地址",
+    "referenceCode": "参考码*",
+    "referenceNote": "*仅适用于标准价预订。"
+  },
+  "footer": {
+    "support": "帮助中心",
+    "about": "关于我们",
+    "settings": "设置",
+    "partners": "合作伙伴",
+    "copyright": "@ 2026 Kody Limited 版权所有"
+  },
+  "header": {
+    "languageSwitched": "已切换到{{language}}",
+    "languageNameZh": "中文",
+    "languageNameEn": "英文"
+  },
   "common": {
-    "submit": "提交",
-    "cancel": "取消",
-    "save": "保存",
-    "delete": "删除",
-    "edit": "编辑",
-    "loading": "加载中...",
-    "error": "错误",
-    "success": "成功",
-    "confirm": "确认"
-  },
-  "index": {
-    "tabsTitle": "标签页",
-    "openComponents": "打开组件",
-    "openComponentsAlt": "打开组件（另一个）"
-  },
-  "component": {
-    "title": "组件",
-    "activeButton": "激活",
-    "enterDetails": "输入详情...",
-    "placeholder": "输入详情...",
-    "testText": "测试文字"
-  },
-  "settings": {
-    "language": "语言",
-    "selectLanguage": "选择语言"
+    "noData": "暂无数据",
+    "copy": "复制",
+    "copied": "已复制！",
+    "copyFailed": "复制失败",
+    "download": "下载",
+    "qrDownloaded": "二维码已下载！",
+    "qrDownloadFailed": "下载二维码失败",
+    "qrSaved": "二维码已保存！",
+    "qrSaveFailed": "保存二维码失败",
+    "permissionDenied": "权限被拒绝"
   }
 }

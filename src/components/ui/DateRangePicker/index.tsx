@@ -1,6 +1,7 @@
 import { ChevronLeft, ChevronRight } from '@tamagui/lucide-icons-2';
 import dayjs from 'dayjs';
 import { useCallback, useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { CalendarList, DateData } from 'react-native-calendars';
 import { MarkedDates } from 'react-native-calendars/src/types';
 import { Text, XStack } from 'tamagui';
@@ -21,6 +22,7 @@ const SecondaryColor = '#EBF4FF';
 const CellSize = 50;
 
 const DateRangePicker = ({ initialRange, onRangeChange, color = PrimaryColor }: Props) => {
+  const { i18n } = useTranslation();
   const [range, setRange] = useState<DateRange>(initialRange ?? { startDate: '', endDate: '' });
 
   const getMarkedDates = useCallback(() => {
@@ -93,6 +95,8 @@ const DateRangePicker = ({ initialRange, onRangeChange, color = PrimaryColor }: 
 
   return (
     <CalendarList
+      // change key to force re-render when language changes, ensuring month names update
+      key={i18n.language}
       calendarWidth={CellSize * 7}
       theme={{
         textDayFontSize: 14,

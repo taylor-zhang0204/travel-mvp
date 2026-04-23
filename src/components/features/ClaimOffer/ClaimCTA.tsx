@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Button, Text } from 'tamagui';
 
 type Props = {
@@ -6,6 +7,7 @@ type Props = {
 };
 
 const ClaimCTA = ({ disabled = false, onPress }: Props) => {
+  const { t } = useTranslation();
   return (
     <Button
       disabled={disabled}
@@ -21,7 +23,7 @@ const ClaimCTA = ({ disabled = false, onPress }: Props) => {
       }}
     >
       <Text fontSize={15} fontWeight="500" color="#fff">
-        Get codes
+        {t('claim.getCodes')}
       </Text>
     </Button>
   );

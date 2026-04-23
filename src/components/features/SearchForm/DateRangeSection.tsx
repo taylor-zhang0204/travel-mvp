@@ -1,5 +1,6 @@
 import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button, Sheet, Text, XStack, YStack } from 'tamagui';
 
 import { Calendar } from '@/src/components/icons/src/public/common';
@@ -12,6 +13,7 @@ type Props = {
 };
 
 const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
+  const { t } = useTranslation();
   const [dialogOpen, setDialogOpen] = useState(false);
   const [range, setRange] = useState<{ startDate: string; endDate: string }>({
     startDate: checkIn,
@@ -46,7 +48,7 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
         {/* Check-in */}
         <YStack flex={1} gap={6}>
           <Text fontSize={13} fontWeight="500" color="#003064" letterSpacing={-0.2}>
-            Check-in
+            {t('searchForm.checkIn')}
           </Text>
           <XStack
             height={45}
@@ -67,7 +69,7 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
         {/* Check-out */}
         <YStack flex={1} gap={6}>
           <Text fontSize={13} fontWeight="500" color="#003064" letterSpacing={-0.2}>
-            Check-out
+            {t('searchForm.checkOut')}
           </Text>
           <XStack
             height={45}
@@ -100,14 +102,14 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
             {/* Title */}
             <YStack gap={12} pt={24} pb={12} px={22} bg="#F5F7FA">
               <Text fontSize={20} fontWeight="500" color="#003064">
-                Select dates
+                {t('searchForm.selectDates')}
               </Text>
               {/* Date Info Row */}
               <XStack gap={30} px={8}>
                 {/* Check-in */}
                 <YStack gap={1}>
                   <Text fontSize={13} fontWeight="500" color="#56708B">
-                    Check-in
+                    {t('searchForm.checkIn')}
                   </Text>
                   <Text fontSize={14} fontWeight="600" color="#003064">
                     {range.startDate}
@@ -117,7 +119,7 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
                 {/* Check-out */}
                 <YStack gap={1}>
                   <Text fontSize={13} fontWeight="500" color="#56708B">
-                    Check-out
+                    {t('searchForm.checkOut')}
                   </Text>
                   <Text fontSize={14} fontWeight="600" color="#003064">
                     {range.endDate}
@@ -127,10 +129,10 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
                 {/* Total stay */}
                 <YStack gap={1}>
                   <Text fontSize={13} fontWeight="500" color="#56708B">
-                    Total stay
+                    {t('searchForm.totalStay')}
                   </Text>
                   <Text fontSize={14} fontWeight="600" color="#003064">
-                    {night ? `${night} Nights` : ''}
+                    {night ? t('searchForm.nights', { count: night }) : ''}
                   </Text>
                 </YStack>
               </XStack>
@@ -155,7 +157,7 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
                 pressStyle={{ borderWidth: 0 }}
               >
                 <Text color="#fff" fontSize={15} fontWeight="500">
-                  Apply
+                  {t('searchForm.apply')}
                 </Text>
               </Button>
             </XStack>

@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { Input, Text, YStack } from 'tamagui';
 
 type Props = {
@@ -9,19 +10,20 @@ type Props = {
 };
 
 const ClaimEmailForm = ({ name, email, onNameChange, onEmailChange, showEmailError }: Props) => {
+  const { t } = useTranslation();
   return (
     <YStack gap={14}>
       <Text fontSize={13} fontWeight="500" color="#364153">
-        Enter details to get Kody code via email
+        {t('claim.emailFormHint')}
       </Text>
       <YStack gap={4}>
         <Text fontSize={13} fontWeight="500" color="#364153">
-          Name*
+          {t('claim.name')}
         </Text>
         <Input
           value={name}
           onChangeText={onNameChange}
-          placeholder="Jane Doe"
+          placeholder={t('claim.namePlaceholder')}
           bg="#f5f7fa"
           borderWidth={0.9}
           borderColor="#eceff2"
@@ -34,12 +36,12 @@ const ClaimEmailForm = ({ name, email, onNameChange, onEmailChange, showEmailErr
           fontSize={16}
         />
         <Text fontSize={13} fontWeight="500" color="#364153">
-          Email*
+          {t('claim.email')}
         </Text>
         <Input
           value={email}
           onChangeText={onEmailChange}
-          placeholder="user@email.com"
+          placeholder={t('claim.emailPlaceholder')}
           bg="#f5f7fa"
           borderWidth={0.9}
           borderColor="#eceff2"
@@ -55,7 +57,7 @@ const ClaimEmailForm = ({ name, email, onNameChange, onEmailChange, showEmailErr
         />
         {showEmailError && (
           <Text fontSize={12} color="#dc2626">
-            Please enter a valid email address
+            {t('claim.emailInvalid')}
           </Text>
         )}
       </YStack>

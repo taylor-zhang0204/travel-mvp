@@ -1,29 +1,89 @@
 {
+  "lang": {
+    "en": "English",
+    "zh": "中文"
+  },
+  "home": {
+    "title": "Find Best Hotel Deals",
+    "subtitle": "Compare hotel prices and save up to 30%"
+  },
+  "searchForm": {
+    "destination": "Destination",
+    "checkIn": "Check-in",
+    "checkOut": "Check-out",
+    "selectDates": "Select dates",
+    "totalStay": "Total stay",
+    "nights": "{{count}} Nights",
+    "apply": "Apply",
+    "roomsAndGuests": "Rooms and guests",
+    "roomGuestSummary": "{{rooms}} Room, {{guests}} Guests",
+    "rooms": "Rooms",
+    "guests": "Guests",
+    "searchHotels": "Search Hotels"
+  },
+  "hotelSearch": {
+    "title": "Enter destination",
+    "placeholder": "Search hotels, cities, etc.",
+    "recentSearches": "Recent Searches",
+    "popularHotels": "Popular Hotels",
+    "noHotelsFound": "No hotels found",
+    "noResultsMatch": "No results match \"{{query}}\""
+  },
+  "deals": {
+    "exclusiveDeals": "Exclusive Deals",
+    "cashbackDeal": "{{percent}}% cashback deal"
+  },
+  "offer": {
+    "badge": "Exclusive Partner Offer",
+    "badgeCashback": "- {{cashback}} Cashback",
+    "defaultLocation": "Mong Kok, Hong Kong",
+    "directBooking": "Direct Booking ({{nights}} nights, Standard Room, 2 Double Beds)",
+    "cashbackApplied": "Cashback applied",
+    "claimKodyOffer": "Claim Kody Offer",
+    "otherProviders": "Other Providers:"
+  },
+  "claim": {
+    "title": "Claim Kody Offer",
+    "subtitle": "Follow these simple steps to book your hotel with exclusive cashback benefits",
+    "step1Title": "Get Kody code (5% cashback)",
+    "step1Desc": "Obtain Kody code here, or enter your details to receive it via email",
+    "step2Title": "Apply code when booking",
+    "step2Desc": "Enter the Kody code in the apply promo code field when booking your room.",
+    "step3Title": "Present code at check-in",
+    "step3Desc": "Show your QR code at check-in to receive your cashback reward.",
+    "getCodes": "Get codes",
+    "goToBookingSite": "Go to hotel booking site",
+    "emailFormHint": "Enter details to get Kody code via email",
+    "name": "Name*",
+    "namePlaceholder": "Jane Doe",
+    "email": "Email*",
+    "emailPlaceholder": "user@email.com",
+    "emailInvalid": "Please enter a valid email address",
+    "referenceCode": "Reference code*",
+    "referenceNote": "*This is only applicable to the standard rate."
+  },
+  "footer": {
+    "support": "Support",
+    "about": "About",
+    "settings": "Settings",
+    "partners": "Partners",
+    "copyright": "@ 2026 Kody limited. All rights reserved."
+  },
+  "header": {
+    "languageSwitched": "Language switched to {{language}}",
+    "languageNameZh": "Chinese",
+    "languageNameEn": "English"
+  },
   "common": {
-    "submit": "Submit",
-    "cancel": "Cancel",
-    "save": "Save",
-    "delete": "Delete",
-    "edit": "Edit",
-    "loading": "Loading...",
-    "error": "Error",
-    "success": "Success",
-    "confirm": "Confirm"
-  },
-  "index": {
-    "tabsTitle": "Tabs",
-    "openComponents": "Open components",
-    "openComponentsAlt": "Open components alt"
-  },
-  "component": {
-    "title": "Component",
-    "activeButton": "Active",
-    "enterDetails": "Enter your details...",
-    "placeholder": "Enter your details...",
-    "testText": "Sample text"
-  },
-  "settings": {
-    "language": "Language",
-    "selectLanguage": "Select Language"
+    "noData": "No data",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "copyFailed": "Failed to copy",
+    "download": "Download",
+    "qrDownloaded": "QR code downloaded!",
+    "qrDownloadFailed": "Failed to download QR code",
+    "qrSaved": "QR code saved!",
+    "qrSaveFailed": "Failed to save QR code",
+    "permissionDenied": "Permission denied"
   }
 }
