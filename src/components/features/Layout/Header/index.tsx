@@ -19,7 +19,7 @@ const Header = ({ showBack = true, title, right }: HeaderProps) => {
   const goBack = () => {
     try {
       router.back();
-    } catch (error) {
+    } catch {
       router.replace('/');
     }
   };

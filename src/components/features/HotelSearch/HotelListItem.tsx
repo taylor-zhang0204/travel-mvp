@@ -25,7 +25,7 @@ export const HotelListItem = ({
     </XStack>
     {subtitle ? (
       <YStack flex={1} gap={4}>
-        <Text fontSize={16} fontWeight="500" color="#101828">
+        <Text fontSize={16} fontWeight="500" color="#101828" numberOfLines={1}>
           {title}
         </Text>
         <Text fontSize={14} fontWeight="500" color="#77889b">
@@ -33,7 +33,7 @@ export const HotelListItem = ({
         </Text>
       </YStack>
     ) : (
-      <Text flex={1} fontSize={16} fontWeight="500" color="#101828">
+      <Text flex={1} fontSize={16} fontWeight="500" color="#101828" numberOfLines={1}>
         {title}
       </Text>
     )}

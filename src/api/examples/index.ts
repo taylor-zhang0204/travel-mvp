@@ -1,6 +1,6 @@
 import qs from 'qs';
 
-import { get, post } from '@/api/base';
+import { get, post } from '@/src/api/base';
 import type { SearchParams } from '@/src/types/page';
 
 import type {

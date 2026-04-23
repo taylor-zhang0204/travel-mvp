@@ -22,6 +22,7 @@
     "@tamagui/config": "2.0.0-rc.40",
     "@tamagui/core": "2.0.0-rc.40",
     "@tamagui/lucide-icons-2": "2.0.0-rc.40",
+    "@uidotdev/usehooks": "^2.4.1",
     "axios": "^1.15.0",
     "dayjs": "^1.11.20",
     "expo": "^55.0.13",

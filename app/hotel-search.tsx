@@ -1,4 +1,5 @@
-import { ScrollView, Text, YStack } from 'tamagui';
+import { Fragment, useState } from 'react';
+import { ScrollView, Text, YStack, useDebounceValue } from 'tamagui';
 
 import {
   HotelListItem,
@@ -10,9 +11,19 @@ import {
 import Header from '@/src/components/features/Layout/Header';
 import { Clock, Location } from '@/src/components/icons/src/public/common';
 import Divider from '@/src/components/ui/Divider';
+import { Empty } from '@/src/components/ui/Empty';
 
 export default function HotelSearch() {
   const { recentSearches, selectHotel } = useHotelSearch();
+  const [searchHotel, setSearchHotel] = useState<string>('');
+
+  const debouncedSearchHotel = useDebounceValue(searchHotel, 300);
+
+  const filteredHotels = POPULAR_HOTELS.filter((hotel) =>
+    hotel.name.toLowerCase().includes(debouncedSearchHotel.toLowerCase())
+  );
+
+  const hasSearch = debouncedSearchHotel.length > 0;
 
   return (
     <YStack flex={1} bg="#fff">
@@ -26,37 +37,64 @@ export default function HotelSearch() {
       />
       <ScrollView flex={1}>
         <YStack px={16} pt={16} gap={16}>
-          <SearchInput />
+          <SearchInput value={searchHotel} onChangeText={setSearchHotel} />
 
-          {recentSearches.length > 0 ? (
+          {hasSearch ? (
             <>
-              <SearchSection title="Recent Searches">
-                {recentSearches.map((hotel) => (
+              {filteredHotels.length === 0 ? (
+                <Empty
+                  title="No hotels found"
+                  description={`No results match "${debouncedSearchHotel}"`}
+                />
+              ) : (
+                filteredHotels.map((hotel, index) => (
+                  <Fragment key={hotel.name}>
+                    {index > 0 ? <Divider /> : null}
+                    <HotelListItem
+                      title={hotel.name}
+                      subtitle={hotel.location}
+                      height={72}
+                      icon={<Location size={20} color="#1566D1" />}
+                      iconBg="#e8f3ff"
+                      onPress={() => selectHotel(hotel.name)}
+                    />
+                  </Fragment>
+                ))
+              )}
+            </>
+          ) : (
+            <>
+              {recentSearches.length > 0 ? (
+                <>
+                  <SearchSection title="Recent Searches">
+                    {recentSearches.map((hotel) => (
+                      <HotelListItem
+                        key={hotel.name}
+                        title={hotel.name}
+                        icon={<Clock size={20} />}
+                        onPress={() => selectHotel(hotel.name)}
+                      />
+                    ))}
+                  </SearchSection>
+                  <Divider />
+                </>
+              ) : null}
+
+              <SearchSection title="Popular Hotels" gap={4} pt={4}>
+                {POPULAR_HOTELS.map((hotel) => (
                   <HotelListItem
                     key={hotel.name}
                     title={hotel.name}
-                    icon={<Clock size={20} />}
+                    subtitle={hotel.location}
+                    height={72}
+                    icon={<Location size={20} color="#1566D1" />}
+                    iconBg="#e8f3ff"
                     onPress={() => selectHotel(hotel.name)}
                   />
                 ))}
               </SearchSection>
-              <Divider />
             </>
-          ) : null}
-
-          <SearchSection title="Popular Hotels" gap={4} pt={4}>
-            {POPULAR_HOTELS.map((hotel) => (
-              <HotelListItem
-                key={hotel.name}
-                title={hotel.name}
-                subtitle={hotel.location}
-                height={72}
-                icon={<Location size={20} color="#1566D1" />}
-                iconBg="#e8f3ff"
-                onPress={() => selectHotel(hotel.name)}
-              />
-            ))}
-          </SearchSection>
+          )}
         </YStack>
       </ScrollView>
     </YStack>
