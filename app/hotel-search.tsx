@@ -28,17 +28,22 @@ export default function HotelSearch() {
         <YStack px={16} pt={16} gap={16}>
           <SearchInput />
 
-          <SearchSection title="Recent Searches">
-            {recentSearches.map((hotel) => (
-              <HotelListItem
-                key={hotel.name}
-                title={hotel.name}
-                icon={<Clock size={20} />}
-                onPress={() => selectHotel(hotel.name)}
-              />
-            ))}
-          </SearchSection>
-          <Divider />
+          {recentSearches.length > 0 ? (
+            <>
+              <SearchSection title="Recent Searches">
+                {recentSearches.map((hotel) => (
+                  <HotelListItem
+                    key={hotel.name}
+                    title={hotel.name}
+                    icon={<Clock size={20} />}
+                    onPress={() => selectHotel(hotel.name)}
+                  />
+                ))}
+              </SearchSection>
+              <Divider />
+            </>
+          ) : null}
+
           <SearchSection title="Popular Hotels" gap={4} pt={4}>
             {POPULAR_HOTELS.map((hotel) => (
               <HotelListItem

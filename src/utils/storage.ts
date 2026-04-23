@@ -2,7 +2,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 type Value = string | number | boolean | object | null;
 
-const storage = {
+const Storage = {
   async get<T extends Value>(key: string): Promise<T | null> {
     try {
       const value = await AsyncStorage.getItem(key);
@@ -38,4 +38,4 @@ const storage = {
   },
 };
 
-export default storage;
+export default Storage;

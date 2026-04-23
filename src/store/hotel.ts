@@ -4,7 +4,7 @@ import { atomWithStorage, createJSONStorage } from 'jotai/utils';
 
 export interface Hotel {
   name: string;
-  location: string;
+  location?: string;
 }
 
 // 持久化 atom

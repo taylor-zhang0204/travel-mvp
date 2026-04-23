@@ -3,7 +3,7 @@ import { useAtom, useSetAtom } from 'jotai';
 import { useEffect } from 'react';
 
 import { recentSearchesAtom, selectedHotelAtom } from '@/src/store/hotel';
-import storage from '@/src/utils/storage';
+import Storage from '@/src/utils/storage';
 
 import { defaultRecentSearches } from './constants';
 
@@ -13,9 +13,9 @@ export const useHotelSearch = () => {
 
   useEffect(() => {
     (async () => {
-      const recent = await storage.get('recent-searches');
+      const recent = await Storage.get('recent-searches');
       if (!recent) {
-        storage.set('recent-searches', defaultRecentSearches);
+        Storage.set('recent-searches', defaultRecentSearches);
       }
     })();
   }, []);
