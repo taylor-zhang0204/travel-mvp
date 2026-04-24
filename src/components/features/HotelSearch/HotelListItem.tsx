@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 import type { GetProps } from 'tamagui';
-import { Text, XStack, YStack } from 'tamagui';
+import { Circle, Text, XStack, YStack } from 'tamagui';
 
 interface HotelListItemProps {
   title: string;
@@ -20,9 +20,9 @@ export const HotelListItem = ({
   onPress,
 }: HotelListItemProps) => (
   <XStack height={height} px={12} gap={12} rounded={10} items="center" onPress={onPress}>
-    <XStack bg={iconBg} p={10} rounded={9999} items="center" justify="center">
+    <Circle size={40} bg={iconBg}>
       {icon}
-    </XStack>
+    </Circle>
     {subtitle ? (
       <YStack flex={1} gap={4}>
         <Text fontSize={16} fontWeight="500" color="#101828" numberOfLines={1}>

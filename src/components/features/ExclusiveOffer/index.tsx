@@ -3,12 +3,11 @@ import dayjs from 'dayjs';
 import { router } from 'expo-router';
 import { useTranslation } from 'react-i18next';
 import { ImageBackground, StyleSheet } from 'react-native';
-import { Button, Text, View, XStack, YStack } from 'tamagui';
+import { Anchor, Button, Text, View, XStack, YStack } from 'tamagui';
 
 import { ArrowUpRightFromSquare, Location } from '@/src/components/icons/src/public/common';
 import Rate from '@/src/components/ui/Rate';
 import type { SearchParams } from '@/src/types/page';
-import { openExternalLink } from '@/src/utils';
 
 type Props = {
   cashback?: string;
@@ -142,12 +141,19 @@ const ExclusiveOffer = ({
               <Text fontSize={13} fontWeight="500" color="#101828">
                 {provider.name}
               </Text>
-              <XStack gap={8} items="center" onPress={() => openExternalLink(provider.link)}>
-                <Text fontSize={15} fontWeight="600" color="#101828">
-                  {provider.price}
-                </Text>
-                <ArrowUpRightFromSquare size={14} color="#CDD7E4" />
-              </XStack>
+              <Anchor
+                href={provider.link}
+                target="_blank"
+                textDecorationLine="none"
+                hoverStyle={{ textDecorationLine: 'none' }}
+              >
+                <XStack items="center" gap={8}>
+                  <Text fontSize={15} fontWeight="600" color="#101828">
+                    {provider.price}
+                  </Text>
+                  <ArrowUpRightFromSquare size={14} color="#CDD7E4" />
+                </XStack>
+              </Anchor>
             </XStack>
           </YStack>
         ))}

@@ -1,4 +1,4 @@
-import { XStack, Text } from 'tamagui';
+import { Circle, Text } from 'tamagui';
 
 type Props = {
   number: string;
@@ -7,18 +7,11 @@ type Props = {
 
 const StepBadge = ({ number, active = false }: Props) => {
   return (
-    <XStack
-      width={37}
-      height={37}
-      bg={active ? '#d1dff0' : '#e5e7eb'}
-      rounded={999}
-      justify="center"
-      items="center"
-    >
+    <Circle size={37} bg={active ? '#d1dff0' : '#e5e7eb'}>
       <Text fontSize={15} fontWeight="600" color="#4a4f55">
         {number}
       </Text>
-    </XStack>
+    </Circle>
   );
 };
 
