@@ -46,14 +46,34 @@ const Header = ({ showBack = true, title, right }: HeaderProps) => {
       borderBottomWidth={1}
       borderBottomColor="#E5E7EB"
     >
-      <YStack position="absolute" l={8}>
-        {router.canGoBack() && showBack && <ChevronLeft onPress={goBack} />}
+      <YStack
+        position="absolute"
+        l={0}
+        height={60}
+        width={48}
+        items="center"
+        justify="center"
+        onPress={goBack}
+        pressStyle={{ opacity: 0.6 }}
+        hitSlop={10}
+      >
+        {router.canGoBack() && showBack ? <ChevronLeft size={24} /> : null}
       </YStack>
       <YStack flex={1} items="center">
         {title || <Logo size={60} />}
       </YStack>
-      <YStack position="absolute" r={8}>
-        {right || <Globe size={40} onPress={changeLanguage} />}
+      <YStack
+        position="absolute"
+        r={0}
+        height={60}
+        width={48}
+        items="center"
+        justify="center"
+        onPress={right ? undefined : changeLanguage}
+        pressStyle={{ opacity: 0.6 }}
+        hitSlop={10}
+      >
+        {right || <Globe size={28} />}
       </YStack>
     </XStack>
   );

@@ -37,29 +37,31 @@ const useWebKeyboardFix = () => {
       window.scrollTo(0, 0);
     };
 
-    document.addEventListener('focusin', (e) => {
-      const tag = (e.target as HTMLElement).tagName;
-      if (tag === 'INPUT' || tag === 'TEXTAREA') {
+    const isFormElement = (target: EventTarget | null) => {
+      const tag = (target as HTMLElement | null)?.tagName;
+      return tag === 'INPUT' || tag === 'TEXTAREA';
+    };
+
+    const onFocusIn = (e: FocusEvent) => {
+      if (isFormElement(e.target)) {
         lockScroll();
       }
-    });
+    };
 
-    document.addEventListener('focusout', (e) => {
-      const tag = (e.target as HTMLElement).tagName;
-      if (tag === 'INPUT' || tag === 'TEXTAREA') {
+    const onFocusOut = (e: FocusEvent) => {
+      if (isFormElement(e.target)) {
         setTimeout(unlockScroll, 300);
       }
-    });
+    };
 
-    document.addEventListener(
-      'touchmove',
-      (e) => {
-        if (scrollLocked) {
-          e.preventDefault();
-        }
-      },
-      { passive: false }
-    );
+    document.addEventListener('focusin', onFocusIn);
+    document.addEventListener('focusout', onFocusOut);
+
+    return () => {
+      document.removeEventListener('focusin', onFocusIn);
+      document.removeEventListener('focusout', onFocusOut);
+      unlockScroll();
+    };
   }, []);
 };
 

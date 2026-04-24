@@ -41,7 +41,6 @@ const DestinationInput = ({ value, onChangeText, placeholder }: Props) => {
         <Input
           flex={1}
           value={value}
-          disabled
           onChangeText={onChangeText}
           placeholder={placeholder}
           onFocus={() => setFocused(true)}
