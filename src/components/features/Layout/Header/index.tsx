@@ -3,7 +3,7 @@ import { useRouter } from 'expo-router';
 import { ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import Toast from 'react-native-toast-message';
-import { XStack, YStack } from 'tamagui';
+import { Button, XStack, YStack } from 'tamagui';
 
 import { Globe, Logo } from '@/src/components/icons/src/public/common';
 
@@ -37,44 +37,50 @@ const Header = ({ showBack = true, title, right }: HeaderProps) => {
     });
   };
 
+  const showBackBtn = router.canGoBack() && showBack;
+
   return (
     <XStack
       height={60}
-      paddingInline={8}
+      px={4}
       items="center"
       bg="#FFFFFF"
       borderBottomWidth={1}
       borderBottomColor="#E5E7EB"
     >
-      <YStack
-        position="absolute"
-        l={0}
-        height={60}
-        width={48}
-        items="center"
-        justify="center"
-        onPress={goBack}
-        pressStyle={{ opacity: 0.6 }}
-        hitSlop={10}
-      >
-        {router.canGoBack() && showBack ? <ChevronLeft size={24} /> : null}
-      </YStack>
+      <XStack width={48} height={48} items="center" justify="center">
+        {showBackBtn ? (
+          <Button
+            unstyled
+            width={44}
+            height={44}
+            items="center"
+            justify="center"
+            pressStyle={{ opacity: 0.5 }}
+          >
+            <ChevronLeft size={24} onPress={goBack} />
+          </Button>
+        ) : null}
+      </XStack>
+
       <YStack flex={1} items="center">
         {title || <Logo size={60} />}
       </YStack>
-      <YStack
-        position="absolute"
-        r={0}
-        height={60}
-        width={48}
-        items="center"
-        justify="center"
-        onPress={right ? undefined : changeLanguage}
-        pressStyle={{ opacity: 0.6 }}
-        hitSlop={10}
-      >
-        {right || <Globe size={28} />}
-      </YStack>
+
+      <XStack width={48} height={48} items="center" justify="center">
+        {right ?? (
+          <Button
+            unstyled
+            width={44}
+            height={44}
+            items="center"
+            justify="center"
+            pressStyle={{ opacity: 0.5 }}
+          >
+            <Globe size={30} onPress={changeLanguage} />
+          </Button>
+        )}
+      </XStack>
     </XStack>
   );
 };
