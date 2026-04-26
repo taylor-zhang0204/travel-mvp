@@ -1,6 +1,8 @@
 import { ChevronLeft, Search } from '@tamagui/lucide-icons-2';
-import { router } from 'expo-router';
+import { useRouter } from 'expo-router';
 import { Text, XStack, YStack } from 'tamagui';
+
+import { safeGoBack } from '@/src/utils/navigation';
 
 type Props = {
   destination?: string;
@@ -8,11 +10,13 @@ type Props = {
 };
 
 export default function SearchHeader({ destination = '', dateRange = '' }: Props) {
+  const router = useRouter();
+
   return (
     <YStack bg="#fff" borderBottomWidth={1} borderBottomColor="#E5E7EB" px={14} py={11}>
       <XStack bg="#fff" height={42} gap={11} rounded={12}>
         {/* Back Button */}
-        <YStack justify="center" onPress={() => router.back()}>
+        <YStack justify="center" onPress={() => safeGoBack(router)}>
           <ChevronLeft size={22} color="#000" />
         </YStack>
 

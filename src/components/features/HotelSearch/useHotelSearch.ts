@@ -3,6 +3,7 @@ import { useAtom, useSetAtom } from 'jotai';
 import { useEffect } from 'react';
 
 import { recentSearchesAtom, selectedHotelAtom } from '@/src/store/hotel';
+import { safeGoBack } from '@/src/utils/navigation';
 import Storage from '@/src/utils/storage';
 
 import { defaultRecentSearches } from './constants';
@@ -24,7 +25,7 @@ export const useHotelSearch = () => {
     const updated = [{ name }, ...recentSearches.filter((h) => h.name !== name)].slice(0, 5);
     setRecentSearches(updated);
     setSelectedHotel({ name });
-    router.back();
+    safeGoBack(router);
   };
 
   return { recentSearches, selectHotel };
