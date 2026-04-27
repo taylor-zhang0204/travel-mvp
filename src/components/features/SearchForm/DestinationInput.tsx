@@ -1,19 +1,17 @@
 import { router } from 'expo-router';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Input, Text, XStack, YStack } from 'tamagui';
+import { Text, XStack, YStack } from 'tamagui';
 
 import { Location } from '@/src/components/icons/src/public/common';
 
 type Props = {
   value: string;
-  onChangeText: (text: string) => void;
   placeholder?: string;
 };
 
-const DestinationInput = ({ value, onChangeText, placeholder }: Props) => {
+const DestinationInput = ({ value, placeholder }: Props) => {
   const { t } = useTranslation();
-  const [focused, setFocused] = useState(false);
 
   useEffect(() => {
     console.log('Destination value: ', value);
@@ -22,6 +20,8 @@ const DestinationInput = ({ value, onChangeText, placeholder }: Props) => {
   const goSearchHotel = () => {
     router.push('/hotel-search');
   };
+
+  const isEmpty = !value;
 
   return (
     <YStack gap={6}>
@@ -32,29 +32,18 @@ const DestinationInput = ({ value, onChangeText, placeholder }: Props) => {
         height={45}
         bg="#F5F7FA"
         px={16}
+        gap={8}
         borderWidth={1}
-        borderColor={focused ? '#1566D1' : 'rgba(255,255,255,0.1)'}
+        borderColor="rgba(255,255,255,0.1)"
         rounded={12}
         items="center"
+        onPress={goSearchHotel}
+        pressStyle={{ opacity: 0.7 }}
       >
         <Location size={18} color="#9CA3AF" />
-        <Input
-          flex={1}
-          value={value}
-          onChangeText={onChangeText}
-          placeholder={placeholder}
-          onFocus={() => setFocused(true)}
-          onBlur={() => setFocused(false)}
-          focusStyle={{
-            outlineWidth: 0,
-            outlineColor: 'transparent',
-          }}
-          color={'#56708B'}
-          bg="transparent"
-          borderWidth={0}
-          fontSize={16}
-          onPress={() => goSearchHotel()}
-        />
+        <Text flex={1} fontSize={16} color={isEmpty ? '#9CA3AF' : '#56708B'} numberOfLines={1}>
+          {isEmpty ? placeholder : value}
+        </Text>
       </XStack>
     </YStack>
   );
