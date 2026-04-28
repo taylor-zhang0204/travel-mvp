@@ -71,7 +71,7 @@ const ExclusiveOffer = ({
             {destination || t('searchForm.destinationPlaceholder')}
           </Text>
           <XStack gap={4} items="center">
-            <Rate count={5} />
+            <Rate count={4.5} />
             <Location size={15} color="#FFF" />
             <Text fontSize={12} color="#FFF">
               {t('offer.defaultLocation')}
