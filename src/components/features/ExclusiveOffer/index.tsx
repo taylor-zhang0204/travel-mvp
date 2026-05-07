@@ -7,6 +7,7 @@ import { Anchor, Button, Text, View, XStack, YStack } from 'tamagui';
 
 import { ArrowUpRightFromSquare, Location } from '@/src/components/icons/src/public/common';
 import Rate from '@/src/components/ui/Rate';
+import { colors } from '@/src/styles/theme';
 import type { SearchParams } from '@/src/types/page';
 
 type Props = {
@@ -58,22 +59,22 @@ const ExclusiveOffer = ({
           px={15}
           height={19}
         >
-          <Text fontSize={11} fontWeight="500" color="#1566d1">
+          <Text fontSize={11} fontWeight="500" color={colors.primary}>
             {t('offer.badge')}
-            <Text fontSize={11} fontWeight="700" color="#1566d1">
+            <Text fontSize={11} fontWeight="700" color={colors.primary}>
               {t('offer.badgeCashback', { cashback })}
             </Text>
           </Text>
         </XStack>
 
         <YStack gap={6} mt={44} pl={14} ml={15}>
-          <Text fontSize={19} fontWeight="600" color="#FFF" letterSpacing={-0.2}>
+          <Text fontSize={19} fontWeight="600" color={colors.textWhite} letterSpacing={-0.2}>
             {destination || t('searchForm.destinationPlaceholder')}
           </Text>
           <XStack gap={4} items="center">
             <Rate count={4.5} />
-            <Location size={15} color="#FFF" />
-            <Text fontSize={12} color="#FFF">
+            <Location size={15} color={colors.textWhite} />
+            <Text fontSize={12} color={colors.textWhite}>
               {t('offer.defaultLocation')}
             </Text>
           </XStack>
@@ -92,18 +93,18 @@ const ExclusiveOffer = ({
         shadowOpacity={0.6}
         shadowRadius={10}
       >
-        <Text fontSize={11} color="#505050">
+        <Text fontSize={11} color={colors.textSubtle}>
           {t('offer.directBooking', { nights })}
         </Text>
         <XStack gap={4} mt={8}>
-          <Text fontSize={20} fontWeight="700" color="#1566d1">
+          <Text fontSize={20} fontWeight="700" color={colors.primary}>
             $5,506
           </Text>
           <XStack gap={4} items="center">
-            <Text fontSize={11} fontWeight="600" color="#1566d1">
+            <Text fontSize={11} fontWeight="600" color={colors.primary}>
               {t('offer.cashbackApplied')}
             </Text>
-            <Check size={14} color="#1566d1" />
+            <Check size={14} color={colors.primary} />
           </XStack>
         </XStack>
         <Button
@@ -112,20 +113,20 @@ const ExclusiveOffer = ({
           rounded={9}
           justify="center"
           items="center"
-          bg="#1566D1"
+          bg={colors.primary}
           onPress={gotoClaim}
           pressStyle={{
             borderWidth: 0,
           }}
         >
-          <Text fontSize={13} fontWeight="500" color="#fff">
+          <Text fontSize={13} fontWeight="500" color={colors.textWhite}>
             {t('offer.claimKodyOffer')}
           </Text>
-          <ArrowUpRightFromSquare size={15} color="#fff" />
+          <ArrowUpRightFromSquare size={15} color={colors.textWhite} />
         </Button>
       </YStack>
       <YStack gap={6} mt={10} px={29} pb={30}>
-        <Text fontSize={13} fontWeight="600" color="#101828">
+        <Text fontSize={13} fontWeight="600" color={colors.textPrimary}>
           {t('offer.otherProviders')}
         </Text>
         {/* Price comparison rows */}
@@ -134,11 +135,11 @@ const ExclusiveOffer = ({
             key={provider.name}
             borderBottomWidth={1}
             height={38}
-            borderColor="#e1e7f3"
+            borderColor={colors.providerBorder}
             justify="center"
           >
             <XStack justify="space-between" items="center">
-              <Text fontSize={13} fontWeight="500" color="#101828">
+              <Text fontSize={13} fontWeight="500" color={colors.textPrimary}>
                 {provider.name}
               </Text>
               <Anchor
@@ -148,10 +149,10 @@ const ExclusiveOffer = ({
                 hoverStyle={{ textDecorationLine: 'none' }}
               >
                 <XStack items="center" gap={8}>
-                  <Text fontSize={15} fontWeight="600" color="#101828">
+                  <Text fontSize={15} fontWeight="600" color={colors.textPrimary}>
                     {provider.price}
                   </Text>
-                  <ArrowUpRightFromSquare size={14} color="#CDD7E4" />
+                  <ArrowUpRightFromSquare size={14} color={colors.providerIcon} />
                 </XStack>
               </Anchor>
             </XStack>

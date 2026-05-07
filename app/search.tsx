@@ -2,10 +2,12 @@ import { useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { ScrollView, YStack } from 'tamagui';
 
+
 // import { search } from '@/api/examples';
 import ExclusiveOffer from '@/src/components/features/ExclusiveOffer';
 import Footer from '@/src/components/features/Layout/Footer';
 import SearchHeader from '@/src/components/features/SearchHeader';
+import { colors } from '@/src/styles';
 import type { SearchParams } from '@/src/types/page';
 
 const Search = () => {
@@ -31,7 +33,7 @@ const Search = () => {
   // }, [params?.checkIn]);
 
   return (
-    <YStack flex={1} bg="#F7F9FD">
+    <YStack flex={1} bg={colors.backgroundPage}>
       <SearchHeader
         destination={params?.destination}
         dateRange={`${params?.checkIn} - ${params?.checkOut}`}

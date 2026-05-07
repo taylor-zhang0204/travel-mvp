@@ -1,6 +1,8 @@
 import { StarFull } from '@tamagui/lucide-icons-2';
 import { XStack, YStack } from 'tamagui';
 
+import { colors } from '@/src/styles';
+
 type Props = {
   count: number; // 0-5, supports decimals (e.g., 3.5, 4.3, 4.7)
   size?: number;
@@ -25,22 +27,22 @@ const Rate = ({ count, size = 12 }: Props) => {
   for (let i = 1; i <= TOTAL_STARS; i++) {
     if (roundedCount >= i) {
       // Full star - fully filled
-      stars.push(<StarFull key={i} size={size} color="#F59E0B" />);
+      stars.push(<StarFull key={i} size={size} color={colors.starFilled} />);
     } else if (roundedCount >= i - 0.5) {
       // Half star - filled left half, gray right half
       stars.push(
         <YStack key={i} width={size} height={size} position="relative">
           {/* Gray background star (empty half) */}
-          <StarFull size={size} color="#D1D5DB" />
+          <StarFull size={size} color={colors.starEmpty} />
           {/* Gold star clipped to left half */}
           <YStack position="absolute" overflow="hidden" width="50%" height="100%">
-            <StarFull size={size} color="#F59E0B" />
+            <StarFull size={size} color={colors.starFilled} />
           </YStack>
         </YStack>
       );
     } else {
       // No star - fully gray
-      stars.push(<StarFull key={i} size={size} color="#D1D5DB" />);
+      stars.push(<StarFull key={i} size={size} color={colors.starEmpty} />);
     }
   }
 

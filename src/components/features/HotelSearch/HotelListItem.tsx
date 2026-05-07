@@ -2,6 +2,8 @@ import type { ReactNode } from 'react';
 import type { GetProps } from 'tamagui';
 import { Circle, Text, XStack, YStack } from 'tamagui';
 
+import { colors } from '@/src/styles/theme';
+
 interface HotelListItemProps {
   title: string;
   subtitle?: string;
@@ -15,7 +17,7 @@ export const HotelListItem = ({
   title,
   subtitle,
   icon,
-  iconBg = '#F5F7FA',
+  iconBg = colors.backgroundInput,
   height = 64,
   onPress,
 }: HotelListItemProps) => (
@@ -25,15 +27,15 @@ export const HotelListItem = ({
     </Circle>
     {subtitle ? (
       <YStack flex={1} gap={4}>
-        <Text fontSize={16} fontWeight="500" color="#101828" numberOfLines={1}>
+        <Text fontSize={16} fontWeight="500" color={colors.textPrimary} numberOfLines={1}>
           {title}
         </Text>
-        <Text fontSize={14} fontWeight="500" color="#77889b">
+        <Text fontSize={14} fontWeight="500" color={colors.textMuted}>
           {subtitle}
         </Text>
       </YStack>
     ) : (
-      <Text flex={1} fontSize={16} fontWeight="500" color="#101828" numberOfLines={1}>
+      <Text flex={1} fontSize={16} fontWeight="500" color={colors.textPrimary} numberOfLines={1}>
         {title}
       </Text>
     )}

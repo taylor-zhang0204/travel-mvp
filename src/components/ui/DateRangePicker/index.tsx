@@ -6,6 +6,8 @@ import { CalendarList, DateData } from 'react-native-calendars';
 import { MarkedDates } from 'react-native-calendars/src/types';
 import { Text, XStack } from 'tamagui';
 
+import { colors } from '@/src/styles/theme';
+
 type DateRange = {
   startDate: string;
   endDate: string;
@@ -17,11 +19,9 @@ type Props = {
   color?: string;
 };
 
-const PrimaryColor = '#1566D1';
-const SecondaryColor = '#EBF4FF';
 const CellSize = 50;
 
-const DateRangePicker = ({ initialRange, onRangeChange, color = PrimaryColor }: Props) => {
+const DateRangePicker = ({ initialRange, onRangeChange, color = colors.primary }: Props) => {
   const { i18n } = useTranslation();
   const [range, setRange] = useState<DateRange>(initialRange ?? { startDate: '', endDate: '' });
 
@@ -48,7 +48,7 @@ const DateRangePicker = ({ initialRange, onRangeChange, color = PrimaryColor }: 
       while (current < end) {
         const dateString = dayjs(current).format('YYYY-MM-DD');
         marked[dateString] = {
-          color: SecondaryColor,
+          color: colors.primaryLight,
         };
         current.setDate(current.getDate() + 1);
       }
@@ -122,7 +122,7 @@ const DateRangePicker = ({ initialRange, onRangeChange, color = PrimaryColor }: 
         };
 
         if (!marking) {
-          const textColor = state === 'disabled' ? '#d9e1e8' : '#2d4150';
+          const textColor = state === 'disabled' ? colors.calendarDisabled : colors.calendarText;
           return (
             <XStack
               width={CellSize}

@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { ImageBackground } from 'react-native';
 import { Text, XStack, YStack } from 'tamagui';
 
+import { colors } from '@/src/styles/theme';
 import { SCREEN_WIDTH } from '@/src/utils/screen';
 
 const CARD_WIDTH = SCREEN_WIDTH - 50;
@@ -52,7 +53,7 @@ const ExclusiveDeals = ({ deals = [] }: Props) => {
     <YStack gap={22} pt={22} px={14} pb={36}>
       {/* Title */}
       <XStack width="100%" justify="center" items="center">
-        <Text fontSize={22} fontWeight="700" color="#101828" text="center">
+        <Text fontSize={22} fontWeight="700" color={colors.textPrimary} text="center">
           {t('deals.exclusiveDeals')}
         </Text>
       </XStack>
@@ -66,7 +67,7 @@ const ExclusiveDeals = ({ deals = [] }: Props) => {
             height={CARD_HEIGHT}
             rounded={CARD_BORDER_RADIUS}
             overflow="hidden"
-            shadowColor="#000"
+            shadowColor={colors.textBlack}
             shadowOffset={{ width: 0, height: 0.9 }}
             shadowOpacity={1}
             shadowRadius={2.8}

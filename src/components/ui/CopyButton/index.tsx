@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next';
 import Toast from 'react-native-toast-message';
 import { Text, XStack } from 'tamagui';
 
+import { colors } from '@/src/styles';
+
 type Props = {
   value: string;
 };
@@ -22,10 +24,10 @@ const CopyButton = ({ value }: Props) => {
 
   return (
     <XStack gap={7} items="center" onPress={handleCopy}>
-      <Text fontSize={13} fontWeight="500" color="#1566d1">
+      <Text fontSize={13} fontWeight="500" color={colors.primary}>
         {t('common.copy')}
       </Text>
-      <Copy size={15} color="#1566d1" />
+      <Copy size={15} color={colors.primary} />
     </XStack>
   );
 };

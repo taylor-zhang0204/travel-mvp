@@ -5,6 +5,7 @@ import { Button, Sheet, Text, XStack, YStack } from 'tamagui';
 
 import { Calendar } from '@/src/components/icons/src/public/common';
 import DateRangePicker from '@/src/components/ui/DateRangePicker';
+import { colors } from '@/src/styles/theme';
 
 type Props = {
   checkIn: string;
@@ -47,7 +48,7 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
       <XStack gap={8}>
         {/* Check-in */}
         <YStack flex={1} gap={6}>
-          <Text fontSize={13} fontWeight="500" color="#003064" letterSpacing={-0.2}>
+          <Text fontSize={13} fontWeight="500" color={colors.primaryDark} letterSpacing={-0.2}>
             {t('searchForm.checkIn')}
           </Text>
           <XStack
@@ -55,12 +56,12 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
             px={14}
             gap={8}
             onPress={handleOpenDialog}
-            bg="#F5F7FA"
+            bg={colors.backgroundInput}
             rounded={12}
             items="center"
           >
             <Calendar size={16} />
-            <Text fontSize={14} color="#56708B">
+            <Text fontSize={14} color={colors.textTertiary}>
               {checkIn}
             </Text>
           </XStack>
@@ -68,7 +69,7 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
 
         {/* Check-out */}
         <YStack flex={1} gap={6}>
-          <Text fontSize={13} fontWeight="500" color="#003064" letterSpacing={-0.2}>
+          <Text fontSize={13} fontWeight="500" color={colors.primaryDark} letterSpacing={-0.2}>
             {t('searchForm.checkOut')}
           </Text>
           <XStack
@@ -76,12 +77,12 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
             px={14}
             gap={8}
             onPress={handleOpenDialog}
-            bg="#F5F7FA"
+            bg={colors.backgroundInput}
             rounded={12}
             items="center"
           >
             <Calendar size={16} />
-            <Text fontSize={14} color="#56708B">
+            <Text fontSize={14} color={colors.textTertiary}>
               {checkOut}
             </Text>
           </XStack>
@@ -100,38 +101,38 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
         <Sheet.Frame bg="$white">
           <YStack>
             {/* Title */}
-            <YStack gap={12} pt={24} pb={12} px={22} bg="#F5F7FA">
-              <Text fontSize={20} fontWeight="500" color="#003064">
+            <YStack gap={12} pt={24} pb={12} px={22} bg={colors.backgroundInput}>
+              <Text fontSize={20} fontWeight="500" color={colors.primaryDark}>
                 {t('searchForm.selectDates')}
               </Text>
               {/* Date Info Row */}
               <XStack gap={30} px={8}>
                 {/* Check-in */}
                 <YStack gap={1}>
-                  <Text fontSize={13} fontWeight="500" color="#56708B">
+                  <Text fontSize={13} fontWeight="500" color={colors.textTertiary}>
                     {t('searchForm.checkIn')}
                   </Text>
-                  <Text fontSize={14} fontWeight="600" color="#003064">
+                  <Text fontSize={14} fontWeight="600" color={colors.primaryDark}>
                     {range.startDate}
                   </Text>
                 </YStack>
 
                 {/* Check-out */}
                 <YStack gap={1}>
-                  <Text fontSize={13} fontWeight="500" color="#56708B">
+                  <Text fontSize={13} fontWeight="500" color={colors.textTertiary}>
                     {t('searchForm.checkOut')}
                   </Text>
-                  <Text fontSize={14} fontWeight="600" color="#003064">
+                  <Text fontSize={14} fontWeight="600" color={colors.primaryDark}>
                     {range.endDate}
                   </Text>
                 </YStack>
 
                 {/* Total stay */}
                 <YStack gap={1}>
-                  <Text fontSize={13} fontWeight="500" color="#56708B">
+                  <Text fontSize={13} fontWeight="500" color={colors.textTertiary}>
                     {t('searchForm.totalStay')}
                   </Text>
-                  <Text fontSize={14} fontWeight="600" color="#003064">
+                  <Text fontSize={14} fontWeight="600" color={colors.primaryDark}>
                     {night ? t('searchForm.nights', { count: night }) : ''}
                   </Text>
                 </YStack>
@@ -146,9 +147,9 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
               />
             </XStack>
 
-            <XStack gap={12} px={30} py={16} justify="flex-end" bg="#F5F7FA">
+            <XStack gap={12} px={30} py={16} justify="flex-end" bg={colors.backgroundInput}>
               <Button
-                bg={isDisabled ? '#CBD5E1' : '#1566D1'}
+                bg={isDisabled ? colors.buttonDisabled : colors.primary}
                 rounded={10}
                 height={45}
                 flex={1}
@@ -156,7 +157,7 @@ const DateRangeSection = ({ checkIn, checkOut, onDateRangeChange }: Props) => {
                 onPress={handleConfirm}
                 pressStyle={{ borderWidth: 0 }}
               >
-                <Text color="#fff" fontSize={15} fontWeight="500">
+                <Text color={colors.textWhite} fontSize={15} fontWeight="500">
                   {t('searchForm.apply')}
                 </Text>
               </Button>

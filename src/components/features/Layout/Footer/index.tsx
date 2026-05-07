@@ -2,6 +2,9 @@ import { ChevronDown } from '@tamagui/lucide-icons-2';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Accordion, Paragraph, Square, Text, XStack, YStack } from 'tamagui';
+
+import { colors } from '@/src/styles/theme';
+
 interface FooterSection {
   title: string;
   isExpanded: boolean;
@@ -10,9 +13,6 @@ interface FooterSection {
 interface FooterProps {
   sections?: FooterSection[];
 }
-
-// Figma design colors
-const FOOTER_TEXT_COLOR = '#56708B';
 
 const SECTION_KEYS = ['support', 'about', 'settings', 'partners'] as const;
 
@@ -32,20 +32,24 @@ const Footer = (_props: FooterProps) => {
                 justify="space-between"
                 bg="$white"
                 pressStyle={{ bg: '$white' }}
-                style={{ border: 0, borderBottomWidth: 1, borderColor: '#CDD7E4' }}
+                style={{ border: 0, borderBottomWidth: 1, borderColor: colors.borderLight }}
               >
                 {({ open }: { open: boolean }) => (
                   <>
-                    <Paragraph color="#101828">{label}</Paragraph>
+                    <Paragraph color={colors.textPrimary}>{label}</Paragraph>
                     <Square transparent transition="quick" rotate={open ? '180deg' : '0deg'}>
                       <ChevronDown size="$1" color="$color" />
                     </Square>
                   </>
                 )}
               </Accordion.Trigger>
-              <Accordion.Content bg="$white" borderBottomWidth={1} borderColor="#CDD7E4">
+              <Accordion.Content
+                bg={colors.white}
+                borderBottomWidth={1}
+                borderColor={colors.borderLight}
+              >
                 <YStack py="$1" height={80}>
-                  <Text color="#4A5565">{label}</Text>
+                  <Text color={colors.textSecondary}>{label}</Text>
                 </YStack>
               </Accordion.Content>
             </Accordion.Item>
@@ -53,7 +57,7 @@ const Footer = (_props: FooterProps) => {
         })}
       </Accordion>
       <XStack pt="$6" pb="$4">
-        <Text fontSize={12} color={FOOTER_TEXT_COLOR} textTransform="capitalize">
+        <Text fontSize={12} color={colors.textTertiary} textTransform="capitalize">
           {t('footer.copyright')}
         </Text>
       </XStack>

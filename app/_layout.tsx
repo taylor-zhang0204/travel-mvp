@@ -6,6 +6,7 @@ import Toast from 'react-native-toast-message';
 import { TamaguiProvider } from 'tamagui';
 
 import { ErrorToast, SuccessToast } from '@/src/components/ui/Toast';
+import { colors } from '@/src/styles';
 
 import '@/src/i18n';
 
@@ -70,7 +71,7 @@ const RootLayout = () => {
 
   return (
     <TamaguiProvider config={tamaguiConfig} defaultTheme="light">
-      <SafeAreaView style={{ flex: 1, backgroundColor: '#F7F9FD' }} edges={['top']}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: colors.backgroundPage }} edges={['top']}>
         <KeyboardAvoidingView
           style={{ flex: 1 }}
           behavior={Platform.OS === 'ios' ? 'padding' : 'height'}

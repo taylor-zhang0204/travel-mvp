@@ -1,22 +1,24 @@
 import { useTranslation } from 'react-i18next';
 import { ScrollView, Text, YStack } from 'tamagui';
 
+
 import ExclusiveDeals from '@/src/components/features/ExclusiveDeals';
 import Footer from '@/src/components/features/Layout/Footer';
 import Header from '@/src/components/features/Layout/Header';
 import SearchForm from '@/src/components/features/SearchForm';
+import { colors } from '@/src/styles';
 
 const Index = () => {
   const { t } = useTranslation();
   return (
-    <YStack flex={1} bg="#F7F9FD">
+    <YStack flex={1} bg={colors.backgroundPage}>
       <Header />
       <ScrollView flex={1}>
         <YStack pt={30} items="center">
-          <Text color="#101828" fontSize={28} fontWeight="700" marginBlockEnd={12}>
+          <Text color={colors.textPrimary} fontSize={28} fontWeight="700" marginBlockEnd={12}>
             {t('home.title')}
           </Text>
-          <Text color="#4A5565" fontSize={15} marginBlockEnd={20}>
+          <Text color={colors.textSecondary} fontSize={15} marginBlockEnd={20}>
             {t('home.subtitle')}
           </Text>
           <SearchForm />

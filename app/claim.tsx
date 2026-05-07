@@ -2,14 +2,16 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ScrollView, Text, YStack } from 'tamagui';
 
+
 import {
-    ClaimCTA,
-    ClaimEmailForm,
-    ClaimReferenceCard,
-    ExternalLink,
-    StepItem,
+  ClaimCTA,
+  ClaimEmailForm,
+  ClaimReferenceCard,
+  ExternalLink,
+  StepItem,
 } from '@/src/components/features/ClaimOffer';
 import Header from '@/src/components/features/Layout/Header';
+import { colors } from '@/src/styles';
 import { isValidEmail } from '@/src/utils';
 
 const BookingLink =
@@ -23,10 +25,10 @@ const Claim = () => {
   const isDisabled = !name.trim() || !isValidEmail(email);
 
   return (
-    <YStack flex={1} bg="#F7F9FD">
+    <YStack flex={1} bg={colors.backgroundPage}>
       <Header
         title={
-          <Text fontSize={20} fontWeight="500" color="#101828">
+          <Text fontSize={20} fontWeight="500" color={colors.textPrimary}>
             {t('claim.title')}
           </Text>
         }
@@ -35,7 +37,7 @@ const Claim = () => {
       <ScrollView flex={1} px={22} py={22}>
         <YStack gap={22} pb={22}>
           {/* Subtitle */}
-          <Text fontSize={15} color="#4a5565">
+          <Text fontSize={15} color={colors.textSecondary}>
             {t('claim.subtitle')}
           </Text>
 

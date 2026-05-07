@@ -7,13 +7,13 @@ export const containerStyles = StyleSheet.create({
   // 全屏容器
   fullScreen: {
     flex: 1,
-    backgroundColor: colors.background,
+    backgroundColor: colors.white,
   },
 
   // 安全区域容器
   safeArea: {
     flex: 1,
-    backgroundColor: colors.background,
+    backgroundColor: colors.white,
   },
 
   // 居中内容容器
@@ -21,13 +21,13 @@ export const containerStyles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: colors.background,
+    backgroundColor: colors.white,
   },
 
   // 页面内容容器（顶部有导航栏）
   pageContent: {
     flex: 1,
-    backgroundColor: colors.background,
+    backgroundColor: colors.white,
   },
 
   // 水平填充容器
@@ -47,7 +47,7 @@ export const containerStyles = StyleSheet.create({
 export const cardStyles = StyleSheet.create({
   // 默认卡片
   default: {
-    backgroundColor: colors.surface,
+    backgroundColor: colors.white,
     borderRadius: borderRadius.lg,
     padding: spacing.md,
     ...shadows.sm,
@@ -55,7 +55,7 @@ export const cardStyles = StyleSheet.create({
 
   // 带边框卡片
   bordered: {
-    backgroundColor: colors.surface,
+    backgroundColor: colors.white,
     borderRadius: borderRadius.lg,
     borderWidth: 1,
     borderColor: colors.border,
@@ -64,7 +64,7 @@ export const cardStyles = StyleSheet.create({
 
   // 悬浮卡片
   elevated: {
-    backgroundColor: colors.surface,
+    backgroundColor: colors.white,
     borderRadius: borderRadius.lg,
     padding: spacing.md,
     ...shadows.md,
@@ -85,7 +85,7 @@ export const buttonStyles = StyleSheet.create({
 
   // 次按钮
   secondary: {
-    backgroundColor: colors.backgroundSecondary,
+    backgroundColor: colors.backgroundPage,
     borderRadius: borderRadius.md,
     paddingVertical: spacing.sm + 2,
     paddingHorizontal: spacing.md,
@@ -119,7 +119,7 @@ export const buttonStyles = StyleSheet.create({
 export const inputStyles = StyleSheet.create({
   // 默认输入框
   default: {
-    backgroundColor: colors.backgroundSecondary,
+    backgroundColor: colors.backgroundPage,
     borderRadius: borderRadius.md,
     paddingVertical: spacing.sm + 2,
     paddingHorizontal: spacing.md,
@@ -129,7 +129,7 @@ export const inputStyles = StyleSheet.create({
 
   // 带边框输入框
   bordered: {
-    backgroundColor: colors.surface,
+    backgroundColor: colors.white,
     borderRadius: borderRadius.md,
     borderWidth: 1,
     borderColor: colors.border,
@@ -141,7 +141,7 @@ export const inputStyles = StyleSheet.create({
 
   // 错误状态输入框
   error: {
-    backgroundColor: colors.surface,
+    backgroundColor: colors.white,
     borderRadius: borderRadius.md,
     borderWidth: 1,
     borderColor: colors.error,

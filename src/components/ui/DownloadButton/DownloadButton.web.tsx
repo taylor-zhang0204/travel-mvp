@@ -5,6 +5,8 @@ import { useTranslation } from 'react-i18next';
 import Toast from 'react-native-toast-message';
 import { Text, XStack } from 'tamagui';
 
+import { colors } from '@/src/styles';
+
 type Props = {
   children: React.ReactNode;
 };
@@ -44,10 +46,10 @@ const DownloadButton = ({ children }: Props) => {
         {children}
       </div>
       <XStack gap={7} items="center" onPress={handleDownload}>
-        <Text fontSize={13} fontWeight="500" color="#1566d1">
+        <Text fontSize={13} fontWeight="500" color={colors.primary}>
           {t('common.download')}
         </Text>
-        <Download size={15} color="#1566d1" />
+        <Download size={15} color={colors.primary} />
       </XStack>
     </XStack>
   );

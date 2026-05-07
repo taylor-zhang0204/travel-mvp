@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E '#[0-9A-Fa-f]{3,6}')"
+    ]
+  }
+}
