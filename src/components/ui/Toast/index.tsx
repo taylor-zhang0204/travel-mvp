@@ -1,7 +1,9 @@
 import { Text, YStack } from 'tamagui';
 
+import { colors } from '@/src/styles';
+
 const SuccessToast = ({ text1 }: { text1: string }) => (
-  <YStack bg="#101828" rounded={8} p={16} minH={50}>
+  <YStack bg={colors.toastSuccess} rounded={8} p={16} minH={50}>
     <Text color="$white" fontSize={14} fontWeight="500">
       {text1}
     </Text>
@@ -9,7 +11,7 @@ const SuccessToast = ({ text1 }: { text1: string }) => (
 );
 
 const ErrorToast = ({ text1 }: { text1: string }) => (
-  <YStack bg="#dc2626" rounded={8} p={16} minH={50}>
+  <YStack bg={colors.toastError} rounded={8} p={16} minH={50}>
     <Text color="$white" fontSize={14} fontWeight="500">
       {text1}
     </Text>

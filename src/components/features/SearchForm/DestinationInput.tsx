@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { Text, XStack, YStack } from 'tamagui';
 
 import { Location } from '@/src/components/icons/src/public/common';
+import { colors } from '@/src/styles/theme';
 
 type Props = {
   value: string;
@@ -25,23 +26,33 @@ const DestinationInput = ({ value, placeholder }: Props) => {
 
   return (
     <YStack gap={6}>
-      <Text fontSize={13} fontWeight="500" style={{ color: '#003064' }} letterSpacing={-0.2}>
+      <Text
+        fontSize={13}
+        fontWeight="500"
+        style={{ color: colors.primaryDark }}
+        letterSpacing={-0.2}
+      >
         {t('searchForm.destination')}
       </Text>
       <XStack
         height={45}
-        bg="#F5F7FA"
+        bg={colors.backgroundInput}
         px={16}
         gap={8}
         borderWidth={1}
-        borderColor="rgba(255,255,255,0.1)"
+        borderColor={colors.border}
         rounded={12}
         items="center"
         onPress={goSearchHotel}
         pressStyle={{ opacity: 0.7 }}
       >
-        <Location size={18} color="#9CA3AF" />
-        <Text flex={1} fontSize={16} color={isEmpty ? '#9CA3AF' : '#56708B'} numberOfLines={1}>
+        <Location size={18} color={colors.textPlaceholder} />
+        <Text
+          flex={1}
+          fontSize={16}
+          color={isEmpty ? colors.textPlaceholder : colors.textTertiary}
+          numberOfLines={1}
+        >
           {isEmpty ? placeholder : value}
         </Text>
       </XStack>

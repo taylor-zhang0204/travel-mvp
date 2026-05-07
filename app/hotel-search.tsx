@@ -3,16 +3,17 @@ import { useTranslation } from 'react-i18next';
 import { ScrollView, Text, YStack, useDebounceValue } from 'tamagui';
 
 import {
-    HotelListItem,
-    POPULAR_HOTELS,
-    SearchInput,
-    SearchSection,
-    useHotelSearch,
+  HotelListItem,
+  POPULAR_HOTELS,
+  SearchInput,
+  SearchSection,
+  useHotelSearch,
 } from '@/src/components/features/HotelSearch';
 import Header from '@/src/components/features/Layout/Header';
 import { Clock, Location } from '@/src/components/icons/src/public/common';
 import Divider from '@/src/components/ui/Divider';
 import { Empty } from '@/src/components/ui/Empty';
+import { colors } from '@/src/styles';
 
 export default function HotelSearch() {
   const { t } = useTranslation();
@@ -28,10 +29,10 @@ export default function HotelSearch() {
   const hasSearch = debouncedSearchHotel.length > 0;
 
   return (
-    <YStack flex={1} bg="#fff">
+    <YStack flex={1} bg={colors.white}>
       <Header
         title={
-          <Text fontSize={20} fontWeight="500" color="#101828">
+          <Text fontSize={20} fontWeight="500" color={colors.textPrimary}>
             {t('hotelSearch.title')}
           </Text>
         }
@@ -56,8 +57,8 @@ export default function HotelSearch() {
                       title={hotel.name}
                       subtitle={hotel.location}
                       height={72}
-                      icon={<Location size={20} color="#1566D1" />}
-                      iconBg="#e8f3ff"
+                      icon={<Location size={20} color={colors.primary} />}
+                      iconBg={colors.primaryLightBg}
                       onPress={() => selectHotel(hotel.name)}
                     />
                   </Fragment>
@@ -89,8 +90,8 @@ export default function HotelSearch() {
                     title={hotel.name}
                     subtitle={hotel.location}
                     height={72}
-                    icon={<Location size={20} color="#1566D1" />}
-                    iconBg="#e8f3ff"
+                    icon={<Location size={20} color={colors.primary} />}
+                    iconBg={colors.primaryLightBg}
                     onPress={() => selectHotel(hotel.name)}
                   />
                 ))}

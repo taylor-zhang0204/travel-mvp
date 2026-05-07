@@ -1,28 +1,27 @@
 import { useLocalSearchParams } from 'expo-router';
-import { useEffect, useState } from 'react';
+import { useMemo } from 'react';
 import { ScrollView, YStack } from 'tamagui';
 
 // import { search } from '@/api/examples';
 import ExclusiveOffer from '@/src/components/features/ExclusiveOffer';
 import Footer from '@/src/components/features/Layout/Footer';
 import SearchHeader from '@/src/components/features/SearchHeader';
+import { colors } from '@/src/styles';
 import type { SearchParams } from '@/src/types/page';
 
 const Search = () => {
   const searchParams = useLocalSearchParams();
-  const [params, setParams] = useState<SearchParams>();
 
-  useEffect(() => {
+  const params = useMemo<SearchParams>(() => {
     const { destination = '', checkIn = '', checkOut = '', guests = '', rooms = '' } = searchParams;
-    setParams({
+    return {
       destination: String(destination),
       checkIn: String(checkIn),
       checkOut: String(checkOut),
       guests: Number(guests),
       rooms: Number(rooms),
-    });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [JSON.stringify(searchParams)]);
+    };
+  }, [searchParams]);
 
   // useEffect(() => {
   //   if (params?.checkIn) {
@@ -31,7 +30,7 @@ const Search = () => {
   // }, [params?.checkIn]);
 
   return (
-    <YStack flex={1} bg="#F7F9FD">
+    <YStack flex={1} bg={colors.backgroundPage}>
       <SearchHeader
         destination={params?.destination}
         dateRange={`${params?.checkIn} - ${params?.checkOut}`}

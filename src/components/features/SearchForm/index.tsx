@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import { YStack } from 'tamagui';
 
 import { selectedHotelAtom } from '@/src/store/hotel';
+import { colors } from '@/src/styles/theme';
 import { SearchParams } from '@/src/types/page';
 import { SCREEN_WIDTH } from '@/src/utils/screen';
 
@@ -55,11 +56,8 @@ const SearchForm = ({ onSearch }: Props) => {
   const isSearchDisabled = !params.destination;
 
   return (
-    <YStack width={SCREEN_WIDTH - 50} px={14} py={20} bg="#fff" gap={16} rounded={12}>
-      <DestinationInput
-        value={params.destination}
-        onChangeText={(destination) => setParams((p) => ({ ...p, destination }))}
-      />
+    <YStack width={SCREEN_WIDTH - 50} px={14} py={20} bg={colors.white} gap={16} rounded={12}>
+      <DestinationInput value={params.destination} />
 
       <DateRangeSection
         checkIn={params.checkIn}

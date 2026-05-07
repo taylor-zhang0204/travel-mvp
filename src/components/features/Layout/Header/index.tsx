@@ -6,6 +6,7 @@ import Toast from 'react-native-toast-message';
 import { XStack, YStack } from 'tamagui';
 
 import { Globe, Logo } from '@/src/components/icons/src/public/common';
+import { colors } from '@/src/styles/theme';
 import { safeGoBack } from '@/src/utils/navigation';
 
 interface HeaderProps {
@@ -44,9 +45,9 @@ const Header = ({ showBack = true, title, right }: HeaderProps) => {
       height={60}
       px={4}
       items="center"
-      bg="#FFFFFF"
+      bg={colors.white}
       borderBottomWidth={1}
-      borderBottomColor="#E5E7EB"
+      borderBottomColor={colors.border}
     >
       <XStack width={48} height={48} items="center" justify="center">
         {showBackBtn ? (

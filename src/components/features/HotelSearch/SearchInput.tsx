@@ -2,6 +2,8 @@ import { Search } from '@tamagui/lucide-icons-2';
 import { useTranslation } from 'react-i18next';
 import { Input, XStack } from 'tamagui';
 
+import { colors } from '@/src/styles/theme';
+
 interface SearchInputProps {
   value?: string;
   onChangeText?: (v: string) => void;
@@ -14,13 +16,13 @@ export const SearchInput = ({ value, onChangeText, placeholder }: SearchInputPro
     <XStack
       height={50}
       borderWidth={1}
-      borderColor="#56708B"
+      borderColor={colors.borderSearch}
       px={13}
       gap={8}
       rounded={10}
       items="center"
     >
-      <Search size={16} color="#56708B" />
+      <Search size={16} color={colors.textTertiary} />
       <Input
         flex={1}
         value={value}
