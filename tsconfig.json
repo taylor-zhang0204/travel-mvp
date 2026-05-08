@@ -5,7 +5,7 @@
     "paths": {
       "@/*": ["./*"]
     },
-    "types": ["tamagui"]
+    "types": ["tamagui", "jest", "node"]
   },
   "include": [
     "**/*.ts",
