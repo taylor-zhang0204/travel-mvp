@@ -1,8 +1,7 @@
-import qs from 'qs';
-
 import { get, post } from '@/src/api/base';
 import type { SearchParams } from '@/src/types/page';
 
+import mock from './mock.json';
 import type {
   BookingParams,
   BookingResponse,
@@ -12,8 +11,11 @@ import type {
   HotelListResponse,
 } from './types';
 
-export async function search(params: SearchParams) {
-  return get(`/?${qs.stringify(params)}`);
+export type SearchHotelResponse = typeof mock;
+
+export async function search(params: SearchParams): Promise<SearchHotelResponse> {
+  console.log(params);
+  return Promise.resolve(mock);
 }
 
 // ==================== 酒店相关接口 ====================
@@ -48,5 +50,6 @@ export type {
   CancelBookingResponse,
   Hotel,
   HotelListParams,
-  HotelListResponse,
+  HotelListResponse
 } from './types';
+

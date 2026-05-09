@@ -11,38 +11,35 @@ type Props = {
 const TOTAL_STARS = 5;
 
 /**
- * Round to nearest 0.5 for star display:
- * - 4.0-4.24 → 4.0 (4 stars)
- * - 4.25-4.74 → 4.5 (4.5 stars)
- * - 4.75-5.0 → 5.0 (5 stars)
+ * Get fill percentage for a specific star position
+ * e.g., count=4.3: star 5 gets 30% fill
  */
-const roundToHalf = (num: number): number => {
-  return Math.round(num * 2) / 2;
+const getFillPercent = (count: number, starIndex: number): number => {
+  if (count >= starIndex) return 100;
+  if (count <= starIndex - 1) return 0;
+  return Math.round((count - (starIndex - 1)) * 100);
 };
 
 const Rate = ({ count, size = 12 }: Props) => {
-  const roundedCount = roundToHalf(count);
   const stars = [];
 
   for (let i = 1; i <= TOTAL_STARS; i++) {
-    if (roundedCount >= i) {
-      // Full star - fully filled
+    const fillPercent = getFillPercent(count, i);
+
+    if (fillPercent === 100) {
       stars.push(<StarFull key={i} size={size} color={colors.starFilled} />);
-    } else if (roundedCount >= i - 0.5) {
-      // Half star - filled left half, gray right half
+    } else if (fillPercent === 0) {
+      stars.push(<StarFull key={i} size={size} color={colors.starEmpty} />);
+    } else {
+      // Partial fill
       stars.push(
         <YStack key={i} width={size} height={size} position="relative">
-          {/* Gray background star (empty half) */}
           <StarFull size={size} color={colors.starEmpty} />
-          {/* Gold star clipped to left half */}
-          <YStack position="absolute" overflow="hidden" width="50%" height="100%">
+          <YStack position="absolute" overflow="hidden" width={`${fillPercent}%`} height="100%">
             <StarFull size={size} color={colors.starFilled} />
           </YStack>
         </YStack>
       );
-    } else {
-      // No star - fully gray
-      stars.push(<StarFull key={i} size={size} color={colors.starEmpty} />);
     }
   }
 

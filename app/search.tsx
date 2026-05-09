@@ -1,8 +1,8 @@
 import { useLocalSearchParams } from 'expo-router';
-import { useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { ScrollView, YStack } from 'tamagui';
 
-// import { search } from '@/api/examples';
+import { search, SearchHotelResponse } from '@/src/api/examples';
 import ExclusiveOffer from '@/src/components/features/ExclusiveOffer';
 import Footer from '@/src/components/features/Layout/Footer';
 import SearchHeader from '@/src/components/features/SearchHeader';
@@ -11,6 +11,8 @@ import type { SearchParams } from '@/src/types/page';
 
 const Search = () => {
   const searchParams = useLocalSearchParams();
+
+  const [hotelInfo, sethotelInfo] = useState<SearchHotelResponse['hotel']>();
 
   const params = useMemo<SearchParams>(() => {
     const { destination = '', checkIn = '', checkOut = '', guests = '', rooms = '' } = searchParams;
@@ -23,11 +25,18 @@ const Search = () => {
     };
   }, [searchParams]);
 
-  // useEffect(() => {
-  //   if (params?.checkIn) {
-  //     search(params).then((res) => console.log(res));
-  //   }
-  // }, [params?.checkIn]);
+  const fetchHotelInfo = async () => {
+    if (params?.checkIn) {
+      const { hotel } = await search(params);
+      sethotelInfo(hotel);
+    }
+  };
+
+  useEffect(() => {
+    if (params?.checkIn) {
+      fetchHotelInfo();
+    }
+  }, [params]);
 
   return (
     <YStack flex={1} bg={colors.backgroundPage}>
@@ -42,6 +51,7 @@ const Search = () => {
           checkOut={params?.checkOut}
           guests={params?.guests}
           rooms={params?.rooms}
+          info={hotelInfo}
         />
         <Footer />
       </ScrollView>

@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { ImageBackground, StyleSheet } from 'react-native';
 import { Anchor, Button, Text, View, XStack, YStack } from 'tamagui';
 
+import type { SearchHotelResponse } from '@/src/api/examples';
 import { ArrowUpRightFromSquare, Location } from '@/src/components/icons/src/public/common';
 import Rate from '@/src/components/ui/Rate';
 import { colors } from '@/src/styles/theme';
@@ -12,23 +13,12 @@ import type { SearchParams } from '@/src/types/page';
 
 type Props = {
   cashback?: string;
+  info?: SearchHotelResponse['hotel'];
 } & Partial<SearchParams>;
 
-const PROVIDERS = [
-  { name: 'Booking.com', price: 'HK$5,812', link: 'https://www.booking.com/' },
-  { name: 'Trip.com', price: 'HK$5,876', link: 'https://www.trip.com/' },
-  { name: 'Agoda', price: 'HK$5,834', link: 'https://www.agoda.com/' },
-  { name: 'Expedia', price: 'HK$5,865', link: 'https://www.expedia.com/' },
-  { name: 'Hotels', price: 'HK$5,845', link: 'https://www.hotels.com/' },
-];
-
-const ExclusiveOffer = ({
-  cashback = '5%',
-  destination = '',
-  checkIn = '',
-  checkOut = '',
-}: Props) => {
+const ExclusiveOffer = ({ cashback = '5%', info }: Props) => {
   const { t } = useTranslation();
+  const { check_in_date: checkIn, check_out_date: checkOut } = info || {};
   const nights = dayjs(checkOut).diff(dayjs(checkIn), 'day');
   const gotoClaim = () => {
     router.push({
@@ -36,17 +26,19 @@ const ExclusiveOffer = ({
     });
   };
 
+  const uniqueProviders = [...new Map(info?.booking_options.map((p) => [p.platform, p])).values()];
+
   return (
     <YStack>
       <ImageBackground
         source={{
-          uri: 'https://pix10.agoda.net/hotelImages/551/551856/551856_16111110450048635209.jpg',
+          uri: info?.photos?.[0]?.photo_url || '',
         }}
         style={{ width: '100%', height: 152, overflow: 'hidden', backgroundColor: 'grey' }}
         resizeMode="cover"
       >
         {/* Gradient overlay */}
-        <View style={StyleSheet.absoluteFillObject} />
+        <View bg="rgba(0, 0, 0, 0.5)" style={StyleSheet.absoluteFillObject} />
 
         {/* Badge */}
         <XStack
@@ -69,13 +61,13 @@ const ExclusiveOffer = ({
 
         <YStack gap={6} mt={44} pl={14} ml={15}>
           <Text fontSize={19} fontWeight="600" color={colors.textWhite} letterSpacing={-0.2}>
-            {destination || t('searchForm.destinationPlaceholder')}
+            {info?.hotel_name || t('searchForm.destinationPlaceholder')}
           </Text>
           <XStack gap={4} items="center">
-            <Rate count={4.5} />
+            <Rate count={info?.rating || 0} />
             <Location size={15} color={colors.textWhite} />
             <Text fontSize={12} color={colors.textWhite}>
-              {t('offer.defaultLocation')}
+              {info?.address || t('offer.defaultLocation')}
             </Text>
           </XStack>
         </YStack>
@@ -98,7 +90,7 @@ const ExclusiveOffer = ({
         </Text>
         <XStack gap={4} mt={8}>
           <Text fontSize={20} fontWeight="700" color={colors.primary}>
-            $5,506
+            {info?.price_trend}
           </Text>
           <XStack gap={4} items="center">
             <Text fontSize={11} fontWeight="600" color={colors.primary}>
@@ -130,9 +122,9 @@ const ExclusiveOffer = ({
           {t('offer.otherProviders')}
         </Text>
         {/* Price comparison rows */}
-        {PROVIDERS.map((provider) => (
+        {uniqueProviders.map((provider) => (
           <YStack
-            key={provider.name}
+            key={`${provider.platform}-${provider.room_type}`}
             borderBottomWidth={1}
             height={38}
             borderColor={colors.providerBorder}
@@ -140,10 +132,10 @@ const ExclusiveOffer = ({
           >
             <XStack justify="space-between" items="center">
               <Text fontSize={13} fontWeight="500" color={colors.textPrimary}>
-                {provider.name}
+                {`${provider.platform}`}
               </Text>
               <Anchor
-                href={provider.link}
+                href={provider.url}
                 target="_blank"
                 textDecorationLine="none"
                 hoverStyle={{ textDecorationLine: 'none' }}
