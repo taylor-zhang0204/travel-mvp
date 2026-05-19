@@ -25,6 +25,26 @@ export function transformKeysToCamel<T>(obj: unknown): T {
   return obj as T;
 }
 
+// 字段转换：camelCase -> snake_case
+export function transformKeysToSnake<T>(obj: unknown): T {
+  if (obj === null || obj === undefined) return obj as T;
+  if (Array.isArray(obj)) return obj.map((item) => transformKeysToSnake<T>(item)) as T;
+
+  if (typeof obj === 'object') {
+    return Object.entries(obj as Record<string, unknown>).reduce(
+      (acc, [key, value]) => {
+        // 转换 camelCase 为 snake_case
+        const snakeKey = key.replace(/[A-Z]/g, (letter) => `_${letter.toLowerCase()}`);
+        (acc as Record<string, unknown>)[snakeKey] = transformKeysToSnake(value);
+        return acc;
+      },
+      {} as Record<string, unknown>
+    ) as T;
+  }
+
+  return obj as T;
+}
+
 // 检查网络状态
 async function checkNetworkStatus(): Promise<{
   isConnected: boolean;
@@ -47,9 +67,13 @@ async function checkNetworkStatus(): Promise<{
 
 // 请求拦截器 - 请求发送前执行
 export function onRequest(config: InternalAxiosRequestConfig): InternalAxiosRequestConfig {
-  // 可在此添加 token 等
-  // const token = await getToken();
-  // config.headers.Authorization = `Bearer ${token}`;
+  // 转换参数为 snake_case
+  if (config.params) {
+    config.params = transformKeysToSnake(config.params);
+  }
+  if (config.data) {
+    config.data = transformKeysToSnake(config.data);
+  }
   return config;
 }
 
