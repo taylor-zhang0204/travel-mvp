@@ -2,7 +2,8 @@ import { useLocalSearchParams } from 'expo-router';
 import { useEffect, useMemo, useState } from 'react';
 import { ScrollView, YStack } from 'tamagui';
 
-import { search, SearchHotelResponse } from '@/src/api/examples';
+import { getBookingOptions } from '@/src/api/hotel';
+import type { IBookingOptionItem } from '@/src/api/hotel/types';
 import ExclusiveOffer from '@/src/components/features/ExclusiveOffer';
 import Footer from '@/src/components/features/Layout/Footer';
 import SearchHeader from '@/src/components/features/SearchHeader';
@@ -12,11 +13,19 @@ import type { SearchParams } from '@/src/types/page';
 const Search = () => {
   const searchParams = useLocalSearchParams();
 
-  const [hotelInfo, sethotelInfo] = useState<SearchHotelResponse['hotel']>();
+  const [hotelInfo, sethotelInfo] = useState<IBookingOptionItem>();
 
   const params = useMemo<SearchParams>(() => {
-    const { destination = '', checkIn = '', checkOut = '', guests = '', rooms = '' } = searchParams;
+    const {
+      hotelId = '',
+      destination = '',
+      checkIn = '',
+      checkOut = '',
+      guests = '',
+      rooms = '',
+    } = searchParams;
     return {
+      hotelId: String(hotelId),
       destination: String(destination),
       checkIn: String(checkIn),
       checkOut: String(checkOut),
@@ -27,8 +36,9 @@ const Search = () => {
 
   const fetchHotelInfo = async () => {
     if (params?.checkIn) {
-      const { hotel } = await search(params);
-      sethotelInfo(hotel);
+      const res = await getBookingOptions(params);
+      console.log(res);
+      // sethotelInfo(res.hotel);
     }
   };
 
@@ -51,7 +61,7 @@ const Search = () => {
           checkOut={params?.checkOut}
           guests={params?.guests}
           rooms={params?.rooms}
-          info={hotelInfo}
+          // info={hotelInfo}
         />
         <Footer />
       </ScrollView>

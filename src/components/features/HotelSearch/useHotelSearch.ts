@@ -2,11 +2,10 @@ import { router } from 'expo-router';
 import { useAtom, useSetAtom } from 'jotai';
 import { useEffect } from 'react';
 
+import type { IHotelItem } from '@/src/api/hotel/types';
 import { recentSearchesAtom, selectedHotelAtom } from '@/src/store/hotel';
 import { safeGoBack } from '@/src/utils/navigation';
 import Storage from '@/src/utils/storage';
-
-import { defaultRecentSearches } from './constants';
 
 export const useHotelSearch = () => {
   const [recentSearches, setRecentSearches] = useAtom(recentSearchesAtom);
@@ -16,15 +15,22 @@ export const useHotelSearch = () => {
     (async () => {
       const recent = await Storage.get('recent-searches');
       if (!recent) {
-        Storage.set('recent-searches', defaultRecentSearches);
+        Storage.set('recent-searches', []);
       }
     })();
   }, []);
 
-  const selectHotel = (name: string) => {
-    const updated = [{ name }, ...recentSearches.filter((h) => h.name !== name)].slice(0, 5);
+  const selectHotel = ({ hotelId, name, address }: IHotelItem) => {
+    const updated = [
+      { hotelId, name, address },
+      ...recentSearches.filter((h) => h.name !== name),
+    ].slice(0, 5);
     setRecentSearches(updated);
-    setSelectedHotel({ name });
+    setSelectedHotel({
+      hotelId,
+      name,
+      address,
+    });
     safeGoBack(router);
   };
 

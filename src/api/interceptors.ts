@@ -3,7 +3,7 @@ import * as Network from 'expo-network';
 
 import { API_ERROR_CODE, API_ERROR_MESSAGE } from '@/src/constants';
 
-import { ApiError } from './types';
+import { IApiError } from './types';
 
 // 字段转换：snake_case -> camelCase
 export function transformKeysToCamel<T>(obj: unknown): T {
@@ -108,15 +108,13 @@ export async function onRequestError(error: AxiosError): Promise<never> {
 
 // 响应成功拦截器 - 数据转换
 export function onResponse(response: AxiosResponse): AxiosResponse {
-  // 转换字段为驼峰
-  console.log('response.data', response.data);
+  // 转换响应数据为驼峰命名法
   response.data = transformKeysToCamel(response.data);
-  console.log('transformKeysToCamel', response.data);
   return response;
 }
 
 // 响应错误拦截器 - 状态码处理
-export async function onResponseError(error: AxiosError<ApiError>): Promise<never> {
+export async function onResponseError(error: AxiosError<IApiError>): Promise<never> {
   const { response } = error;
 
   if (response) {

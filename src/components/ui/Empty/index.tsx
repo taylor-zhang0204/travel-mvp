@@ -3,7 +3,7 @@ import { Text, YStack } from 'tamagui';
 
 import { colors } from '@/src/styles';
 
-interface EmptyProps {
+interface IEmptyProps {
   /** Title text shown below the icon */
   title?: string;
   /** Secondary description text */
@@ -16,7 +16,7 @@ interface EmptyProps {
   py?: number;
 }
 
-export const Empty = ({ title = 'No data', description, icon, action, py = 30 }: EmptyProps) => (
+export const Empty = ({ title = 'No data', description, icon, action, py = 30 }: IEmptyProps) => (
   <YStack items="center" justify="center" gap={12} py={py} px={24}>
     {icon}
     <YStack items="center" gap={4}>

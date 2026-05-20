@@ -5,18 +5,18 @@ import { Accordion, Paragraph, Square, Text, XStack, YStack } from 'tamagui';
 
 import { colors } from '@/src/styles/theme';
 
-interface FooterSection {
+interface IFooterSection {
   title: string;
   isExpanded: boolean;
 }
 
-interface FooterProps {
-  sections?: FooterSection[];
+interface IFooterProps {
+  sections?: IFooterSection[];
 }
 
 const SECTION_KEYS = ['support', 'about', 'settings', 'partners'] as const;
 
-const Footer = (_props: FooterProps) => {
+const Footer = (_props: IFooterProps) => {
   const { t } = useTranslation();
   const [openItems, setOpenItems] = useState<string[]>([]);
 
