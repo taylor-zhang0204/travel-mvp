@@ -1,10 +1,11 @@
-import { Fragment, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ScrollView, Text, YStack, useDebounceValue } from 'tamagui';
 
+import { getHotelList } from '@/src/api/hotel';
+import type { IHotelListResponse } from '@/src/api/hotel/types';
 import {
   HotelListItem,
-  POPULAR_HOTELS,
   SearchInput,
   SearchSection,
   useHotelSearch,
@@ -19,12 +20,23 @@ export default function HotelSearch() {
   const { t } = useTranslation();
   const { recentSearches, selectHotel } = useHotelSearch();
   const [searchHotel, setSearchHotel] = useState<string>('');
+  const [hotels, setHotels] = useState<IHotelListResponse['items']>([]);
 
   const debouncedSearchHotel = useDebounceValue(searchHotel, 300);
 
-  const filteredHotels = POPULAR_HOTELS.filter((hotel) =>
+  const filteredHotels = hotels.filter((hotel) =>
     hotel.name.toLowerCase().includes(debouncedSearchHotel.toLowerCase())
   );
+
+  const fetchHotels = async () => {
+    const { items } = await getHotelList();
+    console.log('fetchHotels: ', items);
+    setHotels(items);
+  };
+
+  useEffect(() => {
+    fetchHotels();
+  }, []);
 
   const hasSearch = debouncedSearchHotel.length > 0;
 
@@ -55,11 +67,11 @@ export default function HotelSearch() {
                     {index > 0 ? <Divider /> : null}
                     <HotelListItem
                       title={hotel.name}
-                      subtitle={hotel.location}
+                      subtitle={hotel.address}
                       height={72}
                       icon={<Location size={20} color={colors.primary} />}
                       iconBg={colors.primaryLightBg}
-                      onPress={() => selectHotel(hotel.name)}
+                      onPress={() => selectHotel(hotel)}
                     />
                   </Fragment>
                 ))
@@ -75,7 +87,7 @@ export default function HotelSearch() {
                         key={hotel.name}
                         title={hotel.name}
                         icon={<Clock size={20} />}
-                        onPress={() => selectHotel(hotel.name)}
+                        onPress={() => selectHotel(hotel)}
                       />
                     ))}
                   </SearchSection>
@@ -84,15 +96,15 @@ export default function HotelSearch() {
               ) : null}
 
               <SearchSection title={t('hotelSearch.popularHotels')} gap={4} pt={4}>
-                {POPULAR_HOTELS.map((hotel) => (
+                {hotels.map((hotel) => (
                   <HotelListItem
                     key={hotel.name}
                     title={hotel.name}
-                    subtitle={hotel.location}
+                    subtitle={hotel.address}
                     height={72}
                     icon={<Location size={20} color={colors.primary} />}
                     iconBg={colors.primaryLightBg}
-                    onPress={() => selectHotel(hotel.name)}
+                    onPress={() => selectHotel(hotel)}
                   />
                 ))}
               </SearchSection>

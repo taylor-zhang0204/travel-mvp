@@ -4,13 +4,13 @@ import { Input, XStack } from 'tamagui';
 
 import { colors } from '@/src/styles/theme';
 
-interface SearchInputProps {
+interface ISearchInputProps {
   value?: string;
   onChangeText?: (v: string) => void;
   placeholder?: string;
 }
 
-export const SearchInput = ({ value, onChangeText, placeholder }: SearchInputProps) => {
+export const SearchInput = ({ value, onChangeText, placeholder }: ISearchInputProps) => {
   const { t } = useTranslation();
   return (
     <XStack

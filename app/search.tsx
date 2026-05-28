@@ -1,8 +1,9 @@
 import { useLocalSearchParams } from 'expo-router';
-import { useMemo } from 'react';
-import { ScrollView, YStack } from 'tamagui';
+import { useEffect, useMemo, useState } from 'react';
+import { ScrollView, Spinner, YStack } from 'tamagui';
 
-// import { search } from '@/api/examples';
+import { getBookingOptions } from '@/src/api/hotel';
+import type { IHotelBookingOptionsResponse } from '@/src/api/hotel/types';
 import ExclusiveOffer from '@/src/components/features/ExclusiveOffer';
 import Footer from '@/src/components/features/Layout/Footer';
 import SearchHeader from '@/src/components/features/SearchHeader';
@@ -12,9 +13,19 @@ import type { SearchParams } from '@/src/types/page';
 const Search = () => {
   const searchParams = useLocalSearchParams();
 
+  const [hotelInfo, sethotelInfo] = useState<IHotelBookingOptionsResponse>();
+
   const params = useMemo<SearchParams>(() => {
-    const { destination = '', checkIn = '', checkOut = '', guests = '', rooms = '' } = searchParams;
+    const {
+      hotelId = '',
+      destination = '',
+      checkIn = '',
+      checkOut = '',
+      guests = '',
+      rooms = '',
+    } = searchParams;
     return {
+      hotelId: String(hotelId),
       destination: String(destination),
       checkIn: String(checkIn),
       checkOut: String(checkOut),
@@ -23,11 +34,26 @@ const Search = () => {
     };
   }, [searchParams]);
 
-  // useEffect(() => {
-  //   if (params?.checkIn) {
-  //     search(params).then((res) => console.log(res));
-  //   }
-  // }, [params?.checkIn]);
+  const fetchHotelInfo = async () => {
+    if (params?.checkIn) {
+      const { guests, hotelId, checkIn, checkOut } = params;
+      const requestParams = {
+        hotelId,
+        checkInDate: checkIn,
+        checkOutDate: checkOut,
+        guestNumber: guests,
+      };
+      const info = await getBookingOptions(requestParams);
+      console.log('hotelInfo: ', info);
+      sethotelInfo(info);
+    }
+  };
+
+  useEffect(() => {
+    if (params?.checkIn) {
+      fetchHotelInfo();
+    }
+  }, [params]);
 
   return (
     <YStack flex={1} bg={colors.backgroundPage}>
@@ -36,13 +62,18 @@ const Search = () => {
         dateRange={`${params?.checkIn} - ${params?.checkOut}`}
       />
       <ScrollView flex={1}>
-        <ExclusiveOffer
-          destination={params?.destination}
-          checkIn={params?.checkIn}
-          checkOut={params?.checkOut}
-          guests={params?.guests}
-          rooms={params?.rooms}
-        />
+        {hotelInfo ? (
+          <ExclusiveOffer
+            destination={params?.destination}
+            guests={params?.guests}
+            rooms={params?.rooms}
+            info={hotelInfo}
+          />
+        ) : (
+          <YStack height={200} justify="center" items="center">
+            <Spinner size="large" />
+          </YStack>
+        )}
         <Footer />
       </ScrollView>
     </YStack>

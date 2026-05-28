@@ -3,7 +3,7 @@ import * as Network from 'expo-network';
 
 import { API_ERROR_CODE, API_ERROR_MESSAGE } from '@/src/constants';
 
-import { ApiError } from './types';
+import { IApiError } from './types';
 
 // 字段转换：snake_case -> camelCase
 export function transformKeysToCamel<T>(obj: unknown): T {
@@ -16,6 +16,26 @@ export function transformKeysToCamel<T>(obj: unknown): T {
         // 转换 snake_case 为 camelCase
         const camelKey = key.replace(/_([a-z])/g, (_, letter) => letter.toUpperCase());
         (acc as Record<string, unknown>)[camelKey] = transformKeysToCamel(value);
+        return acc;
+      },
+      {} as Record<string, unknown>
+    ) as T;
+  }
+
+  return obj as T;
+}
+
+// 字段转换：camelCase -> snake_case
+export function transformKeysToSnake<T>(obj: unknown): T {
+  if (obj === null || obj === undefined) return obj as T;
+  if (Array.isArray(obj)) return obj.map((item) => transformKeysToSnake<T>(item)) as T;
+
+  if (typeof obj === 'object') {
+    return Object.entries(obj as Record<string, unknown>).reduce(
+      (acc, [key, value]) => {
+        // 转换 camelCase 为 snake_case
+        const snakeKey = key.replace(/[A-Z]/g, (letter) => `_${letter.toLowerCase()}`);
+        (acc as Record<string, unknown>)[snakeKey] = transformKeysToSnake(value);
         return acc;
       },
       {} as Record<string, unknown>
@@ -47,9 +67,13 @@ async function checkNetworkStatus(): Promise<{
 
 // 请求拦截器 - 请求发送前执行
 export function onRequest(config: InternalAxiosRequestConfig): InternalAxiosRequestConfig {
-  // 可在此添加 token 等
-  // const token = await getToken();
-  // config.headers.Authorization = `Bearer ${token}`;
+  // 转换参数为 snake_case
+  if (config.params) {
+    config.params = transformKeysToSnake(config.params);
+  }
+  if (config.data) {
+    config.data = transformKeysToSnake(config.data);
+  }
   return config;
 }
 
@@ -84,15 +108,13 @@ export async function onRequestError(error: AxiosError): Promise<never> {
 
 // 响应成功拦截器 - 数据转换
 export function onResponse(response: AxiosResponse): AxiosResponse {
-  // 转换字段为驼峰
-  console.log('response.data', response.data);
+  // 转换响应数据为驼峰命名法
   response.data = transformKeysToCamel(response.data);
-  console.log('transformKeysToCamel', response.data);
   return response;
 }
 
 // 响应错误拦截器 - 状态码处理
-export async function onResponseError(error: AxiosError<ApiError>): Promise<never> {
+export async function onResponseError(error: AxiosError<IApiError>): Promise<never> {
   const { response } = error;
 
   if (response) {

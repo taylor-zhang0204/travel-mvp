@@ -18,22 +18,28 @@ type Props = {
   onSearch?: (params: SearchParams) => void;
 };
 
+const DEFAULT_HOTEL = {
+  hotelId: 'ChgI_KC-8vCrstqdARoLL2cvMTU1cWZxMDMQAQ',
+  destination: 'The Langham, Hong Kong',
+} as const;
+
 const SearchForm = ({ onSearch }: Props) => {
-  const destination = useAtomValue(selectedHotelAtom);
+  const hotelInfo = useAtomValue(selectedHotelAtom);
 
   const [params, setParams] = useState<SearchParams>({
-    destination: destination?.name || 'The Langham, Hong Kong',
+    hotelId: hotelInfo?.hotelId || DEFAULT_HOTEL.hotelId,
+    destination: hotelInfo?.name || DEFAULT_HOTEL.destination,
     checkIn: dayjs().format('YYYY-MM-DD'),
     checkOut: dayjs().add(1, 'day').format('YYYY-MM-DD'),
     rooms: 1,
-    guests: 1,
+    guests: 2,
   });
 
   useEffect(() => {
-    if (destination?.name) {
-      setParams((p) => ({ ...p, destination: destination.name }));
+    if (hotelInfo?.name) {
+      setParams((p) => ({ ...p, hotelId: hotelInfo.hotelId || '', destination: hotelInfo.name }));
     }
-  }, [destination]);
+  }, [hotelInfo]);
 
   const onRoomsChange = (rooms: number) =>
     setParams((p) => ({ ...p, guests: Math.max(p.guests, rooms), rooms }));

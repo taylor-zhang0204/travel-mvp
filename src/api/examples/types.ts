@@ -1,7 +1,7 @@
 // ==================== 酒店相关类型 ====================
 
 // 酒店列表参数
-export interface HotelListParams {
+export interface IHotelListParams {
   city?: string;           // 城市
   checkInDate?: string;    // 入住日期 YYYY-MM-DD
   checkOutDate?: string;   // 退房日期 YYYY-MM-DD
@@ -14,7 +14,7 @@ export interface HotelListParams {
 }
 
 // 酒店详情
-export interface Hotel {
+export interface IHotel {
   id: number;
   name: string;
   city: string;
@@ -28,8 +28,8 @@ export interface Hotel {
 }
 
 // 酒店列表响应
-export interface HotelListResponse {
-  list: Hotel[];
+export interface IHotelListResponse {
+  list: IHotel[];
   total: number;
   page: number;
   pageSize: number;
@@ -38,7 +38,7 @@ export interface HotelListResponse {
 // ==================== 预订相关类型 ====================
 
 // 预订参数
-export interface BookingParams {
+export interface IBookingParams {
   hotelId: number;         // 酒店ID
   roomId: number;          // 房间ID
   checkInDate: string;     // 入住日期 YYYY-MM-DD
@@ -50,7 +50,7 @@ export interface BookingParams {
 }
 
 // 预订响应
-export interface BookingResponse {
+export interface IBookingResponse {
   orderId: string;         // 订单号
   status: 'pending' | 'confirmed' | 'cancelled';
   totalPrice: number;
@@ -58,6 +58,6 @@ export interface BookingResponse {
 }
 
 // 取消预订响应
-export interface CancelBookingResponse {
+export interface ICancelBookingResponse {
   success: boolean;
 }

@@ -1,12 +1,12 @@
 // 响应数据结构
-export interface ApiResponse<T = unknown> {
+export interface IApiResponse<T = unknown> {
   data: T;
   status: number;
   message?: string;
 }
 
 // API 错误类型
-export interface ApiError {
+export interface IApiError {
   code: number;
   message: string;
   details?: unknown;

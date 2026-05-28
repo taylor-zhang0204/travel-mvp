@@ -2,10 +2,9 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { atom } from 'jotai';
 import { atomWithStorage, createJSONStorage } from 'jotai/utils';
 
-export interface Hotel {
-  name: string;
-  location?: string;
-}
+import type { IHotelItem } from '../api/hotel/types';
+
+export type Hotel = Pick<IHotelItem, 'name' | 'address' | 'hotelId'>;
 
 // 持久化 atom
 export const recentSearchesAtom = atomWithStorage<Hotel[]>(

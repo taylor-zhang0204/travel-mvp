@@ -1,7 +1,7 @@
 import React from 'react';
 import { XStack, YStack } from 'tamagui';
 
-interface DividerProps {
+interface IDividerProps {
   /**
    * Divider orientation
    * @default 'horizontal'
@@ -41,7 +41,7 @@ interface DividerProps {
   my?: number | string;
 }
 
-const Divider: React.FC<DividerProps> = ({
+const Divider: React.FC<IDividerProps> = ({
   orientation = 'horizontal',
   color = '$gray5',
   thickness = 1,

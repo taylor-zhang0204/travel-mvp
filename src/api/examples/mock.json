@@ -1,0 +1,1297 @@
+{
+  "hotel": {
+    "url": "https://www.google.com/travel/hotels/entity/ChgI_KC-8vCrstqdARoLL2cvMTU1cWZxMDMQAQ?q=hong+kong+langham&ved=0CAAQ5JsGahcKEwiI4sO1iqmUAxUAAAAAHQAAAAAQAw&ap=KigKEgkjhAb5xEo2QBEklnntwIpcQBISCcWVSt_wTDZAESSW-Rb5ilxAMAE&ts=CAESCgoCCAMKAggDEAAaNwoZEhUKCC9tLzAzaDY0OglIb25nIEtvbmcaABIaEhQKBwjqDxAFGA8SBwjqDxAFGBAYATICCAEqCQoFOgNVU0QaAA&qs=CAAgACgAOA1IAA&utm_campaign=sharing&utm_medium=link&utm_source=htls&hl=en",
+    "hotel_id": "ChgI_KC-8vCrstqdARoLL2cvMTU1cWZxMDMQAQ",
+    "hotel_name": "The Langham, Hong Kong",
+    "rating": 4.3,
+    "review_count": "2468",
+    "star_classification": 5,
+    "address": "8 Peking Rd, Tsim Sha Tsui",
+    "phone_number": "2375 1133",
+    "photos": [
+      {
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipM-w_amL6rqJRqkT_dcbPbfPIcCpDh8ucG-stLe=w252-h188-k-no",
+        "photo_caption": null
+      },
+      {
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipPk_CKGBkvzFkMWzb33rHc0QaSV9rjdHQ3jRPam=w252-h188-k-no",
+        "photo_caption": null
+      },
+      {
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipPVOcGG4-K3k23bsH8qJgUcKIDVo7bsjgeMHPim=w252-h188-k-no",
+        "photo_caption": null
+      },
+      {
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipPUdDJjWVMLHDhHJuVSMWnKySW79M84WSk125jX=w252-h188-k-no",
+        "photo_caption": null
+      },
+      {
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipM-w_amL6rqJRqkT_dcbPbfPIcCpDh8ucG-stLe=w252-h188-k-no",
+        "photo_caption": null
+      },
+      {
+        "photo_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHiuGRYNxoNzUvDd4j5-f_HaR7fj8BmUyOxAwvxSo_wztwOmpw7obI6gC6Nd3uBPhSNwPEeqQZrX8IXHqcUuPm-EEnXP6IEq5H15MXzsph5A_qrB6wuVs_NAALDm2-PTtlTCBXp=w252-h335-k-no",
+        "photo_caption": null
+      },
+      {
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipM14_oyYT9EEt8WDY6nZDTjzFdAssj0pTkzQS_T=w252-h188-k-no",
+        "photo_caption": null
+      },
+      {
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipOFqlc7ri6MCRE1yeY4kxFjBygpDy8_KFOi37Qy=w252-h168-k-no",
+        "photo_caption": null
+      },
+      {
+        "photo_url": "https://lh6.googleusercontent.com/proxy/bsZACoYoVPsvzfSfUQVQnTM4cw5ZeNsgHOxg74JXOh1YpWVuJI1q5sy3z7iFNc3jv_xnWs5h9AvQ38joOG2XrU00rTklwT1D2DL2Xtl_gkdmH5AhGsc4nC3kj9xAWud8F3C4CWtk2z-VEBAqp6Ilt-tU3bglsQ=w252-h168-k-no",
+        "photo_caption": null
+      },
+      {
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipNpblU2Sr2jrbi5pI5Td5ulyl7YWCh0mzx9XoPO=w252-h167-k-no",
+        "photo_caption": null
+      },
+      {
+        "photo_url": "https://lh6.googleusercontent.com/proxy/IXOdNTV2JxW5jHaymlzXpcXDLgPiDfzMaUvZXBlHhNSKeo80jF-7StqvlGsvee4AvPdNZGM_y3_PvBkZRAeW96-VPx2a2oEEIla6NqXhNPPbFi_e6naFpo1EHqrbAwjj6Q1qvBaX016FrKmH29wfZB2dtuIzDjo=w252-h188-k-no",
+        "photo_caption": null
+      },
+      {
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipNcEIiNpB2_T-GQg0dr1IdPBJLo_It_7H0rSCfv=w252-h189-k-no",
+        "photo_caption": null
+      },
+      {
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipM5FdZw8rKZ4tHNrNmWxjjIwBAqhXt6VLiz3p6g=w252-h188-k-no",
+        "photo_caption": null
+      },
+      {
+        "photo_url": "https://lh6.googleusercontent.com/proxy/qOtLSlYtPGq3HdekDugzhI3tNTp_A7P1q4dqd57dhVP2QAxRXWZVro19jiauSKxUPBJmS_iIDUzQKev7WIyEsi3zBdYaee2D91328b2bKCR4yomGhIqh9L-jubwk9EVqhplQoQTmHhFkbYVMi_fzTLdkH7vWLQ=w252-h189-k-no",
+        "photo_caption": null
+      },
+      {
+        "photo_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAHiuGRYNxoNzUvDd4j5-f_HaR7fj8BmUyOxAwvxSo_wztwOmpw7obI6gC6Nd3uBPhSNwPEeqQZrX8IXHqcUuPm-EEnXP6IEq5H15MXzsph5A_qrB6wuVs_NAALDm2-PTtlTCBXp=w252-h335-k-no",
+        "photo_caption": null
+      },
+      {
+        "photo_url": "https://lh3.googleusercontent.com/gps-cs-s/APNQkAFEUFUPO8XBGeedzbhFX3hWuj-GuqocGeHlZdmBcfy1W2nlatwe095eiuTn_D7Jbieoh4-SAD2VrHBhduAdHt0XzveRQdQOmc0k52F0FB2di4JUY1cR4xs-UEhtD0Oy_78B9nmu=w252-h336-k-no",
+        "photo_caption": null
+      }
+    ],
+    "check_in_date": "2026-05-15T00:00:00.000Z",
+    "check_out_date": "2026-05-16T00:00:00.000Z",
+    "guest_number": 2,
+    "booking_options": [
+      {
+        "platform": "The Langham, Hong Kong",
+        "price": "$245",
+        "room_type": "King Bed - Flexible Rate",
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQARoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYASABEgI-3PD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_2DBngRqPegtVRg_bDmvg4cY5oXxQ&adurl=",
+        "price_value": 245
+      },
+      {
+        "platform": "The Langham, Hong Kong",
+        "price": "$245",
+        "room_type": "King Bed - Fun With Family - Free extra bed",
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQARoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYASABEgI-3PD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_2DBngRqPegtVRg_bDmvg4cY5oXxQ&adurl=",
+        "price_value": 245
+      },
+      {
+        "platform": "The Langham, Hong Kong",
+        "price": "$245",
+        "room_type": "King Bed - Summer Offerings",
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQARoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYASABEgI-3PD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_2DBngRqPegtVRg_bDmvg4cY5oXxQ&adurl=",
+        "price_value": 245
+      },
+      {
+        "platform": "The Langham, Hong Kong",
+        "price": "$245",
+        "room_type": "Twin Beds - Flexible Rate",
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQARoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYASABEgI-3PD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_2DBngRqPegtVRg_bDmvg4cY5oXxQ&adurl=",
+        "price_value": 245
+      },
+      {
+        "platform": "The Langham, Hong Kong",
+        "price": "$245",
+        "room_type": "Twin Beds - Fun With Family - Free extra bed",
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQARoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYASABEgI-3PD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_2DBngRqPegtVRg_bDmvg4cY5oXxQ&adurl=",
+        "price_value": 245
+      },
+      {
+        "platform": "The Langham, Hong Kong",
+        "price": "$245",
+        "room_type": "Twin Beds - Summer Offerings",
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQARoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYASABEgI-3PD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_2DBngRqPegtVRg_bDmvg4cY5oXxQ&adurl=",
+        "price_value": 245
+      },
+      {
+        "platform": "The Langham, Hong Kong",
+        "price": "$303",
+        "room_type": "King Bed - Bed and Breakfast",
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQARoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYASABEgI-3PD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_2DBngRqPegtVRg_bDmvg4cY5oXxQ&adurl=",
+        "price_value": 303
+      },
+      {
+        "platform": "The Langham, Hong Kong",
+        "price": "$303",
+        "room_type": "Twin Beds - Bed and Breakfast",
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQARoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYASABEgI-3PD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_2DBngRqPegtVRg_bDmvg4cY5oXxQ&adurl=",
+        "price_value": 303
+      },
+      {
+        "platform": "The Langham, Hong Kong",
+        "price": "$419",
+        "room_type": "King Bed - Summer Offerings - Premium Rooms",
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQARoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYASABEgI-3PD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_2DBngRqPegtVRg_bDmvg4cY5oXxQ&adurl=",
+        "price_value": 419
+      },
+      {
+        "platform": "The Langham, Hong Kong",
+        "price": "$419",
+        "room_type": "Twin Beds - Summer Offerings - Premium Rooms",
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQARoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYASABEgI-3PD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_2DBngRqPegtVRg_bDmvg4cY5oXxQ&adurl=",
+        "price_value": 419
+      },
+      {
+        "platform": "Hotels.com",
+        "price": "$245",
+        "room_type": "Superior King",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQIxoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYAiABEgJItfD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_3NGv1iPW5wAPXDQyg5lkCtKzQLiw&adurl=",
+        "price_value": 245
+      },
+      {
+        "platform": "Hotels.com",
+        "price": "$245",
+        "room_type": "Superior Twin",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQIxoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYAiABEgJItfD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_3NGv1iPW5wAPXDQyg5lkCtKzQLiw&adurl=",
+        "price_value": 245
+      },
+      {
+        "platform": "Hotels.com",
+        "price": "$303",
+        "room_type": "Superior Twin",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQIxoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYAiABEgJItfD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_3NGv1iPW5wAPXDQyg5lkCtKzQLiw&adurl=",
+        "price_value": 303
+      },
+      {
+        "platform": "Hotels.com",
+        "price": "$289",
+        "room_type": "Deluxe King",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQIxoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYAiABEgJItfD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_3NGv1iPW5wAPXDQyg5lkCtKzQLiw&adurl=",
+        "price_value": 289
+      },
+      {
+        "platform": "Hotels.com",
+        "price": "$346",
+        "room_type": "Deluxe King",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQIxoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYAiABEgJItfD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_3NGv1iPW5wAPXDQyg5lkCtKzQLiw&adurl=",
+        "price_value": 346
+      },
+      {
+        "platform": "Hotels.com",
+        "price": "$303",
+        "room_type": "Premier King",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQIxoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYAiABEgJItfD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_3NGv1iPW5wAPXDQyg5lkCtKzQLiw&adurl=",
+        "price_value": 303
+      },
+      {
+        "platform": "Hotels.com",
+        "price": "$361",
+        "room_type": "Premier King",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQIxoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYAiABEgJItfD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_3NGv1iPW5wAPXDQyg5lkCtKzQLiw&adurl=",
+        "price_value": 361
+      },
+      {
+        "platform": "Hotels.com",
+        "price": "$303",
+        "room_type": "Premier Twin",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQIxoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYAiABEgJItfD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_3NGv1iPW5wAPXDQyg5lkCtKzQLiw&adurl=",
+        "price_value": 303
+      },
+      {
+        "platform": "Hotels.com",
+        "price": "$361",
+        "room_type": "Premier Twin",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQIxoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYAiABEgJItfD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_3NGv1iPW5wAPXDQyg5lkCtKzQLiw&adurl=",
+        "price_value": 361
+      },
+      {
+        "platform": "Hotels.com",
+        "price": "$418",
+        "room_type": "Club Executive King",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQIxoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYAiABEgJItfD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_3NGv1iPW5wAPXDQyg5lkCtKzQLiw&adurl=",
+        "price_value": 418
+      },
+      {
+        "platform": "Hotels.com",
+        "price": "$418",
+        "room_type": "Club Executive Twin",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQIxoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYAiABEgJItfD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_3NGv1iPW5wAPXDQyg5lkCtKzQLiw&adurl=",
+        "price_value": 418
+      },
+      {
+        "platform": "Hotels.com",
+        "price": "$563",
+        "room_type": "Club Executive One-Bedroom Suite King",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQIxoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYAiABEgJItfD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_3NGv1iPW5wAPXDQyg5lkCtKzQLiw&adurl=",
+        "price_value": 563
+      },
+      {
+        "platform": "Agoda",
+        "price": "$245",
+        "room_type": "Superior King",
+        "amenities": [
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQDRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYAyABEgLWxvD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_3BI2MCffcZI2Mv0IDKM7y9olzQgA&adurl=",
+        "price_value": 245
+      },
+      {
+        "platform": "Agoda",
+        "price": "$245",
+        "room_type": "Superior Twin",
+        "amenities": [
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQDRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYAyABEgLWxvD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_3BI2MCffcZI2Mv0IDKM7y9olzQgA&adurl=",
+        "price_value": 245
+      },
+      {
+        "platform": "Agoda",
+        "price": "$289",
+        "room_type": "Deluxe King",
+        "amenities": [
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQDRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYAyABEgLWxvD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_3BI2MCffcZI2Mv0IDKM7y9olzQgA&adurl=",
+        "price_value": 289
+      },
+      {
+        "platform": "Agoda",
+        "price": "$303",
+        "room_type": "Premier King",
+        "amenities": [
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQDRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYAyABEgLWxvD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_3BI2MCffcZI2Mv0IDKM7y9olzQgA&adurl=",
+        "price_value": 303
+      },
+      {
+        "platform": "Agoda",
+        "price": "$303",
+        "room_type": "Premier Twin",
+        "amenities": [
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQDRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYAyABEgLWxvD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_3BI2MCffcZI2Mv0IDKM7y9olzQgA&adurl=",
+        "price_value": 303
+      },
+      {
+        "platform": "Agoda",
+        "price": "$491",
+        "room_type": "Cheapest combo rooms",
+        "amenities": [
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQDRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYAyABEgLWxvD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_3BI2MCffcZI2Mv0IDKM7y9olzQgA&adurl=",
+        "price_value": 491
+      },
+      {
+        "platform": "Trip.com",
+        "price": "$245",
+        "room_type": "Superior King",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQMRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYBCABEgJSgvD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_319hEm3yJ_igesWbXZnyH-UosYmQ&adurl=",
+        "price_value": 245
+      },
+      {
+        "platform": "Trip.com",
+        "price": "$245",
+        "room_type": "Superior King With Extra Bed",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQMRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYBCABEgJSgvD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_319hEm3yJ_igesWbXZnyH-UosYmQ&adurl=",
+        "price_value": 245
+      },
+      {
+        "platform": "Trip.com",
+        "price": "$303",
+        "room_type": "Superior Twin",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQMRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYBCABEgJSgvD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_319hEm3yJ_igesWbXZnyH-UosYmQ&adurl=",
+        "price_value": 303
+      },
+      {
+        "platform": "Expedia.com.hk",
+        "price": "$245",
+        "room_type": "Superior King",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQFRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYBSABEgLCtPD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_0gY7XxU9TwZq_uke49zF1v9gN01g&adurl=",
+        "price_value": 245
+      },
+      {
+        "platform": "Expedia.com.hk",
+        "price": "$245",
+        "room_type": "Superior Twin",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQFRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYBSABEgLCtPD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_0gY7XxU9TwZq_uke49zF1v9gN01g&adurl=",
+        "price_value": 245
+      },
+      {
+        "platform": "Expedia.com.hk",
+        "price": "$303",
+        "room_type": "Superior Twin",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQFRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYBSABEgLCtPD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_0gY7XxU9TwZq_uke49zF1v9gN01g&adurl=",
+        "price_value": 303
+      },
+      {
+        "platform": "Expedia.com.hk",
+        "price": "$289",
+        "room_type": "Deluxe King",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQFRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYBSABEgLCtPD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_0gY7XxU9TwZq_uke49zF1v9gN01g&adurl=",
+        "price_value": 289
+      },
+      {
+        "platform": "Expedia.com.hk",
+        "price": "$346",
+        "room_type": "Deluxe King",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQFRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYBSABEgLCtPD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_0gY7XxU9TwZq_uke49zF1v9gN01g&adurl=",
+        "price_value": 346
+      },
+      {
+        "platform": "Expedia.com.hk",
+        "price": "$303",
+        "room_type": "Premier King",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQFRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYBSABEgLCtPD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_0gY7XxU9TwZq_uke49zF1v9gN01g&adurl=",
+        "price_value": 303
+      },
+      {
+        "platform": "Expedia.com.hk",
+        "price": "$361",
+        "room_type": "Premier King",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQFRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYBSABEgLCtPD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_0gY7XxU9TwZq_uke49zF1v9gN01g&adurl=",
+        "price_value": 361
+      },
+      {
+        "platform": "Expedia.com.hk",
+        "price": "$303",
+        "room_type": "Premier Twin",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQFRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYBSABEgLCtPD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_0gY7XxU9TwZq_uke49zF1v9gN01g&adurl=",
+        "price_value": 303
+      },
+      {
+        "platform": "Expedia.com.hk",
+        "price": "$361",
+        "room_type": "Premier Twin",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQFRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYBSABEgLCtPD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_0gY7XxU9TwZq_uke49zF1v9gN01g&adurl=",
+        "price_value": 361
+      },
+      {
+        "platform": "Expedia.com.hk",
+        "price": "$419",
+        "room_type": "Club Executive King",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQFRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYBSABEgLCtPD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_0gY7XxU9TwZq_uke49zF1v9gN01g&adurl=",
+        "price_value": 419
+      },
+      {
+        "platform": "Expedia.com.hk",
+        "price": "$419",
+        "room_type": "Club Executive Twin",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQFRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYBSABEgLCtPD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_0gY7XxU9TwZq_uke49zF1v9gN01g&adurl=",
+        "price_value": 419
+      },
+      {
+        "platform": "Expedia.com.hk",
+        "price": "$563",
+        "room_type": "Club Executive One-Bedroom Suite King",
+        "amenities": [
+          null,
+          null
+        ],
+        "cancellation_policy": null,
+        "is_sponsored": true,
+        "url": "https://www.google.com/aclk?sa=l&ai=DChsSEwihmM_VmKmUAxUIXg8CHYqyOPMYACICCAEQFRoCdGI&co=1&ase=2&gclid=EAIaIQobChMIoZjP1ZiplAMVCF4PAh2KsjjzEAoYBSABEgLCtPD_BwE&cid=CAASugHkaIEdSzG0HFvIt7CIjxxnUvZeiRTuMS0lD138mjO32G0keodEavPIODmAYZcQGROc3V_P-gNlI6b48KQSR-GW9b3Iuu_gKw-6xuDPrltqL2NnnN6fJcNZWW5oIGL0KOumwOFxAYnzfL3UmDTrreBpECB1OaU-8XZAQG2bofuWXBrpJbsu9rrnLDfYpw654v0s3pPPPJU2K-EyWk9Tk-9D5kuBgYpbYoJa3fZZTkOwc2pTo0uOxIxyPr0&category=acrcp_v1_48&sig=AOD64_0gY7XxU9TwZq_uke49zF1v9gN01g&adurl=",
+        "price_value": 563
+      },
+      {
+        "platform": "The Langham, Hong Kong",
+        "price": "US$245",
+        "room_type": null,
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": false,
+        "url": "https://www.google.com/travel/clk?pc=AA80Oszv7siepNhEaHN3XrTCNQlW96t6A0bpbb8551YvmLw5Dl1m_hSTAkilTVPlpPodi_fSBHtXBF7Uv7zb6NPj8ToMH6Ok8UZ0RMAbc0nJtP9k40u94K53jQW8XhQ_GYJH_eV5yWs3uXAZl_i6jeu1z-YPa1gRq04qS3n8vFaKB7TMiqrL3ZgTJSoVqpduhSDg&pcurl=https://onboard.triptease.io/redirect?checkin%3D2026-05-15%26checkout%3D2026-05-16%26adults%3D2%26children%3D0%26currency%3DUSD%26tt_currency%3DUSD%26language%3Den%26apiKey%3D21d7a910856c4b75ad73b0c09ebd32a6%26tt_meta%3Dgha%26tt_ad_type%3Dfree%26tt_meta_price%3D245.37_28.23_21.71%26rateCode%3DRFLX%26tt_clsrc%3D%26tt_cid%3D%26&s=AD1XQnmiss6Vujdg3hzGlPUx7Wqi&ap=1",
+        "price_value": 245
+      },
+      {
+        "platform": "Agoda",
+        "price": "US$245",
+        "room_type": null,
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": false,
+        "url": "https://www.google.com/travel/clk?pc=AA80Osw3ULqBpE2YVGwpZBvmvk4I5fUDPCeDHKvwV-afXDhHgosicZFqPtHRXtvfo_NXarOjVs-ZdfqNuhzaHwuPWZRBk4Tyj7NJWV4L0siu6aVki1SiqbY-8xjPUe0l9NXJCtP_fd7ouKtmNmcFSQYlDJrcPJYCEWvZE-QxCrWNK3IUvKs03nc3PQw57n2rNg&pcurl=https://www.agoda.com/partners/partnersearch.aspx?site_id%3D1917614%26CkInDay%3D15%26CkInMonth%3D05%26CkInYear%3D2026%26CkOutDay%3D16%26campaignid%3D%26CkOutMonth%3D05%26CkOutYear%3D2026%26SearchDateType%3Dselected%26NumberOfAdults%3D2%26LT%3D7%26NumberOfChildren%3D0%26childages%3D%26NumberOfRooms%3D1%26gsite%3Dlocaluniversal%26los%3D1%26PartnerCurrency%3DHKD%26hid%3D8261%26RoomID%3D4890386%26masterRoomId%3D3051847%26PriceTax%3D28.23%26PriceTotal%3D245.37%26RatePlan%3D458f893d-10f9-3e49-82e6-554e0c9e75c5%26UserCountry%3DHK%26Currency%3DUSD%26UserDevice%3Ddesktop%26Verif%3Dfalse%26rr%3Drow_desktop%26audience_list%3D%26mcid%3D3038%26booking_source%3Dcpc%26adType%3D0%26mpt%3DWVZwMlV4OHY3QmE4eURKOEpIUm1adWoyZGZmV01IWlprK241YXk0d1lQWlBBcTcwQ25DcmQzOXZrNVd5bHRrTTJEcllvNGFUNmRtOQ%26original_rr%3D&s=AD1XQnkxUUNtWSyGFDb5v0Lx__Tc&ap=1",
+        "price_value": 245
+      },
+      {
+        "platform": "Trip.com",
+        "price": "US$245",
+        "room_type": null,
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": false,
+        "url": "https://www.google.com/travel/clk?pc=AA80OswUfQlg4j9sTvS6eQbgNtKRutENzF1_8W2vmVyxIYgL_GCCSxddiBMTKEegcoH1enSq1Y0c6xYR6gMQZ0mSGadhqjlFi306XX4FbeGQXE6aPCEJcJexbCx2EwP4tRun7TdN34dWdyeerWC0cYkkvRaeHqOrg-AJH0B25Xf-3UE7o7jf4Jw&pcurl=https://hk.trip.com/hotels/redirect?locale%3Den_hk%26hotelid%3D344937%26city%3D58%26shoppingid%3DMWAnVJ9KUT1A%26adult%3D2%26children%3D0%26ages%3D%26checkin%3D2026-05-15%26checkout%3D2026-05-16%26curr%3DUSD%26Allianceid%3D15214%26Sid%3D1209578%26prid%3DLANG_HK_EN%26trip_sub1%3D15_05_2026_1_localuniversal_344937_HK_desktop_selected___0_0-LANG_HK_EN-landing%26hpaopts%3Dstand%5BH4sIAAAAAAAA_-Ny5GKSYBJi4mCUMuc4sGzRdDaD18IWrVUBHDMYX7aJrmBk3MHIdJGRAQQmzHJ4CGGxzHN4wfjtSUMT4wIWRike33DHvDAvS-_QEENHBUaNy9-_nmfzYAxiM7V0NHGxjJLhYvbwdhG0WCjA2H7htb0UiKcI4yWxpubpenhnNIt2MTJ5MK5iZOdiNjAyFGD6xMiPbG68oSkASOXtCqwAAAA%5Dfgt%5B1%5D%26br%3D245.37%26tf%3D28.23%26display%3Dincavg%26minlocale%3Den%26crn%3D1%26roomid%3D1659409216&s=AD1XQnlKLuyod4ePfsdUD9qKFUZn&ap=1",
+        "price_value": 245
+      },
+      {
+        "platform": "Booking.com",
+        "price": "US$245",
+        "room_type": null,
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": false,
+        "url": "https://www.google.com/travel/clk?pc=AA80OsxtS90hWdpVf4td9_MBx6vLwY9dAcfRFA2MEgzw6eLJkOJiJ_t3S9hcP5E4Zk_585p7xE4aXosxjwM7EhfRbipbDhbC4JecM0LLIKxtjjqqdYEDX0cgajIldOkKoBelaSXkKuJqGeZKH93-vbEV_T5-9Sp4D8zUeEVKI0e5-mK-azJV1HhIPmGN7UQ8b4CTO_6xuA&pcurl=https://www.booking.com/searchresults.en.html?dest_id%3D55039%26highlighted_hotels%3D55039%26dest_type%3Dhotel%26checkin%3D2026-05-15%26checkout%3D2026-05-16%26group_adults%3D2%26req_adults%3D2%26show_room%3D5503914_398133204_2_2_0%26lang%3Den%26selected_currency%3DUSD%26exrt%3D0.12772800%26ext_price_total%3D245.37%26ext_price_tax%3D28.23%26xfc%3DHKD%26hca%3Dm%26group_children%3D0%26req_children%3D0%26%26ts%3D1778223272%26no_rooms%3D1%26edgtid%3DJQdSDdktTu2hSXREXbkKgg%26efpc%3DFwCwChkhsApp%26utm_source%3Dmetagha%26utm_medium%3Dlocaluniversal%26utm_campaign%3DHK%26utm_term%3Dhotel-55039%26utm_content%3Ddev-desktop_los-1_bw-7_dow-Friday_defdate-0_room-0_gstadt-2_rateid-public_aud-0_gacid-_mcid-10_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20260515_ppt-%26aid%3D2127639%26label%3Dmetagha-link-LUHK-hotel-55039_dev-desktop_los-1_bw-7_dow-Friday_defdate-0_room-0_gstadt-2_rateid-public_aud-0_gacid-_mcid-10_ppa-0_clrid-0_ad-0_gstkid-0_checkin-20260515_ppt-&s=AD1XQnlryDGwRG4Wo0_5GQzFSo2V&ap=1",
+        "price_value": 245
+      },
+      {
+        "platform": "Expedia.com.hk",
+        "price": "US$245",
+        "room_type": null,
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": false,
+        "url": "https://www.google.com/travel/clk?pc=AA80Osx6x3HwK_vV-fqiEV0ig_lg6jSHNkLkyyvuOqs1I4rOALuqJ3gTGNBCuOe-5hCw9BwnH2gcUdGGV5ULTd0956mv_reGlQ7md062fRYQK1YqNU8DwVxTjN6hi-J-S3HtNpYm4pppLdJWef1wM9wxzRx0RIRC7lgr2tp7aN2a7rTBtQK57FsmW2dkORGzxFQH&pcurl=https://www.expedia.com.hk/Hotel-Search?selected%3D4921%26startDate%3D2026-05-15%26endDate%3D2026-05-16%26MDPCID%3DHK.META.HPA.HOTEL-ORGANIC-desktop.HOTEL%26MDPDTL%3DHTL.4921.20260515.20260516.DDF.7.CID..AUDID..RRID.bex_hk_desktop%26langid%3D2057%26adults%3D2%26children%3D%26mctc%3D10%26ct%3Dhotel%26mpg%3DUSD%26mpf%3D245.37%26mpj%3D28.23%26mpr%3D21.71%26mpl%3DHKD%26exp_pg%3Dgoogle%26langid%3Den%26ad%3D2%26tp%3D%26utm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_term%3D4921%26utm_content%3Dlocaluniversal%26utm_campaign%3DHotelAds%26rateplanid%3D402137372%26mpm%3D24%26mpn%3D201001620%26mpo%3DEC%26mpp%3D1&s=AD1XQnnCjlgkwcO6NgS2mBA_VW_U&ap=1",
+        "price_value": 245
+      },
+      {
+        "platform": "klook",
+        "price": "US$253",
+        "room_type": null,
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": false,
+        "url": "https://www.google.com/travel/clk?pc=AA80Osyvv9vafOoJz_J4uRQdNqjDCnxEnA4vrKqhIRRjtzstKpb5pNWQJcW-uMEgUlPLDMPwVu1BQ7DdGVVU3S36K9HdGfjdTW3flgnExC49LSYSb7n_xSlpTGAzfusIaQ-WFB1p_rc7KBjGDRZZOTFZFAEeThJy2YNkI7HrDeRMKKodzAwAD8g&pcurl=https://api.klktech.com/v1/meta/hotels/detail/248241/?hotelid%3D248241%26check_in%3D2026-05-15%26check_out%3D2026-05-16%26aid%3D28539%26campaignid%3D%26adult_num%3D2%26lead_time%3D7%26child_num%3D0%26childages%3D%26room_num%3D1%26google_site%3Dlocaluniversal%26length_of_stay%3D1%26partner_currency%3DHKD%26click_type%3Dhotel%26click_price_total%3D252.72%26price_tax%3D29.66%26rate_key%3D1-6-1789107%26user_country%3DHK%26click_currency%3DUSD%26_currency%3DUSD%26device%3Ddesktop%26partner_hotelid%3D248241%26language%3Den%26audience_list%3D%26verification%3Dfalse%26booking_source%3Dcpc%26isPromoted%3D0%26utm_source%3DMSE%26utm_medium%3DGoogle%26utm_campaign%3D28539%26utm_term%3D248241%26utm_content%3DUSD%26isAdClick%3D0%26prid%3DDomestic-Other%26arrival_fees%3D57.600%26mse_trace_id%3DZDU4MjU3Ni03N2E3MjhkLTE3NzgyMjE0MjUuZC5vOjA6MDoyOjA6MToxMzQ6MTM1OkhL%26mse_search_token%3DZDU4MjU3Ni03N2E3MjhkLTE3NzgyMjE0MjUuZC5vOjA6MDoyOjA6MToxMzQ6MTM1OkhL%26price_total%3DHKD-1921.000%26price_type%3DDomestic-desktop%26klc_l1%3DMSE%26klc_l2%3DGoogle%26age%3D&s=AD1XQnnPtLMfZF0b-U_dk2Ia9XU4&ap=1",
+        "price_value": 253
+      },
+      {
+        "platform": "HyperAir.com Hotel Booking",
+        "price": "US$245",
+        "room_type": null,
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": false,
+        "url": "https://www.google.com/travel/clk?pc=AA80Osw_VOgzB7uhTlrj56Wug7RVIaYidpTHakCYsX70rQ7hXAPzjblqyMSz2NdigCe0tfYyvlGj-8x0OCO_0ASq1aCmVi-k3oKzdDsaIbjgzsYoTTYRI5PbcwBQhSO_E9zbR0YyjIKfDnFf_KMOEOQclhzwErcuMAACqIznwGeP7lLpApBo-R_Trx1TxdjXRIvaeUfjrovc0vyx4vGlnzpGSSYNyQsX63Ul7g&pcurl=https://www.hyperair.com/en/hotel/100011?adults%3D2%26checkInDate%3D2026-05-15%26checkOutDate%3D2026-05-16%26childrenAges%3D%26currency%3DUSD%26afterTax%3D1%26src%3Dgoogle-hotel-en_hk%26utm_source%3Dgoogle-hotel%26utm_medium%3Den_hk-organic%26utm_campaign%3DHK&s=AD1XQnmIiQxhhiJB0rOk52u53YdU&ap=1",
+        "price_value": 245
+      },
+      {
+        "platform": "lastminute.com",
+        "price": "US$246",
+        "room_type": null,
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": false,
+        "url": "https://www.google.com/travel/clk?pc=AA80OszIy9RkBadTG-r0Gtzch1DP0O5C6IGhDv3srUQfY93-_eMWyLOR7ZSxFUjJ_rX-RN-FEgJ9f_xskqqhuI2SRfHMDOrCD39Or7avfAAzrZ6zgja5dqvPjNc1DlaZHPk7nFTbc0wcKNZ2435kDyMa6EItietYlVF0FuwoEw1wtiKVTdRIhf_M7poKKWR5meng&pcurl=https://lastminute.ie/s/hdp/hotel-details/52041/hotel-only?search.type%3DOSE%26search.accomodationOnly%3Dtrue%26search.SPM%3D%26COBRANDED%3DHOL_LMNUK_GOOGLEHOTIE%26bf_source%3Dmeta-HOL_LMNUK_GOOGLEHOTIE%26search.departureIntervals%3D20260515-20260516%26search.rooms%5B0%5D.adults%3D2%26acntb%3Dhotel%26utm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_term%3D%26checkin%3D20260515%26checkout%3D20260516%26currency%3DUSD%26totalPrice%3D246.19%26utm_campaign%3Dlmn_ie-int_hotel_hotel-center_gha%26businessProfileId%3DHOL_LMNUK_GOOGLEHOTIE%26recHotels%3D52041%26extReferenceType%3DHOOGLER%26bfSubsource%3D-----WS0S10PS01%26extReferenceId%3D40fd32141a2847c9abba0eea93511f4f%26metaSite%3Dlocaluniversal%26userLanguage%3Den%26userCountry%3DHK%26feedContext%3DhRpfO-dRfLjbptSkIbAGJY0svTpHXDCpwDr1V1vb0Mjm9BOobMmFMDssOtqspOsQQcOX8A%26gmeta%3Dtrue&s=AD1XQnlmWn6L9LbLm_QeqcK5jlwP&ap=1",
+        "price_value": 246
+      },
+      {
+        "platform": "BusinessHotels.com",
+        "price": "US$245",
+        "room_type": null,
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": false,
+        "url": "https://www.google.com/travel/clk?pc=AA80OsxptQzHcV0xlzKKQB6CMJ_Ckegx10mCnIL-1e3vLddmmZxjLzjrjNoGZBN1JN3gkF2VxmtlQTDddNzglomqIvBJllRmeRDqWfshyEEiXgNFGCf0_zhD3tuxfVl_mlmTlczg0ODbJhHZcGHek5td0rt2AJ85Ryw14iHBze5ZkBqql2u3wvTMqCoSAWq-y9QLVyaT&pcurl=https://www.businesshotels.com/booking.php?hotel-id%3D700456349%26checkin-date%3D2026-05-15%26checkout-date%3D2026-05-16%26language%3Den%26USER-CURRENCY%3DUSD%26USER-COUNTRY%3DHK%26NUM-ADULTS%3D2%26NUM-CHILDREN%3D0&s=AD1XQnkQuvhxj-hNSK663KP4ichp&ap=1",
+        "price_value": 245
+      },
+      {
+        "platform": "Priceline",
+        "price": "US$245",
+        "room_type": null,
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": false,
+        "url": "https://www.google.com/travel/clk?pc=AA80Oszoy0YcTALkBX7ZOb18FnML5ECi9Wxb8mReQGoPx_IVe7BMmSNYcgCLlEMD2cpDl7hsg0rwTLhXZoJo8GuznvtiQnfoHS8Ahv6d0pQ-ZvfVdNQIkelGDRybRwEtjh5W4PvIlP8rmpgBHO0lLXbRGIPjp2GUdYob3seljGUZrgKeoWR8sxPmZ-YbTPU37ML1xrM&pcurl=https://www.priceline.com/r/?channel%3Dmeta%26product%3Dhotel%26theme%3Dghalistings%26refid%3DPLGOOGLEMSS%26refclickid%3DHK_HP%257C5470105_localuniversal_1%257C20260515%257Cdesktop%257Cuserdate%7Cpublic%7C%7C%7C7%257C2%257C0%7C0%7CEN%26hotelid%3D5470105%26checkin%3D20260515%26checkout%3D20260516%26rooms%3D1%26currency%3DHKD%26displayedCurr%3DUSD%26POSCountryCode%3DHK%26taxDisplayMode%3DBP%26cityID%3D3000040012%26adults%3D2%26land%3DL%26metaid%3DbMeYRAEE9bH8Fwde1cT1Af-vGOMCm0uWUm926RsuZRrevnHjvix-DNFdamTcTYMzFMKdBEFAUFAEpBfs0G32HPjjsbvkEcplY7x1spQ13lNXAML271-OOGlPaUlk0fHXmI4btQbUNelE5J9aNl5SzyyN3l_WXNeSuzhDrU0p87nUR2StjAFKSxWhPGa0WXk5C_39tiTbFexPap3OPMn-Rafzc7t0LmK8m34aDOxBGatEPmd1qtFfO_gTqZnQ_nOaiKeryc7GOS33WC__2N7B53BYT3M8U-vFk5YIiwJcCyg_zYGyb1WOazF96apKkRHCFYH7oOE0fXejHyRTICj5ExVuZKnn7akqXCookj3Q6tt2_xS9yly5cpSoQugxHsiu%26dblcnt%3Dtrue%26user_num_adults%3D2%26hc%3D1%26pdtax%3D28.23%26pdf%3D21.71%26pdt%3D245.37%26locale%3Den-us%26ad-src%3D%26numChild%3D0&s=AD1XQnlemiApUNkIBKU2m3uMV1fg&ap=1",
+        "price_value": 245
+      },
+      {
+        "platform": "SKYLARK",
+        "price": "US$245",
+        "room_type": null,
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": false,
+        "url": "https://www.google.com/travel/clk?pc=AA80Osx02uazmoZs8oYnhpOPxXzFHACXEgQUKfsWgA-_g0LmXNIz8qRAkbuLaJhet3VxtoLqyYhfTNOhP38Or02v2RkZtUfQwxPIn8IxM9zgO-hO03a5ff7NrdQmgxVYM3WOGCSheJbesgg76c2RH_6tKRNwQqZIENUT06ZBU7Sd0QBCx6jZaFX7OvObU1cl3e8HVw&pcurl=https://skylark.com/hotels/0001644/2026-05-15/2026-05-16/2/1?utm_source%3Dgooglehotelads%26utm_medium%3Dcpc%26utm_campaign%3D%26rate%3DA2KRA9%26utm_content%3D0001644_HK_desktop_localuniversal_1_2026-05-15_selected___organic%26currency%3DUSD&s=AD1XQnkb7JzHoYz6kZhFDNc361Vl&ap=1",
+        "price_value": 245
+      },
+      {
+        "platform": "Hotels.com",
+        "price": "US$245",
+        "room_type": null,
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": false,
+        "url": "https://www.google.com/travel/clk?pc=AA80OsxcksYZgGfkteR3aCmIz_l0GniYD944qzXNigW-atCp7cA5Kcu7LtRZ8P3JXnNEouM7CM616tlT5UmrR-AHBuKK0T0widYFP_gcqoqJ4EkzpBEWXfTgCdX973PT4gmExht8KIevgJJptC4ojuwQUsqORqHvGG4XyWBAPYNRnW-sAdcsTeZvVVheVWc3tM0&pcurl=https://zh.hotels.com/Hotel-Search?selected%3D4921%26startDate%3D2026-05-15%26endDate%3D2026-05-16%26mdpcid%3DHCOM-HK.META.HPA.HOTEL-ORGANIC-desktop.HOTEL%26MDPDTL%3DHTL.4921.20260515.20260516.DDF.7.CID..AUDID.%26adults%3D2%26children%3D%26mctc%3D10%26mpf%3D245.25%26mpg%3DUSD%26mpl%3DUSD%26mpj%3D28.21%26mpr%3D21.70%26rffrid%3Dsem.hcom.HK.156.024.localuniversal.02.desktop-1.kwrd%3DGGMETA.4921HKen-20260515-N-ABW%3D7-camp%3D-aud%3D-N%26rateplanid%3D395670764%26mpm%3D24%26mpn%3D201001615%26mpo%3DEC%26mpp%3D1%26locale%3Den_HK%26siteid%3D300000039&s=AD1XQnmnUji5f8Ok6ld4TUBTO3zC&ap=1",
+        "price_value": 245
+      },
+      {
+        "platform": "Hotelscombined.hk",
+        "price": "US$245",
+        "room_type": null,
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": false,
+        "url": "https://www.google.com/travel/clk?pc=AA80OsxY8XDteZG9vgHKGSSvPNBfZp1jUiMUxvkzD8u-lAH1WX2b5rmMx2cGlQ4JlcKunfdXfInd7Z6OXkUCoDbdfPSXTteHZ4otshANSTtQeeaXaRXG_ySzpk2O1q9GW-wH4nur5nyFhm0jVtYFXOR4PXT4WFSleO3x9hLo4FK8Z35wCmE6hwKL2eLS2z4O_u-KnDCiGA&pcurl=https://www.hotelscombined.hk/semi/ha/hotel_ads/49522/en.html?utm_source%3Dgoogle%26utm_medium%3Dcpc%26utm_term%3D49522%26adType%3D0%26utm_content%3Dlocaluniversal%26utm_campaign%3DHotelAds%26ci%3D2026-05-15%26co%3D2026-05-16%26gs%3Dlocaluniversal%26l%3D1%26pc%3DUSD%26rid%3D%26pdtax%3D28.22%26pdtotal%3D245.29%26rpid%3D%26uc%3DHK%26ucuc%3DUSD%26d%3Ddesktop%26lc%3Den%26v%3Dfalse%26rrid%3DQUdPREFIUEE%26k_pc%3D~QUdPREFIUEE%26k_rt%3D%26k_sid%3DzFDETjYtY2%26k_kct%3D1778222600%26k_gct%3D1778222671%26g%3D2%26r%3D1%26ac%3D2%26k_cc%3Dhk%26dt%3Dselected%26cmpid%3D%26cmptrack%3D&s=AD1XQnmpRHwVNlN6MnER3bMVzMt8&ap=1",
+        "price_value": 245
+      },
+      {
+        "platform": "Qantas Hotels",
+        "price": "US$246",
+        "room_type": null,
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": false,
+        "url": "https://www.google.com/travel/clk?pc=AA80Osz428MumuYKkahb92p8Pp722MpfVTykJDrmrX4n54C4qS9Y-3poR8jXMUQlkw7r4isyiCl6oVunmHO26yHbSMfl4YU0-b0uOITcEMJsdL6zPm-Ej5egGO91v0Wy8KggAh12hj5AZrI6ZWATIEahyFS6SKxT6g7swlKC1SI3Ib2KUN8QCNi1&pcurl=https://www.qantas.com/hotels/properties/19818?adults%3D2%26children%3D0%26infants%3D0%26checkIn%3D2026-05-15%26checkOut%3D2026-05-16%26utm_campaign%3DGoogleHotels%26adType%3D0%26utm_medium%3Dorganic-search%26utm_source%3DGoogle-Hotels%26utm_term%3D19818%26hotelID%3D19818%26hotel_campaign%3D&s=AD1XQnkWCJtv3Oy_2FEvyA2tAW6q&ap=1",
+        "price_value": 246
+      },
+      {
+        "platform": "Bluepillow.hk",
+        "price": "US$245",
+        "room_type": null,
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": false,
+        "url": "https://www.google.com/travel/clk?pc=AA80Oszv7YpRnaMl2Esz5bcSZPC6qSInUPeo2cGqdkYAwpie2lcwj3nKpirQrM_fIfOmoL7L0FWypJDRcnrxgMxKPQvz3iPbd8lNKI3oFflMv3lXspI93oV_5V7hBNxcdMW6AkRfMEOjhr6t_vTDDRglkQbMeN5AREusoLQYSRzB34P54LSscEj1YxQlrQ&pcurl=https://hk.bluepillow.com/search/594396c87c00cb0e643be5f4?begin%3D2026-05-15%26end%3D2026-05-16%26block_id%3D-b,6lz_A3u2Q7K3ucKcVHtgZGEEpLw0KViv31MW6apllDWvgwTy-dG6kTkZjuIB2RAxoGUQ60gTg7VnOLO--npX9A,-bkng-Hotel%26adults%3D2%26childs%3D0%26infants%3D0%26childrens%3D0%26country%3DHK%26currency%3DUSD%26language%3Den%26source%3Dlocaluniversal%26utm_campaign%3Dhotel%26prid%3D&s=AD1XQnmeX3jONlbhwXC7To9o91ig&ap=1",
+        "price_value": 245
+      },
+      {
+        "platform": "Reserving",
+        "price": "US$245",
+        "room_type": null,
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": false,
+        "url": "https://www.google.com/travel/clk?pc=AA80OswjS5FRXykTzHbVxb8wAjHtv_S4enMgCil0uiebxQKLehUwUVTP6IsNsGJS_ItaLKsSr2wPiSe_FX-vim3ha_plPgCOr5fuGCBwSwcjjb1UVpOVoXdiou1Wb5VGye1i8tUAssF8WrgR6FMbW2FuenZKyjS9j5evLOessNX58UaFCIen6cQAS73ym2DAyMImZg&pcurl=https://h-en.reserving.com/search?i%3D7103%26rf%3DGOOGLEHOTELS%26portal%3Drsvcom%26lang%3Den%26auto%3D1%26tipo%3DS%26id%3D56660%26numero_habs%3D1%26no_adultos_hab1%3D2%26no_ninos_hab1%3D0%26fecha_entrada%3D15%252F05%252F2026%26fecha_salida%3D16%252F05%252F2026%26refp%3D245.37%26campaing-id%3D%26tp%3D%26moneda%3DUSD%26device%3Ddesktop%26pais_dom%3DHK%26sg%3Db%3D202.71,b$%3DHKD,big%3D2026-05-11T17:59:00%2B02:00,bmid%3D100,bpd%3Dus,breg%3D12,bt%3D5.53,bwp%3D6Tz5CzvzBcM,ts%3D2026-05-08T04:45:46%2B02:00/B:79D6D9B46F4F41F620E2566AF95CBFBF555A5B43FFD98DA908628CA0%26c3%3Dmode%3DL,dl%3D3900,d%3D2,ts_id%3D2083463929087213%26r%3DCAMPAIGN-ID%3D;TRACKING-PARAM%3D;CUSTOM1%3D;PRICE-DISPLAYED-TOTAL%3D245.37;DEFAULT-DATE%3D0;CLICK-TYPE%3Dhotel;USER-COUNTRY%3DHK;DEVICE%3Ddesktop;SITE%3Dlocaluniversal;USER-LANGUAGE%3Den;USER-CURRENCY%3DUSD;POS%3DALL-ALL-ALL-RSVCOM;AD-CLICK%3D0;PAYMENT-ID%3Dfree;C2%3Db%3D202.71,b$%3DHKD,big%3D2026-05-11T17:59:00%2B02:00,bmid%3D100,bpd%3Dus,breg%3D12,bt%3D5.53,bwp%3D6Tz5CzvzBcM,ts%3D2026-05-08T04:45:46%2B02:00/B:79D6D9B46F4F41F620E2566AF95CBFBF555A5B43FFD98DA908628CA0;C3%3Dmode%3DL,dl%3D3900,d%3D2,ts_id%3D2083463929087213&s=AD1XQnn6Jf2ga3eeCUAhMx2h0hOK&ap=1",
+        "price_value": 245
+      },
+      {
+        "platform": "Traveloka.com",
+        "price": "US$288",
+        "room_type": null,
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": false,
+        "url": "https://www.google.com/travel/clk?pc=AA80OsxGEri-toH9p_Mao3mxa9-kuzrAo0luVdlNp23kpcv6rJwQIZnWD7MfHkTuubM8vhHdYjQaLiYeFytvOjti239TlF6oj36ras8GB43CeLpwtUE0bs0VoJZVEFwQpsoEsU_ugMHvH6rg7xoSdjbBYaPZ6MQifQD8J8wFhViLMr_meULXyTY7aeqk&pcurl=https://www.traveloka.com/en-en/hotel/search?spec%3D15-05-2026.16-05-2026.1.1.HOTEL_GEO.10011651.Hong%2520Kong.2%26hotelId%3D1000000149547%26contexts%3D%257B%2522accessCode%2522:%252290975GHAD1305desktop%2522%252C%2522metasearchRequestId%2522%253A%252241bafe95-dfc5-4455-88d2-9ab647e33209%2522%252C%2522dateSelectionType%2522%253A%2522selected%2522%252C%2522plc%2522%253A%25229NiZyHC5Xod4wKp4ZHG8BwDEzIVYTBfRzyspLYRnHTTMz60kpZOHwwzAc5eDdAqfojHpZSzQUNyrreflZzqBeg%253D%253D%2522%257D%26metasearchId%3DGoogleHotelAdsUser%26metasearchRateId%3Ddesktop%26metasearchRatekey%3DsgyUU2M0LrnnpXh1LPwoI%26priceDisplay%3DTOTAL%26metasearchRefid%3D12345678910abcdefghijk@-%26adType%3D0%26PPA%3D0%26hotelCampaign%3D1%26cur%3DUSD&s=AD1XQnm8ZD0VGAV2f_GVkN_V6RNy&ap=1",
+        "price_value": 288
+      },
+      {
+        "platform": "Vio.com",
+        "price": "US$338",
+        "room_type": null,
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": false,
+        "url": "https://www.google.com/travel/clk?pc=AA80OsxNRe-_mb_v4X3VUL84nwUHsIgFW7_xkeEPnAROSNI2e32mBQ-9kRmkW2-Kev8K4xBuxUQc1V5PkfAvGesF1cY3VkcU-Dtamw8UObV_M9xBIDgrz5YqdggoC0KQy9c3m1QyuW9AquJTiZVJIfdU2fhrsiBEauoHG1X57Rv3qVtDXScxmBC3-ehd&pcurl=https://deals.vio.com/?sig%3D73aca13c7f952d2641c156f3e69125e1eb497c325f122828ee5aa8797168b9a12d32303331333438363233%26turl%3Dhttps%253A%252F%252Fwww.vio.com%252FHotel%252FSearch%253FcheckIn%253D2026-05-15%2526checkOut%253D2026-05-16%2526currency%253DUSD%2526forceCurrencyChange%253D1%2526lang%253Den%2526forceLanguageChange%253D1%2526rooms%253D2%253A%2526utm_source%253Dgha%2526utm_medium%253Dcpc%2526hotelId%253D1052471%2526userCountry%253DHK%2526profile%253Dr2d2m73kn8%2526preferredRate%253D338.37%2526deviceType%253Ddesktop%2526label%253Dsrc%25253Dgha%252526cltype%25253Dhotel%252526datype%25253Dselected%252526gsite%25253Dlocaluniversal%252526vf%25253D0%252526ucountry%25253DHK%252526udevice%25253Ddesktop%252526hotel%25253D1052471%252526day%25253D15%252526month%25253D05%252526year%25253D2026%252526los%25253D1%252526price%25253D338.37%252526currency%25253DUSD%252526cid%25253D%252526listid%25253D%252526rateid%25253DZZ_D%252526closerateid%25253D%252526promo%25253D0%252526isPrivateRate%25253D0%252526isAudienceUser%25253D0%252526isPaidClick%25253D0%252526%2526cp%253DrHtKFeMfGOkCgtWN2FMTEtTX0hEVRjE-PXPBiACOLX_5OULQhoIibydrIXYyqr2ARDt6gEY2RYg5wYqA1VTRA&s=AD1XQnlhJiC_7sPRI3Gi5-DXNwAJ&ap=1",
+        "price_value": 338
+      },
+      {
+        "platform": "Clicktrip.com",
+        "price": "US$325",
+        "room_type": null,
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": false,
+        "url": "https://www.google.com/travel/clk?pc=AA80OsypPC0MTZWc5nemeKc5EAvZwFQeRtoKrt5-CXmOOMpiCm4XNbxFAZP6f-eXRf7cf0M_YUOOj6cMmYThe9Pq1BbKWd3AvbaaajHLF-Rg9r8Sd650Uevcd3qQ_CpCimV3n8BBzkxZmMLAXe-jb-WOwqZ_g2Wt9YOrhVXr0kdkfjfXYfV3xI4VcGO-TjBX2spmRzrGrv-IKWw&pcurl=https://clicktrip.com/hotels/details/tRPeYAfNMn9aiTKaa2CRmB2XKWsw4bq_0fvZr0KJn_cFHErZ97y8LuqO-VueQEKG4cGawsEwITQ8diwPDOIJywwChRUqWZlxMzA6Mn4aNoolaWx7QM2ZqsJBQYjrWdih0?locale%3Den%26currency%3DUSD%26pos%3DHK%26date_type%3Dselected%26taf%3Dsh-4YdYKZx55HcOF-ul0VyL-NDQhJOK49WJY0QEf2kQ1%26verification%3Dfalse%26clk_src%3D%26utm_source%3Dgha&s=AD1XQnmCRXBzAGcNPxBLdXZtlDNs&ap=1",
+        "price_value": 325
+      },
+      {
+        "platform": "Evendo",
+        "price": "US$331",
+        "room_type": null,
+        "amenities": [],
+        "cancellation_policy": null,
+        "is_sponsored": false,
+        "url": "https://www.google.com/travel/clk?pc=AA80OsxQdIFj-8GJbIa6SaS8ab_ljZWz0myNkaY7hGAC8VBwbmmPvBuRheNN_Fbh6PU5sfrjaLsgDjdjU4U90J-QzCOmpCGXiT5eLs22_EPekEA05MpoiAij3s-dGTsmzVbVQS0TVJurylF58Ovb-fVFMRL0O-ibAQn0i3O__aLoLnJJso_9Otgisn9-Il5KiErz4A&pcurl=https://evendo.com/stays/the-langham-hong-kong/00201309?check_in%3D2026-05-15%26check_out%3D2026-05-16%26who%3D%255B%257B%2522adults%2522:2,%2522children%2522:%255B%255D%257D%255D%26currency%3DUSD%26language%3Den%26country%3DHK%26utm_source%3Dgoogle%26utm_medium%3Dgooglehotels%26utm_campaign%3Dlocaluniversal%26pdtax%3D38.12%26pdtotal%3D331.34%26prid%3D&s=AD1XQnkkbyPxqMkX9L_S11qKNFmp&ap=1",
+        "price_value": 331
+      }
+    ],
+    "price_trend": "US$245",
+    "similar_hotels": [
+      {
+        "hotel_name": "The Langham, Hong Kong",
+        "price": "$245",
+        "platform": "Agoda",
+        "rating": 4.3,
+        "review_count": "2468",
+        "star_classification": 5,
+        "highlights": null
+      },
+      {
+        "hotel_name": "Harbour Grand Hong Kong",
+        "price": "$127",
+        "platform": "Booking.com",
+        "rating": 4.1,
+        "review_count": "5105",
+        "star_classification": 5,
+        "highlights": null
+      },
+      {
+        "hotel_name": "W's Lounge",
+        "price": "$37",
+        "platform": "Hotels.com",
+        "rating": 2.8,
+        "review_count": "26",
+        "star_classification": 3,
+        "highlights": null
+      },
+      {
+        "hotel_name": "Renaissance Hong Kong Harbour View Hotel",
+        "price": "$245",
+        "platform": "Renaissance Hong Kong Harbour View Hotel",
+        "rating": 4.2,
+        "review_count": "4680",
+        "star_classification": 5,
+        "highlights": null
+      },
+      {
+        "hotel_name": "Sheraton Hong Kong Hotel & Towers",
+        "price": "$274",
+        "platform": "Sheraton Hong Kong Hotel & Towers",
+        "rating": 4.2,
+        "review_count": "3486",
+        "star_classification": 5,
+        "highlights": null
+      },
+      {
+        "hotel_name": "Royal Pacific Hotel",
+        "price": "$98",
+        "platform": "Agoda",
+        "rating": 4.1,
+        "review_count": "1571",
+        "star_classification": 4,
+        "highlights": null
+      },
+      {
+        "hotel_name": "Hyatt Centric Victoria Harbour Hong Kong",
+        "price": "$172",
+        "platform": "Booking.com",
+        "rating": 4.2,
+        "review_count": "3392",
+        "star_classification": 5,
+        "highlights": null
+      },
+      {
+        "hotel_name": "Hotel Skycity",
+        "price": "$34",
+        "platform": "Agoda",
+        "rating": 2.9,
+        "review_count": "29",
+        "star_classification": 2,
+        "highlights": null
+      },
+      {
+        "hotel_name": "Page148 - Page Hotels",
+        "price": "$150",
+        "platform": "Agoda",
+        "rating": 4.5,
+        "review_count": "961",
+        "star_classification": 4,
+        "highlights": null
+      }
+    ],
+    "nearby_places": [
+      {
+        "place_name": "Victoria Peak",
+        "rating": 4.6,
+        "review_count": "4791",
+        "description": "Mountain on Hong Kong island (elevation 1,181 feet) known for its skyline & waterfront views.",
+        "travel_time": "29 min",
+        "place_type": "Point of interest"
+      },
+      {
+        "place_name": "Victoria Harbour",
+        "rating": 4.6,
+        "review_count": "5413",
+        "description": "Bustling harbour area with waterfront scenery & popular nighttime light & firework displays.",
+        "travel_time": "6 min",
+        "place_type": "Point of interest"
+      },
+      {
+        "place_name": "Temple Street Night Market",
+        "rating": 3.8,
+        "review_count": "22546",
+        "description": "Everything from trinkets, jade & antiques to electronics & watches sold in a bustling night market.",
+        "travel_time": "7 min",
+        "place_type": "Point of interest"
+      },
+      {
+        "place_name": "Avenue of Stars HK",
+        "rating": 4.3,
+        "review_count": "16655",
+        "description": "Promenade with handprints & plaques honoring Hong Kong film stars, plus a Bruce Lee statue.",
+        "travel_time": "8 min",
+        "place_type": "Point of interest"
+      },
+      {
+        "place_name": "Ocean Park",
+        "rating": 4.3,
+        "review_count": "33243",
+        "description": "Theme park with rollercoasters & water rides, a cable car & a marine park with animal enclosures.",
+        "travel_time": "18 min",
+        "place_type": "Point of interest"
+      },
+      {
+        "place_name": "The Peak Tram",
+        "rating": 4.3,
+        "review_count": "24818",
+        "description": "Victorian-era train taking visitors to the highest peak on Hong Kong island for views of the city.",
+        "travel_time": "14 min",
+        "place_type": "Point of interest"
+      },
+      {
+        "place_name": "Hong Kong Museum of History",
+        "rating": 4.3,
+        "review_count": "8850",
+        "description": "Large museum showcasing the history & culture of Hong Kong from prehistoric to modern times.",
+        "travel_time": "8 min",
+        "place_type": "Point of interest"
+      },
+      {
+        "place_name": "Lan Kwai Fong",
+        "rating": 4.2,
+        "review_count": "10125",
+        "description": "Historic district of narrow streets & alleys lined with restaurants, nightclubs & bars.",
+        "travel_time": "15 min",
+        "place_type": "Point of interest"
+      },
+      {
+        "place_name": "Hong Kong Museum of Art",
+        "rating": 4.5,
+        "review_count": "4388",
+        "description": "Hong Kong's main art museum, featuring mostly Chinese paintings, sculptures & drawings.",
+        "travel_time": "7 min",
+        "place_type": "Point of interest"
+      },
+      {
+        "place_name": "Hong Kong Disneyland",
+        "rating": 4.5,
+        "review_count": "64775",
+        "description": "Famous theme park complex featuring 7 areas with rides, shows and welcoming costumed characters.",
+        "travel_time": "19 min",
+        "place_type": "Point of interest"
+      },
+      {
+        "place_name": "Man Mo Temple",
+        "rating": 4.3,
+        "review_count": "6673",
+        "description": "1800s temple featuring a lavish, traditional interior with dozens of incense spirals overhead.",
+        "travel_time": "16 min",
+        "place_type": "Point of interest"
+      },
+      {
+        "place_name": "International Commerce Centre (ICC)",
+        "rating": null,
+        "review_count": null,
+        "description": null,
+        "travel_time": "6 min",
+        "place_type": "Point of interest"
+      },
+      {
+        "place_name": "Hong Kong Space Museum",
+        "rating": 4.2,
+        "review_count": "6858",
+        "description": "Waterside egg-shaped building with planetarium and Omnimax films, plus space and astronomy exhibits.",
+        "travel_time": "7 min",
+        "place_type": "Point of interest"
+      },
+      {
+        "place_name": "Sik Sik Yuen Wong Tai Sin Temple",
+        "rating": 4.3,
+        "review_count": "6448",
+        "description": "Built with feng shui elements, this Taoist shrine to Wong Tai Sin is considered a source of luck.",
+        "travel_time": "18 min",
+        "place_type": "Point of interest"
+      },
+      {
+        "place_name": "Sky 100 Hong Kong Observation Deck",
+        "rating": 4.4,
+        "review_count": "7283",
+        "description": "Indoor observation deck on the 100th floor with high-tech telescopes, interactive exhibits & a cafe.",
+        "travel_time": "5 min",
+        "place_type": "Point of interest"
+      },
+      {
+        "place_name": "Tsim Sha Tsui",
+        "rating": null,
+        "review_count": null,
+        "description": null,
+        "travel_time": "7 min",
+        "place_type": "Underground Station"
+      },
+      {
+        "place_name": "East Tsim Sha Tsui",
+        "rating": null,
+        "review_count": null,
+        "description": null,
+        "travel_time": "10 min",
+        "place_type": "Underground Station"
+      },
+      {
+        "place_name": "Tsim Sha Tsui Star Ferry Pier",
+        "rating": null,
+        "review_count": null,
+        "description": null,
+        "travel_time": "5 min",
+        "place_type": "Ferry service"
+      },
+      {
+        "place_name": "Silvercord; Canton Road",
+        "rating": null,
+        "review_count": null,
+        "description": null,
+        "travel_time": "3 min",
+        "place_type": "Bus and Coach Station"
+      },
+      {
+        "place_name": "Peking Road; Kowloon Park Drive",
+        "rating": null,
+        "review_count": null,
+        "description": null,
+        "travel_time": "1 min",
+        "place_type": "Bus and Coach Station"
+      },
+      {
+        "place_name": "Hong Kong International Airport",
+        "rating": null,
+        "review_count": null,
+        "description": null,
+        "travel_time": "28 min",
+        "place_type": "Airport"
+      },
+      {
+        "place_name": "The Pearl",
+        "rating": 4.7,
+        "review_count": "803",
+        "description": null,
+        "travel_time": "7 min",
+        "place_type": "Modern European restaurant"
+      },
+      {
+        "place_name": "Library Restaurant & Bar",
+        "rating": 4.5,
+        "review_count": "328",
+        "description": null,
+        "travel_time": "4 min",
+        "place_type": "Restaurant"
+      },
+      {
+        "place_name": "Hutong",
+        "rating": 4.2,
+        "review_count": "1130",
+        "description": null,
+        "travel_time": "5 min",
+        "place_type": "Chinese restaurant"
+      },
+      {
+        "place_name": "room 3",
+        "rating": 4.7,
+        "review_count": "387",
+        "description": null,
+        "travel_time": "5 min",
+        "place_type": "Japanese restaurant"
+      },
+      {
+        "place_name": "Skewer Kitchen (Tsim Sha Tsui)",
+        "rating": 4.6,
+        "review_count": "229",
+        "description": null,
+        "travel_time": "7 min",
+        "place_type": "Yakitori restaurant"
+      },
+      {
+        "place_name": "aqua",
+        "rating": 4.2,
+        "review_count": "1646",
+        "description": null,
+        "travel_time": "5 min",
+        "place_type": "Restaurant"
+      },
+      {
+        "place_name": "Garden Bar & Restaurant",
+        "rating": 4.7,
+        "review_count": "38",
+        "description": null,
+        "travel_time": "8 min",
+        "place_type": "Western restaurant"
+      },
+      {
+        "place_name": "Gonpachi (Tsim Sha Tsui)",
+        "rating": 4,
+        "review_count": "130",
+        "description": null,
+        "travel_time": "1 min",
+        "place_type": "Izakaya restaurant"
+      },
+      {
+        "place_name": "Milu Thai",
+        "rating": 4.6,
+        "review_count": "438",
+        "description": null,
+        "travel_time": "5 min",
+        "place_type": "Thai restaurant"
+      },
+      {
+        "place_name": "Felix",
+        "rating": 4.4,
+        "review_count": "674",
+        "description": null,
+        "travel_time": "6 min",
+        "place_type": "Modern European restaurant"
+      }
+    ],
+    "neighborhood_info": {
+      "name": "Tsim Sha Tsui",
+      "rating": 4.6,
+      "description": "Tsim Sha Tsui"
+    },
+    "google_review_summary": {
+      "overall_rating": 4.3,
+      "total_reviews": 2468,
+      "rating_distribution": {
+        "five_star": 1423,
+        "four_star": 680,
+        "three_star": 215,
+        "two_star": 65,
+        "one_star": 85
+      },
+      "highlighted_reviews": null
+    },
+    "third_party_reviews": [
+      {
+        "platform": "Trip.com",
+        "rating": "4.5",
+        "review_count": 5689,
+        "recent_review": {
+          "reviewer_name": "Trip.com Member",
+          "review_date": "a month ago",
+          "review_text": "Location is excellent. The room is quiet and good maintained. I like little details in room eg. Adapter plug, Diptyque brand amenities."
+        }
+      }
+    ],
+    "about_hotel": "Premium hotel offering multiple eateries, plus a rooftop wellness area with a spa & an outdoor pool.",
+    "check_in_time": "3:00 PM",
+    "check_out_time": "12:00 PM",
+    "popular_amenities": [
+      {
+        "amenity_name": "Pool",
+        "is_free": false,
+        "extra_charge": false
+      },
+      {
+        "amenity_name": "Spa",
+        "is_free": false,
+        "extra_charge": false
+      },
+      {
+        "amenity_name": "Wi-Fi",
+        "is_free": true,
+        "extra_charge": false
+      },
+      {
+        "amenity_name": "Fitness center",
+        "is_free": false,
+        "extra_charge": false
+      }
+    ],
+    "official_website": "http://www.langhamhotels.com/en/the-langham/hong-kong/?htl=tlhkg&src=organic&eng=google&size=na&cid=yext_profile&y_source=1_MTA0MjQ3MDktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "alternative_hotels": null,
+    "vacation_rentals_nearby": [
+      {
+        "property_name": "Modena by Fraser Hong Kong - Studio Deluxe",
+        "price": "US$260",
+        "bedrooms": 1,
+        "sleeps": 3,
+        "distance": "0.1 km away"
+      },
+      {
+        "property_name": "Royal Paris Guest House 皇家巴黎賓館 - Quadruple Room with Shower",
+        "price": "US$79",
+        "bedrooms": 1,
+        "sleeps": 4,
+        "distance": "0.3 km away"
+      },
+      {
+        "property_name": "CEBU APPARTMENT - Budget Double Room",
+        "price": "US$50",
+        "bedrooms": 4,
+        "sleeps": 6,
+        "distance": "0.3 km away"
+      },
+      {
+        "property_name": "CEBU APPARTMENT - Budget Double or Twin Room",
+        "price": "US$50",
+        "bedrooms": 2,
+        "sleeps": 6,
+        "distance": "0.3 km away"
+      },
+      {
+        "property_name": "Li Cheng Guesthouse - Quadruple Room with Private Bathroom",
+        "price": "US$65",
+        "bedrooms": 1,
+        "sleeps": 4,
+        "distance": "0.3 km away"
+      },
+      {
+        "property_name": "Holiday Guest House - Deluxe Double Room",
+        "price": "US$51",
+        "bedrooms": 4,
+        "sleeps": 4,
+        "distance": "0.3 km away"
+      }
+    ],
+    "popular_hotels_in_city": [
+      {
+        "hotel_name": "The Peninsula Hong Kong",
+        "price": null,
+        "rating": 4.6,
+        "review_count": "7498",
+        "description": "Luxury hotel with a spa & an indoor pool",
+        "distance": "0.3 km away"
+      },
+      {
+        "hotel_name": "Regent Hong Kong",
+        "price": null,
+        "rating": 4.4,
+        "review_count": "4255",
+        "description": "Harbourside luxe hotel offering dining",
+        "distance": "0.5 km away"
+      },
+      {
+        "hotel_name": "Hotel ICON",
+        "price": null,
+        "rating": 4.4,
+        "review_count": "5033",
+        "description": "Also a 5-star hotel, for US$21 less",
+        "distance": "1.1 km away"
+      },
+      {
+        "hotel_name": "Cordis, Hong Kong",
+        "price": null,
+        "rating": 4.3,
+        "review_count": "5421",
+        "description": "Also a 5-star hotel, for US$69 less",
+        "distance": "2.4 km away"
+      },
+      {
+        "hotel_name": "InterContinental Grand Stanford Hong Kong by IHG",
+        "price": null,
+        "rating": 4.2,
+        "review_count": "4183",
+        "description": "Also a 5-star hotel, for US$56 less",
+        "distance": "1 km away"
+      },
+      {
+        "hotel_name": "Eaton HK",
+        "price": null,
+        "rating": 4.1,
+        "review_count": "5070",
+        "description": "4-star hotel for US$121 less",
+        "distance": "1.3 km away"
+      }
+    ],
+    "search_term": null,
+    "currency": "USD",
+    "timestamp": "2026-05-08T07:42:52.638Z",
+    "input": {
+      "url": "https://www.google.com/travel/hotels/entity/ChgI_KC-8vCrstqdARoLL2cvMTU1cWZxMDMQAQ?q=hong%20kong%20langham&ved=0CAAQ5JsGahcKEwiI4sO1iqmUAxUAAAAAHQAAAAAQAw&ap=KigKEgkjhAb5xEo2QBEklnntwIpcQBISCcWVSt_wTDZAESSW-Rb5ilxAMAE&ts=CAESCgoCCAMKAggDEAAaNwoZEhUKCC9tLzAzaDY0OglIb25nIEtvbmcaABIaEhQKBwjqDxAFGA8SBwjqDxAFGBAYATICCAEqCQoFOgNVU0QaAA&qs=CAAgACgAOA1IAA&utm_campaign=sharing&utm_medium=link&utm_source=htls",
+      "country": "HK"
+    }
+  }
+}

@@ -9,13 +9,13 @@ import { Globe, Logo } from '@/src/components/icons/src/public/common';
 import { colors } from '@/src/styles/theme';
 import { safeGoBack } from '@/src/utils/navigation';
 
-interface HeaderProps {
+interface IHeaderProps {
   showBack?: boolean;
   title?: ReactNode;
   right?: ReactNode;
 }
 
-const Header = ({ showBack = true, title, right }: HeaderProps) => {
+const Header = ({ showBack = true, title, right }: IHeaderProps) => {
   const router = useRouter();
   const navigation = useNavigation();
   const pathname = usePathname();
