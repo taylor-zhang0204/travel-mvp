@@ -2,7 +2,7 @@ import { get } from '@/src/api/base';
 
 import type {
   IBookingOptionsRequest,
-  IBookingOptionsResponse,
+  IHotelBookingOptionsResponse,
   IHotelListRequest,
   IHotelListResponse,
 } from './types';
@@ -12,9 +12,9 @@ export async function getHotelList(params?: IHotelListRequest): Promise<IHotelLi
   return get<IHotelListResponse>('/hotels', params);
 }
 
-/** 获取预订选项列表 */
+/** 获取酒店预订选项 */
 export async function getBookingOptions(
-  params?: IBookingOptionsRequest
-): Promise<IBookingOptionsResponse> {
-  return get<IBookingOptionsResponse>('/booking-options', params);
+  params: IBookingOptionsRequest
+): Promise<IHotelBookingOptionsResponse> {
+  return get<IHotelBookingOptionsResponse>('/booking-options', params);
 }

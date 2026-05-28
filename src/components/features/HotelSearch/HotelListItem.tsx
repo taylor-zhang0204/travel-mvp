@@ -30,7 +30,7 @@ export const HotelListItem = ({
         <Text fontSize={16} fontWeight="500" color={colors.textPrimary} numberOfLines={1}>
           {title}
         </Text>
-        <Text fontSize={14} fontWeight="500" color={colors.textMuted}>
+        <Text fontSize={14} fontWeight="500" color={colors.textMuted} numberOfLines={1}>
           {subtitle}
         </Text>
       </YStack>

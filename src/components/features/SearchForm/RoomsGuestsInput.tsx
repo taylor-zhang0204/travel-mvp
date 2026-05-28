@@ -2,8 +2,17 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Sheet, Text, XStack, YStack } from 'tamagui';
 
-import { Minus, MinusDisabled, People, Plus } from '@/src/components/icons/src/public/common';
+import {
+  Minus,
+  MinusDisabled,
+  People,
+  Plus,
+  PlusDisabled,
+} from '@/src/components/icons/src/public/common';
 import { colors } from '@/src/styles/theme';
+
+const MAX_ROOMS = 1;
+const MAX_GUESTS = 4;
 
 type Props = {
   rooms: number;
@@ -63,7 +72,11 @@ const RoomsGuestsInput = ({ rooms, guests, onRoomsChange, onGuestsChange }: Prop
               >
                 {rooms}
               </Text>
-              <Plus size={30} onPress={() => onRoomsChange(rooms + 1)} />
+              {rooms >= MAX_ROOMS ? (
+                <PlusDisabled size={30} />
+              ) : (
+                <Plus size={30} onPress={() => onRoomsChange(rooms + 1)} />
+              )}
             </XStack>
           </XStack>
 
@@ -88,7 +101,11 @@ const RoomsGuestsInput = ({ rooms, guests, onRoomsChange, onGuestsChange }: Prop
                 {guests}
               </Text>
 
-              <Plus size={30} onPress={() => onGuestsChange(guests + 1)} />
+              {guests >= MAX_GUESTS ? (
+                <PlusDisabled size={30} />
+              ) : (
+                <Plus size={30} onPress={() => onGuestsChange(guests + 1)} />
+              )}
             </XStack>
           </XStack>
         </Sheet.Frame>

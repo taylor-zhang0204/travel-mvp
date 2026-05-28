@@ -1,9 +1,9 @@
 import { useLocalSearchParams } from 'expo-router';
 import { useEffect, useMemo, useState } from 'react';
-import { ScrollView, YStack } from 'tamagui';
+import { ScrollView, Spinner, YStack } from 'tamagui';
 
 import { getBookingOptions } from '@/src/api/hotel';
-import type { IBookingOptionItem } from '@/src/api/hotel/types';
+import type { IHotelBookingOptionsResponse } from '@/src/api/hotel/types';
 import ExclusiveOffer from '@/src/components/features/ExclusiveOffer';
 import Footer from '@/src/components/features/Layout/Footer';
 import SearchHeader from '@/src/components/features/SearchHeader';
@@ -13,7 +13,7 @@ import type { SearchParams } from '@/src/types/page';
 const Search = () => {
   const searchParams = useLocalSearchParams();
 
-  const [hotelInfo, sethotelInfo] = useState<IBookingOptionItem>();
+  const [hotelInfo, sethotelInfo] = useState<IHotelBookingOptionsResponse>();
 
   const params = useMemo<SearchParams>(() => {
     const {
@@ -36,9 +36,16 @@ const Search = () => {
 
   const fetchHotelInfo = async () => {
     if (params?.checkIn) {
-      const res = await getBookingOptions(params);
-      console.log(res);
-      // sethotelInfo(res.hotel);
+      const { guests, hotelId, checkIn, checkOut } = params;
+      const requestParams = {
+        hotelId,
+        checkInDate: checkIn,
+        checkOutDate: checkOut,
+        guestNumber: guests,
+      };
+      const info = await getBookingOptions(requestParams);
+      console.log('hotelInfo: ', info);
+      sethotelInfo(info);
     }
   };
 
@@ -55,14 +62,18 @@ const Search = () => {
         dateRange={`${params?.checkIn} - ${params?.checkOut}`}
       />
       <ScrollView flex={1}>
-        <ExclusiveOffer
-          destination={params?.destination}
-          checkIn={params?.checkIn}
-          checkOut={params?.checkOut}
-          guests={params?.guests}
-          rooms={params?.rooms}
-          // info={hotelInfo}
-        />
+        {hotelInfo ? (
+          <ExclusiveOffer
+            destination={params?.destination}
+            guests={params?.guests}
+            rooms={params?.rooms}
+            info={hotelInfo}
+          />
+        ) : (
+          <YStack height={200} justify="center" items="center">
+            <Spinner size="large" />
+          </YStack>
+        )}
         <Footer />
       </ScrollView>
     </YStack>

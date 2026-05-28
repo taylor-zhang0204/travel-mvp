@@ -32,7 +32,7 @@ const SearchForm = ({ onSearch }: Props) => {
     checkIn: dayjs().format('YYYY-MM-DD'),
     checkOut: dayjs().add(1, 'day').format('YYYY-MM-DD'),
     rooms: 1,
-    guests: 1,
+    guests: 2,
   });
 
   useEffect(() => {
