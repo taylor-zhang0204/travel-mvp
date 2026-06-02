@@ -154,7 +154,7 @@ const ExclusiveOffer = ({ cashback = '5%', info }: Props) => {
                 >
                   <XStack items="center" gap={8}>
                     <Text fontSize={15} fontWeight="600" color={colors.textPrimary}>
-                      {provider.price}
+                      {formatCurrency(provider.priceValue, provider.currency)}
                     </Text>
                     <ArrowUpRightFromSquare size={14} color={colors.providerIcon} />
                   </XStack>

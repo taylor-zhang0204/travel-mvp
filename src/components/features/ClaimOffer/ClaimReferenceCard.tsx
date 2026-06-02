@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import QRCode from 'react-native-qrcode-svg';
 import { Text, XStack, YStack } from 'tamagui';
@@ -6,8 +7,14 @@ import CopyButton from '@/src/components/ui/CopyButton';
 import DownloadButton from '@/src/components/ui/DownloadButton';
 import { colors } from '@/src/styles/theme';
 
+const generateReferenceCode = () => {
+  const digits = Math.floor(1000 + Math.random() * 9000).toString();
+  return `KODY${digits}`;
+};
+
 const ClaimReferenceCard = () => {
   const { t } = useTranslation();
+  const referenceCode = useMemo(() => generateReferenceCode(), []);
   return (
     <YStack
       bg={colors.backgroundInput}
@@ -23,13 +30,13 @@ const ClaimReferenceCard = () => {
       </Text>
       <XStack gap={7.4} items="center">
         <Text fontSize={18} fontWeight="700" color={colors.textPrimary}>
-          KODY1234
+          {referenceCode}
         </Text>
-        <CopyButton value="KODY1234" />
+        <CopyButton value={referenceCode} />
       </XStack>
       <XStack gap={7} items="flex-end">
         <DownloadButton>
-          <QRCode value="KODY1234" size={80} />
+          <QRCode value={referenceCode} size={80} />
         </DownloadButton>
       </XStack>
       <Text fontSize={10} color={colors.textHint}>
