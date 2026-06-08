@@ -12,7 +12,7 @@ import {
 import { colors } from '@/src/styles/theme';
 
 const MAX_ROOMS = 1;
-const MAX_GUESTS = 4;
+const MAX_GUESTS = 2;
 
 type Props = {
   rooms: number;
