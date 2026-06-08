@@ -1,18 +1,19 @@
 import axios from 'axios';
 
+import { config, type AppEnv } from '@/src/config/env';
+
 import { onRequest, onRequestError, onResponse, onResponseError } from './interceptors';
 import type { IApiResponse } from './types';
 
-// 在模拟器/真机调试时，Android 模拟器用 10.0.2.2 访问宿主机的 localhost
-// iOS 模拟器用 localhost 即可，真机需要用宿主机的局域网 IP
-
-const BASE_URL =
-  process.env.NODE_ENV === 'development'
-    ? 'http://192.168.8.229:8000/api'
-    : 'https://api.kodytravel.com/v1';
+// 各环境的 API 地址，按 env 动态选择
+const API_BASE_URLS: Record<AppEnv, string> = {
+  development: 'https://api-dev-ap.kodypay.com/travel-agent',
+  staging: 'https://api-staging-ap.kodypay.com/travel-agent',
+  production: 'https://api-ap.kodypay.com/travel-agent',
+};
 
 const api = axios.create({
-  baseURL: BASE_URL,
+  baseURL: API_BASE_URLS[config.env],
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
